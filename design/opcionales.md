@@ -9,7 +9,6 @@ Opción 2: https://colorhunt.co/palette/63246
 
 Tipografías
 Opcion 1: 
-Opcion 1: 
-"<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">"
-"<link rel="stylesheet" href="/css/normalize.css">"
+https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap
+
 
