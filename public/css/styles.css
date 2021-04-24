@@ -10,15 +10,34 @@ header {
     color: white;
 }
 
-header img {
-    height: 100px;
-    width: 220px;
-}
-
 header nav ul {
     list-style-type: none;
 }
 
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #F2F4F7;
+}
 
+.logo .mobile {
+    height: 70px;
+    width: 100px;
+}
 
-    
+.logo .desktop {
+    height: 108px;
+    width: 250px;
+    display: none;
+}
+
+/* Version desktop */
+@media screen and (min-width: 361px) {
+    .logo .desktop {
+        display: block;
+    }
+    .logo .mobile {
+        display: none;
+    }
+
+ }  
+
