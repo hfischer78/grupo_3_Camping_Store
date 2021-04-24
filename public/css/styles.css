@@ -11,3 +11,6 @@ header img {
 header nav ul {
     list-style-type: none;
 }
+
+@import url("header.css")
+
