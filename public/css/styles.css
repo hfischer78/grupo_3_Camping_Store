@@ -1,0 +1,13 @@
+header {
+    background-color: #FF3E41;
+    color: white;
+}
+
+header img {
+    height: 100px;
+    width: 220px;
+}
+
+header nav ul {
+    list-style-type: none;
+}
