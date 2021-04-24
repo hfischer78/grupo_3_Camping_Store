@@ -1,3 +1,10 @@
+@import url("index.css");
+@import url("login.css");
+@import url("product-cart.css");
+@import url("product-detail.css");
+@import url("styles.css");
+
+
 header {
     background-color: #FF3E41;
     color: white;
@@ -12,5 +19,6 @@ header nav ul {
     list-style-type: none;
 }
 
-@import url("header.css")
 
+
+    
