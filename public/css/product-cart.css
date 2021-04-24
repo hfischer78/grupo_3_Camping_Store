@@ -1,0 +1,18 @@
+@import url("header.css");
+
+.cart{
+display: flex;
+width: 100%;
+justify-content: space-between;
+background-color: teal;
+}
+
+.cartEnzabezados{
+display: flex;
+width: 80%;
+justify-content: space-between;
+}
+
+.cartImagen{
+    width: 20%;
+}
