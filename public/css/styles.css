@@ -8,6 +8,8 @@
 header {
     background-color: #FF3E41;
     color: white;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 header nav ul {
@@ -67,4 +69,14 @@ nav {
         display: block;
     }
  }  
+
+ .aviso-banner {
+     font-weight: bold;
+     display: flex;
+     background-color: white;
+     color: black;
+     width: 100%;
+     text-align: center;
+     margin: auto;
+ }
 
