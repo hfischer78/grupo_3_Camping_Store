@@ -1,20 +1,86 @@
 
 
-.cart{
-display: flex;
-width: 100%;
-justify-content: space-between;
-background-color: teal;
+/* Estilo de la etiqueta que contiene el nombre DETALLE DE PRODUCTO */
+
+h2{
+   text-align: center;
+   border-bottom:solid black;
+   width: 100%; 
+   padding: 10px
 }
 
-.cartEnzabezados{
+
+/* Estilos de de los articulos (productos comprados y detalles) */
+
+article{
+    border-bottom:solid 1px black;
+}
+
+    /* Estilos del contenedor de Imagen, Producto y descripción */
+    .cartProduct{
+        display:flex;
+        justify-content:start;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+            /*Estilo de los div de cartProduct (*/
+            .cartProduct div{
+                margin: 10px
+            }
+            
+            /* Aplicacion de estilo a la imagen del producto */
+            .imgProd{
+                width: 65px;
+                height: 65px;
+            }
+
+            /* Estilo de la descripción del producto */
+            .descripcion{
+                text-align: justify;
+            }
+
+            /* Estilo del nombre del producto*/
+            .producto{
+                font-weight: bold;
+            }
+
+    /*  Estilos del contenedor de los detalles de la compra (cantidad, precio y total) */  
+    .detalleCompra{
+        display:flex;
+        justify-content:start;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+        }   
+
+            /*Estilo de los div de detalleCompra */
+            .detalleCompra div{
+                margin: 10px
+            }    
+        
+       
+    /* Estilos Generales de elementos */    
+    .nombreEtiqueta{
+        font-weight: bold;
+        margin: 0px;
+        text-align: center;
+    }
+
+
+    /* PENDIENTE DE PROGRAMACION 
+    .resumenCompra{
+        width: 50%;
+        display: flex;
+        justify-content:start; 
+        flex-wrap: wrap; 
+        margin: 10px;
+     }
+*/
+
+
+
     
-    color:black;
-display: flex;
-width: 80%;
-justify-content: space-between;
-}
-
-.cartImagen{
-    width: 20%;
-}

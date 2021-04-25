@@ -14,41 +14,124 @@
 
     <header>HEADER</header>
 
-    <main></main>
-
-    <H2>CARRITO DE COMPRAS</H1>
-
-    <div class="cart">
-        <div class="cartEnzabezados"> 
-        <p>Detalles del Producto</p>       
-        <p>Cantidad</p> 
-        <p>Precio</p>       
-        <p>Total</p>             
-        </div>
-
-        <div class= "cartImagen"> 
-                <img src="./img/carpa 1.jpg">
-        </div>
-
-    </div>
+    <main>
+            <H2>CARRITO DE COMPRAS</H1> <!--ENCABEZADO-->
         
-        <!-- <div class="cartDetalles"> </div> -->
-    
+        <section> <!-- SECCION CON LOS DETALLES DE LOS ARTICULOS COMPRADOS-->
+                        
+            <article>  <!--DETALLE DE COMPRA--> 
+                <div class="cartProduct"> <!-- CONTIENE IMAGEN, NOMBRE DE PRODUCTO Y DESCRIPCION-->
+                    <div> <!--IMAGEN-->
+                    <img class="imgProd" src="./img/patagonia_down_sweater_boys_imagen1.jpg"> 
+                    </div>
 
-    
-      
+                    <div> <!--NOMBRE DEL PRODUCTO-->
+                        <div class="producto"> 
+                            <span>PATAGONIA DOWN SWEATER BOYS</span>
+                        </div>    
 
-            <!--
-            <h2 class="copy-header">
-                <i class = "fa fa-hand-holding-usd fa" ></i> 
-                Compra en cuotas y sin tarjeta de crédito
-            </h2>
-           
--->
+                        <div class="descripcion"> <!--DESCRIPCION DEL PRODUCTO-->
+                            <span>El Down Sweater para niños es abrigado, comprimible y se amolda fácilmente para brindar mayor calidez en climas fríos. Protegido con plumón 100% rastreable de 600-fill-power.</span>
+                        </div>
+                    </div>    
+
+                </div>
+                
+                    <div class="detalleCompra"> <!--DETALLE DE LA COMPRA DEL PRODUCTO (CANTIDAD, PRECIO, TOTAL)-->
+                        <div> <!--CANTIDAD-->
+                            <H6 class="nombreEtiqueta">CANT</H6> 
+                            <span>
+                                <select name="cantidad" class="cantidad">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </span>
+                        </div>
+
+                        <div> <!-- PRECIO -->
+                            <H6 class="nombreEtiqueta">PRECIO</H6>
+                            <span>$ 9.999,99</span>
+                        </div>
+                        
+                        <div> <!--TOTAL-->
+                            <H6 class="nombreEtiqueta">TOTAL</H6>
+                            <span>$ 9.999,99</span>
+                        </div>
+                        
+                    </div>    
+
+            </article>
 
 
+            <!-- OTRO ARTICULO DE EJEMPLO, MISMA PROGRAMACION-->
 
-    <footer></footer>
+            <article>  <!--DETALLE DE COMPRA--> 
+                <div class="cartProduct"> <!-- CONTIENE IMAGEN, NOMBRE DE PRODUCTO Y DESCRIPCION-->
+                    <div> <!--IMAGEN-->
+                    <img class="imgProd" src="./img/carpa 1.jpg"> 
+                    </div>
+
+                    <div> <!--NOMBRE DEL PRODUCTO-->
+                        <div class="producto"> 
+                            <span>ALTUS VINSON CARPA</span>
+                        </div>    
+
+                        <div class="descripcion"> <!--DESCRIPCION DEL PRODUCTO-->
+                            <span>Altus Vinson Carpa para alta montaña Altus 2 personas - 4 estaciones/ Expedición.</span>
+                        </div>
+                    </div>    
+
+                </div>
+                
+                    <div class="detalleCompra"> <!--DETALLE DE LA COMPRA DEL PRODUCTO (CANTIDAD, PRECIO, TOTAL)-->
+                        <div> <!--CANTIDAD-->
+                            <H6 class="nombreEtiqueta">CANT</H6> 
+                            <span>
+                                <select name="cantidad" class="cantidad">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </span>
+                        </div>
+
+                        <div> <!-- PRECIO -->
+                            <H6 class="nombreEtiqueta">PRECIO</H6>
+                            <span>$ 39.999,99</span>
+                        </div>
+                        
+                        <div> <!--TOTAL-->
+                            <H6 class="nombreEtiqueta">TOTAL</H6>
+                            <span>$ 39.999,99</span>
+                        </div>
+                        
+                    </div>    
+
+            </article>
+
+        </section>     
+
+
+        <section> <!-- SECCION DE RESUMEN DE LA COMPRA-->    
+
+            <!-- 
+            <div class="resumenCompra">
+                <div>
+                    <H6>TOTAL</H6>
+                    <span>$ 34.999,99</span>
+                </div>                        
+                           
+            </div>
+            -->
+        
+            </section>
+          
+
+    </main>
+
+
+    <footer> FOOTER</footer>
 
 
 </body>
