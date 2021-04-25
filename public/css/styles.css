@@ -4,7 +4,7 @@
 @import url("product-detail.css");
 @import url("styles.css");
 
-
+/* Header */
 header {
     background-color: #FF3E41;
     color: white;
@@ -22,7 +22,7 @@ body {
     background-color: #F2F4F7;
 }
 
-nav {
+header nav {
     display: none;
 }
 
@@ -57,16 +57,71 @@ nav {
     flex-flow: column;
 }
 
+/* Main */
+
+
+
+
+/* Footer */
+
+footer{
+    background-color: #202030;
+    color: #D9DFE7;
+    padding: 10px;    
+}
+
+footer section{
+    margin-top: 10px;
+    margin-bottom: 10px;    
+}
+
+footer p{
+    text-align: center;
+    font-size: 16px;    
+}
+
+footer section .nosotros ul li{
+    font-size: 14px;
+    list-style-type: none;         
+}
+
+footer section .redes .iconos-redes{
+    font-size: 30px;
+    display:flex;
+    justify-content: space-around;
+}
+
+footer section .contacto .whatsapp,
+.email{
+    font-size: 14px;
+    margin-left: 40px;
+}
+
+
+
 /* Version desktop */
 @media screen and (min-width: 361px) {
+    
+    /* Header en Tablet y Desktop */
     .logo .desktop {
         display: block;
     }
     .logo .mobile {
         display: none;
     }
-    nav {
+    header nav {
         display: block;
+    }
+
+    /* Main en Tablet y Desktop */
+
+
+    /* Footer en Tablet y Desktop */
+
+    footer{
+        display: flex;
+        flex-wrap: wrap;        
+        justify-content: space-between;
     }
  }  
 
