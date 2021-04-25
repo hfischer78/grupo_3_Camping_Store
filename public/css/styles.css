@@ -12,6 +12,7 @@ header {
 
 header nav ul {
     list-style-type: none;
+    text-decoration: none;
 }
 
 body {
@@ -19,15 +20,39 @@ body {
     background-color: #F2F4F7;
 }
 
+nav {
+    display: none;
+}
+
 .logo .mobile {
-    height: 70px;
     width: 100px;
 }
 
 .logo .desktop {
-    height: 108px;
     width: 250px;
     display: none;
+}
+
+.top-bar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-bar {
+    margin-left: 180px;
+    font-size: 30px;
+    margin-top: 6px;
+}
+
+.shopping-cart {
+    margin-left: 10px;
+    font-size: 30px;
+    margin-top: 6px;
+}
+
+.category-bar {
+    display: flex;
+    flex-flow: column;
 }
 
 /* Version desktop */
@@ -38,6 +63,8 @@ body {
     .logo .mobile {
         display: none;
     }
-
+    nav {
+        display: block;
+    }
  }  
 
