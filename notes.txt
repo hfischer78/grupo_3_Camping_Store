@@ -3,9 +3,9 @@ Configuraciones generales:
 Fuente: 'Lato'
 
 Paleta colores:
-    -Gris claro: D9DFE7
+    -Gris claro: #D9DFE7
     -Rojo: #FF3E41
-    -Azul: 2B3A67
-    -Azul oscuro: 202030
+    -Azul: #2B3A67
+    -Azul oscuro: #202030
 
 Tamaños: ???
