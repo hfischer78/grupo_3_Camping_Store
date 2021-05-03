@@ -176,18 +176,4 @@ footer section .contacto .whatsapp,
      margin: auto;
  }
 
-
- .productPresentation{
-     display: flex;
-     justify-content: space-between;
- }
- .imgProduct, .prodSpecification{
-     flex-grow: 1;
- }
- .buyElection{
-     display: flex;
-     justify-content: space-between;
- }
- .prodSCQ{
-     display: flex;
- }
+/* Main de Prod Detail en Tablet Desktop */

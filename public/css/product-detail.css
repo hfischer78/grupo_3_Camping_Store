@@ -1,0 +1,37 @@
+.productPresentation{
+    display: flex;
+    justify-content: space-between;
+}
+.imgProduct, .prodSpecification{
+    flex-grow: 1;
+}
+.buyElection{
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 40px;
+}
+.prodSCQ{
+    display: flex;
+    text-align: center;
+}
+
+.prodNPD{
+    text-align:start;
+}
+
+.buyButton{
+    background-color: blue;
+    color: white;
+}
+.prodPrice{
+    text-align: start;
+}
+.prodDiscount{
+    text-align: start;
+color: green;
+}
+
