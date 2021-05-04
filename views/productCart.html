@@ -12,10 +12,47 @@
         <title>CAMPING STORE / CARRITO DE COMPRAS</title>
     </head>
 
-    <header>HEADER</header>
+    <!-- INICIO HEADER ACTUALIZAR!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+    <header>
+        <div class="top-bar">
+            <div class="aviso-banner">
+                <p> Avisos temporales: envíos gratis- cuotas sin interés! </p>
+            </div>
+            <div class="logo">
+                <img src="img/logo-desktop.png" alt="" class="desktop">
+                <img src="img/logo-mobile.png" class="mobile">
+            </div>
+
+            <div class="menu-bar">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class= "shopping-cart">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+            
+            <div class="category-bar">
+                <nav>
+                    <ul>
+                        <li><a href="#">Indumentaria</a></li>
+                        <li><a href="#">Tekking</a></li>
+                        <li><a href="#">Camping</a></li>
+                        <li><a href="#">Pesca</a></li>
+                        <li><a href="#">Ofertas</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+        </div>
+        <form action=""></form>
+    </header>
+
+<!-- FIN HEADER ACTUALIZAR!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
 
     <main>
-            <H2>CARRITO DE COMPRAS</H1> <!--ENCABEZADO-->
+            <H2>CARRITO DE COMPRAS</H2> <!--ENCABEZADO-->
         
         <section> <!-- SECCION CON LOS DETALLES DE LOS ARTICULOS COMPRADOS-->
                         
@@ -113,25 +150,145 @@
         </section>     
 
 
-        <section> <!-- SECCION DE RESUMEN DE LA COMPRA-->    
+        <section class="datosEntrega">  <!-- SECCION DE DATOS DE ENTREGA-->    
 
-            <!-- 
-            <div class="resumenCompra">
-                <div>
-                    <H6>TOTAL</H6>
-                    <span>$ 34.999,99</span>
-                </div>                        
-                           
-            </div>
-            -->
+            
+                          
+                <H3 class="etiquetaSecciones">ENTREGA</H3>
+                <div class="textoEntrega">Selecciona tu opción de retiro o entrega tu producto: </div>
+                 
+                
+                <form action="/" method="GET" class= formularioEntrega>
+                    <div class="contenedorFormEntrega">
+                        <input class="botonFormularioEntrega" type="radio" name="metodo-entrega" value="envio">
+                        <label for="envio">ENVIO</label>
+                        <input class="botonFormularioEntrega" type="radio" name="metodo-entrega" value="sucursal">
+                        <label for="sucursal">SUCURSAL </label>
+                    </div>
+
+                    
+                </form>
+ 
+            
+                <form action="/" method="GET" class= "formularioEntregaDetalle">
+
+                    <div class="contenedor-opciones">
+                        <div class="opcion-entrega">
+                            <p>Ingresa tu código postal:</p>
+                            <input type="text" disabled name="CP" class="seleccionado">
+                            <span class= "errorValidacion">Debe ingresar un valor</span>
+                        </div>
+
+                        <div class="opcion-entrega">
+                            <p>Selecciona la sucursal donde retirarás tu compra:</p>
+                            <select class="seleccionado" disabled name="sucursal">
+                                <option value="Caballito">Caballito</option>
+                                <option value="Palermo">Palermo</option>
+                            </select>
+                        </div>
+                    
+                        <div>
+                            <button type="submit" class="boton">CALCULAR</button>
+                        </div> 
+                        
+                    </div>
+  
+                    
+
+
+
+                </form>
+
+        </section>
+
+        <section> <!-- SECCION DE RESUMEN DE LA COMPRA-->    
+            
+            <H3 class="etiquetaSecciones">RESUMEN DE COMPRA</H3>
+           
+
+                    <article class= "resumen-Compra">
+
+                    <div  class="etiquetaResumenItem"> <!--SUBTOTAL-->
+                        <span>SUBTOTAL:</span>
+                        <span>$ 9.999,99</span>
+                    </div>
+
+                    <div  class="etiquetaResumenItem"> <!-- COSTO DE ENTREGA -->
+                        <span>COSTO DE ENVIO</span>
+                        <span>$ 0,00</span>
+                    </div>
+
+                    <div  class="etiquetaResumenTotal"> <!--TOTAL -->
+                        <span>TOTAL</span>
+                        <span>$ 49.999,98</span>
+                    </div>
+            
+                   
         
+
+                <form action="/" method="GET" class= "formulariofinalizacionCompra">
+
+                    <div class="contenedor-final">
+                                          
+                        <div>
+                            <button type="submit" class="boton">FINALIZAR COMPRA</button>
+                        </div> 
+
+                        <div>
+                            <button type="submit" class="boton">ELEGIR MAS PRODUCTOS</button>
+                        </div> 
+                        
+                    </div>   
+                
+                </form>
+
+            </article> 
+
+
             </section>
           
 
     </main>
 
 
-    <footer> FOOTER</footer>
+<!-- INICIO FOOTER ACTUALIZAR!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+    <footer>
+        <section>
+            <div class= "nosotros">
+                <p>¿Quiénes somos?</p>
+                <nav>
+                    <ul>
+                        <li><a href= "#">About us</a></li>
+                        <li><a href= "#">Envíos y cambios</a></li>
+                        <li><a href= "#">Servicio al cliente</a></li>
+                        <li><a href= "#">Términos y condiciones</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <section>
+            <div class= "redes">
+                <p>Seguinos en:</p>
+                <div class="iconos-redes">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class= "contacto">
+                <p>Contacto</p>
+                <div class="whatsapp"><i class="fab fa-whatsapp"></i> 011-1500000000</div>
+                <div class="email"><i class="far fa-envelope"></i> ecommerce@gmail.com</div>
+            </div>               
+        </section>
+    </footer>
+
+<!-- FIN FOOTER ACTUALIZAR!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
 
 </body>
