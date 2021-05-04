@@ -63,14 +63,21 @@ article{
             }    
         
        
-    /* Estilos Generales de elementos */    
-    .nombreEtiqueta{
-        font-weight: bold;
-        margin: 0px;
-        text-align: center;
-    }
+            /* Estilos Generales de elementos */    
+            .nombreEtiqueta{
+                font-weight: bold;
+                margin: 0px;
+                text-align: center;
+            }
 
+            .icono{
+                text-align: center;
+            }
 
+                .icono i{
+                    color: #2B3A67;
+                    
+                }
 
 /* ENTREGA Y RESUMEN DE COMPRA */
 
@@ -148,6 +155,7 @@ article{
             /* campo del formulario de la opción a completar*/
             .seleccionado{
             width: 200px;
+            opacity: 0.5;
             }
 
         /* Boton para el calculo del costo de envío */
