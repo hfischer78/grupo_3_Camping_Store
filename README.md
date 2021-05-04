@@ -1,3 +1,9 @@
+##ENLACE AL TABLERO:
+
+>TRELLO: https://trello.com/b/169vMlZA
+>GIT: https://github.com/hfischer78/grupo_3_Camping_Store
+
+
 ##Camping Store:
 >Comercializa productos para camping, actividades deportivas (caza, pesca)y turismo aventura. 
 La audiencia objetivo del sitio son personas entre 18 y 60 años principalmente, que disfrutan de la vida al aire libre, turismo aventura y actividades deportivas.
