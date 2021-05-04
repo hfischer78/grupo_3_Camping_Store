@@ -22,6 +22,7 @@ header {
 header nav ul {
     list-style-type: none;
     text-decoration: none;
+    width: 100%; 
 }
 
 body {
@@ -57,9 +58,10 @@ body {
     padding-right: 10px;
 }
 
-.shopping-cart {
+.shopping-cart a{
     margin-left: 10px;
     font-size: 20px;
+    color: white;
 }
 
 
