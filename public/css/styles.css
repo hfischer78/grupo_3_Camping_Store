@@ -37,7 +37,6 @@ body {
 }
 
 .logo .desktop {
-    width: 250px;
     display: none;
 }
 
@@ -202,11 +201,12 @@ footer section .contacto .whatsapp,
 
 /* Version Tablet y Desktop */
 
-@media screen and (min-width: 361px) {
+@media screen and (min-width: 415px) {
 
     .logo .desktop {
         display: block;
-        width: 160px;
+        width: auto;
+        max-height: 60px;
     }
 
     .logo .mobile {
@@ -220,18 +220,34 @@ footer section .contacto .whatsapp,
 
     .category-bar {
         display: block;
-
-    }
-
-    .categories {
-        display: block;
-        display: flex;
-        justify-content: space-between;
-        flex-flow: column;
+        width: 100%;
     }
 
     .category-bar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
         display: flex;
+        justify-content: space-around;
+    }
+
+
+
+    .category-bar a {
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        padding: 5px 0;
+        font-size: 14px;
+        text-align: center;
+        padding: 14px 16px;
+    }
+
+    .top-bar {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 }
 
@@ -241,7 +257,7 @@ footer section .contacto .whatsapp,
     /* Header en Tablet y Desktop */
     .logo .desktop {
         display: block;
-        width: 250px;
+        max-width: 300px;
     }
 
     .logo .mobile {
