@@ -281,7 +281,7 @@ footer section .contacto .whatsapp,
 
     /* Main en Tablet */
 
-    main section{
+    .index-main section{
         display:flex;         
         margin:10px;  
         flex-wrap:wrap; 
