@@ -135,19 +135,41 @@ input {
 main {
     width: 90%;
     margin: 0 auto;
+    padding-bottom: 10px;
 }
 
 main h3 {
     text-align: center;
     color: black;
+    margin: 10px 0;
 }
 
 main section .producto-oferta {
     border: 1px solid #D9DFE7;
+    margin-top: 5px;
+    width: 100%;
+    position: relative;
 }
 
 main section .producto-oferta img {
     width: 100%;
+}
+
+main section article .caja-productos{
+    background-color: #D9DFE7;
+    padding: 10px;
+}
+
+main section article i{
+    display: block;
+    color: red;
+    font-size: 25px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;      
+    position: absolute;
+    left: 5px; 
+    top: 5px; 
 }
 
 /* Footer */
@@ -169,8 +191,13 @@ footer p {
     font-weight: bold;
 }
 
+footer section nav{
+    padding:5px;
+}
+
 footer section .nosotros ul {
     padding-inline-start: 0;
+    text-align:center;
 }
 
 footer section .nosotros ul li {
@@ -187,6 +214,7 @@ footer section .redes .iconos-redes {
     font-size: 30px;
     display: flex;
     justify-content: space-around;
+    padding: 5px;
 }
 
 footer section .redes .iconos-redes i {
@@ -196,12 +224,16 @@ footer section .redes .iconos-redes i {
 footer section .contacto .whatsapp,
 .email {
     font-size: 70%;
+    padding-top: 10px;
+    text-align:center;
 }
 
 
-/* Version Tablet y Desktop */
+/* Version Tablet */
 
 @media screen and (min-width: 415px) {
+
+    /* Header en Tablet */
 
     .logo .desktop {
         display: block;
@@ -212,7 +244,6 @@ footer section .contacto .whatsapp,
     .logo .mobile {
         display: none;
     }
-
 
     .menu-bar {
         display: none;
@@ -231,8 +262,6 @@ footer section .contacto .whatsapp,
         justify-content: space-around;
     }
 
-
-
     .category-bar a {
         text-decoration: none;
         color: white;
@@ -249,30 +278,24 @@ footer section .contacto .whatsapp,
         flex-wrap: wrap;
         justify-content: space-around;
     }
-}
 
-/* Version desktop */
-@media screen and (min-width: 769px) {
+    /* Main en Tablet */
 
-    /* Header en Tablet y Desktop */
-    .logo .desktop {
-        display: block;
-        max-width: 300px;
+    main section{
+        display:flex;         
+        margin:10px;  
+        flex-wrap:wrap; 
+        justify-content: space-between;   
+        align-items: flex-start;                     
+    }
+    
+    main section .producto-oferta{
+        max-width: 45%; 
+        margin:5px;  
     }
 
-    .logo .mobile {
-        display: none;
-    }
-
-    header nav {
-        display: block;
-    }
-
-    /* Main en Tablet y Desktop */
-
-
-    /* Footer en Tablet y Desktop */
-
+    /* Footer en Tablet */
+    
     footer {
         display: flex;
         justify-content: space-between;
@@ -286,6 +309,35 @@ footer section .contacto .whatsapp,
         border-left: 2px solid #D9DFE7;
         border-right: 2px solid #D9DFE7;
     }
+}
+
+
+/* Version desktop */
+@media screen and (min-width: 769px) {
+
+    /* Header en Desktop */
+    .logo .desktop {
+        display: block;
+        max-width: 300px;
+    }
+
+    .logo .mobile {
+        display: none;
+    }
+
+    header nav {
+        display: block;
+    }    
+
+    /* Main en Desktop */
+    
+    main section .producto-oferta{
+        max-width: 23%;
+    }
+
+
+    /* Footer en Desktop */
+
 }
 
 .aviso-banner {
