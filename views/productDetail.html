@@ -16,37 +16,50 @@
 <body>
 
     <header>
+        <div class="aviso-banner">
+            <p> Avisos temporales: envíos gratis- cuotas sin interés! </p>
+        </div>
         <div class="top-bar">
-            <div class="aviso-banner">
-                <p> Avisos temporales: envíos gratis- cuotas sin interés! </p>
-            </div>
+
             <div class="logo">
                 <img src="img/logo-desktop.png" alt="" class="desktop">
                 <img src="img/logo-mobile.png" class="mobile">
             </div>
 
+            <form class="searcher" action="search" method="get">
+                <input class="search-bar" type="text" placeholder="Qué andas buscando?">
+                <div class="lupa">
+                    <button class="lupa button-search-bar" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </form>
+
+            <div class="shopping-cart">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+
             <div class="menu-bar">
                 <i class="fas fa-bars"></i>
             </div>
-
-            <div class= "shopping-cart">
-                <i class="fas fa-shopping-cart"></i>
-            </div>
             
-            <div class="category-bar">
-                <nav>
+            <nav class="category-bar">
+                <div class="">
                     <ul>
                         <li><a href="#">Indumentaria</a></li>
-                        <li><a href="#">Tekking</a></li>
+                        <li><a href="#">Trekking</a></li>
                         <li><a href="#">Camping</a></li>
                         <li><a href="#">Pesca</a></li>
                         <li><a href="#">Ofertas</a></li>
                     </ul>
-                </nav>
-            </div>
-            
+                </div>
+                
+            </nav>
+
+
         </div>
-        <form action=""></form>
+
+        </div>
     </header>
     
     <main class="pageProdDetail">
@@ -104,9 +117,9 @@
         </div>
         <div class="prodDescription">
             <h3 class="prodNPD">Descripcion del Producto</h3>
-            <p>Large Throw Tent Outdoor 3-4Persons Automatic Speed Open Throwing Pop Up</p>
-            <p>The NORTHFACE lanza una carpa que resiste vientos de hasta 100km/h</p>
-            <p>La Tienda tiene un escpacio para cuatro personas y se puede estar parado en su interior. Es liviana y facil de transportar</p>
+            <p class="textProdDetail">Large Throw Tent Outdoor 3-4Persons Automatic Speed Open Throwing Pop Up</p>
+            <p class="textProdDetail">The NORTHFACE lanza una carpa que resiste vientos de hasta 100km/h</p>
+            <p class="textProdDetail">La Tienda tiene un escpacio para cuatro personas y se puede estar parado en su interior. Es liviana y facil de transportar</p>
         </div>
     </main>
 
