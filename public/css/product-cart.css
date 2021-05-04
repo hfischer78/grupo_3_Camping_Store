@@ -13,7 +13,7 @@ h2{
 /* Estilos de de los articulos (productos comprados y detalles) */
 
 article{
-    border-bottom:solid 1px black;
+    border-bottom: solid 1px grey;
 }
 
     /* Estilos del contenedor de Imagen, Producto y descripción */
@@ -63,24 +63,129 @@ article{
             }    
         
        
-    /* Estilos Generales de elementos */    
-    .nombreEtiqueta{
-        font-weight: bold;
-        margin: 0px;
-        text-align: center;
+            /* Estilos Generales de elementos */    
+            .nombreEtiqueta{
+                font-weight: bold;
+                margin: 0px;
+                text-align: center;
+            }
+
+            .icono{
+                text-align: center;
+            }
+
+                .icono i{
+                    color: #2B3A67;
+                    
+                }
+
+/* ENTREGA Y RESUMEN DE COMPRA */
+
+
+.etiquetaSecciones{
+    border-bottom:solid black;
+    margin: 10px 0px 25px 0px;
+    padding: 10px;
+}
+
+
+
+    /* SECCION DATO DE ENTREGA */
+    
+    /*Estilo General de la sección */
+    .datosEntrega{ 
+        width: 100%;
+    }
+    
+    /* Texto para elegir opción de entrega */
+    .textoEntrega{
+        font-style: italic;
+    }
+
+    /* Formulario para elección de forma de entrega de producto */
+    .formularioEntrega{
+        margin: 20px;
+        flex-wrap: wrap;
+    }
+
+        /*Contenedor de los botones checkbox para elegir forma de entrega*/
+        .contenedorFormEntrega{
+            display: flex;
+            margin: 0px;
+            align-items: center;
+        }
+
+            /* Etiqueta de los botones */
+            .contenedorFormEntrega label{
+            font-style: italic;
+            font-weight: bold;
+            }
+
+            /* Botones de opcion */
+            .botonFormularioEntrega{
+                margin-right: 10px;
+                margin-left: 10px;
+                padding: 10px;
+            }
+    
+    /* formulario para completar CP o elegir sucursal de entrega del producto */
+    /*.formularioEntregaDetalle{}*/
+
+        
+        /* Contenedor de las opciones para completar, de acuerdo al método de entrega elegido */
+        .contenedor-opciones{
+            display: block
+        }
+
+            /* formulario: etiqueta + campos de formulario // para completar de acuerdo a opciones seleccionadas */
+            .opcion-entrega{
+                margin-bottom: 10px;
+                width: 100%;
+            }
+
+            /* SPAN para validacion de formulario */
+            .errorValidacion{
+                display: none;
+            }
+
+            .contenedor-opciones p{
+                font-style: italic;
+            }
+
+            /* campo del formulario de la opción a completar*/
+            .seleccionado{
+            width: 200px;
+            opacity: 0.5;
+            }
+
+        /* Boton para el calculo del costo de envío */
+        .boton{
+         background-color: #2B3A67;   
+         color: white
+            
     }
 
 
-    /* PENDIENTE DE PROGRAMACION 
-    .resumenCompra{
-        width: 50%;
-        display: flex;
-        justify-content:start; 
-        flex-wrap: wrap; 
-        margin: 10px;
-     }
-*/
+/* RESUMEN DE COMPRA */
+ 
+.resumen-Compra{
 
+    display: block;
+    margin-bottom: 20px;
+    border: none;
+}
 
-
+.etiquetaResumenItem{
+margin: 10px;
+}
     
+.etiquetaResumenTotal{
+margin: 10px;
+font-weight: bold;
+}
+
+.contenedor-final{
+    display: flex;
+    justify-content: space-around;
+
+}
