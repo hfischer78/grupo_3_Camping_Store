@@ -138,7 +138,7 @@ main {
     padding-bottom: 10px;
 }
 
-main h3 {
+main .h3-home {
     text-align: center;
     color: black;
     margin: 10px 0;
