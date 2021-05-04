@@ -2,7 +2,12 @@
 @import url("login.css");
 @import url("product-cart.css");
 @import url("product-detail.css");
-@import url("styles.css");
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;  
+}
 
 /* Header */
 header {
@@ -22,9 +27,8 @@ body {
     background-color: #F2F4F7;
 }
 
-header nav {
-    display: none;
-}
+
+
 
 .logo .mobile {
     width: 100px;
@@ -37,13 +41,14 @@ header nav {
 
 .top-bar {
     display: flex;
-    flex-wrap: wrap;
+    padding: 3px;
 }
 
 .menu-bar {
-    margin-left: 180px;
     font-size: 30px;
     margin-top: 6px;
+    font-weight: 80;
+    display: block;
 }
 
 .shopping-cart {
@@ -52,11 +57,53 @@ header nav {
     margin-top: 6px;
 }
 
-.category-bar {
-    display: flex;
-    flex-flow: column;
+
+
+/* Barra de busqueda */
+
+input {
+    text-indent: 10px;
 }
 
+.search-bar {
+    background-color: white;
+    width: 100%;
+    height: 35px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    border: none;
+    max-width: 500px;
+}
+
+.search-bar input {
+    border: none;
+
+}
+
+.lupa i {
+    cursor: pointer;
+    color: #cac7c7fa;
+}
+
+.lupa {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px; 
+    top: 0;
+    right: 0;
+    padding: 6px 7px;
+    z-index: 2;
+}
+
+.test {
+    position: relative;
+}
+
+.category-bar {
+    display: none;
+}
 /* Main */
 
 
@@ -98,13 +145,47 @@ footer section .contacto .whatsapp,
 }
 
 
+/* Version Tablet */
+
+@media screen and (min-width: 361px) {
+
+    .logo .desktop {
+        display: block;
+        width: 160px;
+    }
+    .logo .mobile {
+        display: none;
+    }
+
+
+    .menu-bar {
+        display: none;
+    }
+    
+    .category-bar {
+        display: block;
+       
+    }
+    
+    .categories {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: column;
+    }
+    
+    .category-bar ul {
+        display: flex;
+    }
+}
 
 /* Version desktop */
-@media screen and (min-width: 361px) {
+@media screen and (min-width: 769px) {
     
     /* Header en Tablet y Desktop */
     .logo .desktop {
         display: block;
+        width: 250px;
     }
     .logo .mobile {
         display: none;
