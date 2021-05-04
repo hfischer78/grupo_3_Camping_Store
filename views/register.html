@@ -15,11 +15,135 @@
 
 <body>
 
-    <header>REGISTRO</header>
-    
-    <main></main>
+    <header>
+        <div class="aviso-banner">
+            <p> Avisos temporales: envíos gratis- cuotas sin interés! </p>
+        </div>
+        <div class="top-bar">
 
-    <footer></footer>
+            <div class="logo">
+                <img src="img/logo-desktop.png" alt="" class="desktop">
+                <img src="img/logo-mobile.png" class="mobile">
+            </div>
+
+            <form class="searcher" action="search" method="get">
+                <input class="search-bar" type="text" placeholder="Qué andas buscando?">
+                <div class="lupa">
+                    <button class="lupa button-search-bar" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </form>
+
+            <div class="shopping-cart">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+
+            <div class="menu-bar">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav class="category-bar">
+                <div class="">
+                    <ul>
+                        <li><a href="#">Indumentaria</a></li>
+                        <li><a href="#">Trekking</a></li>
+                        <li><a href="#">Camping</a></li>
+                        <li><a href="#">Pesca</a></li>
+                        <li><a href="#">Ofertas</a></li>
+                    </ul>
+                </div>
+                
+            </nav>
+
+
+        </div>
+
+        </div>
+
+    </header>
+    
+    <main class= "main-register">
+       
+            <!--Contenedor de formulario y etiqueta de registro-->           
+            <div class="contRegistro">
+                <h3 class="etiquetaRegister">
+                    REGISTRARSE
+                </h3>
+                    <div class="register">
+                        <form action="/" method="GET" class= form-registro >
+                                                    
+                                <div class="control-formulario-registro">
+                                    <label>Nombre de usuario</label>
+                                    <input type="mail" name="nombre" class="control-registro">
+                                </div>
+
+                                <div class="control-formulario-registro">
+                                    <label>Direccion de Correo</label>
+                                    <input type="text" name="nombre" class="control-registro">
+                                </div>
+                
+                    
+                                <div class="control-formulario-registro">
+                                    <label>Contraseña:</label>
+                                    <input type="password" name="password" class="control-registro">
+                                </div>
+                                
+                                <div class="div-btn-registro">
+                                <button type="submit" class="boton-formulario-registro">REGISTRARSE</button>
+                            </div>
+                        </form>
+                    </div> 
+            </div>    
+            
+            
+                 
+            <!-- Contenedor de Informacion sobre el registro-->
+            <div class="infoRegistro">
+                <h3 class="etiquetaRegister">
+                    LOGIN
+                </h3>
+                <p>Registrarse en este sitio le permite acceder al estado y al historial de su pedido. Simplemente complete los campos a continuación y obtendrá una nueva cuenta configurada para usted en poco tiempo. 
+                </p>
+            </div>    
+
+    </main>
+
+
+    <footer>
+        <section>
+            <div class="nosotros">
+                <p>¿Quiénes somos?</p>
+                <nav>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Envíos y cambios</a></li>
+                        <li><a href="#">Servicio al cliente</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    
+        <section>
+            <div class="redes">
+                <p>Seguinos en:</p>
+                <div class="iconos-redes">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+        </section>
+    
+        <section>
+            <div class="contacto">
+                <p>Contacto</p>
+                <div class="whatsapp"><i class="fab fa-whatsapp"></i> 011-1500000000</div>
+                <div class="email"><i class="far fa-envelope"></i> ecommerce@gmail.com</div>
+            </div>
+        </section>
+    </footer>
 
 
 </body>

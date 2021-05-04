@@ -1,0 +1,45 @@
+
+.main-register{
+
+display:flex;
+justify-content: space-between;
+margin: 20px
+}
+
+.etiquetaRegister{
+    text-align: center;
+}
+
+.contRegistro{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+}
+
+    .register{
+        margin-top: 10px;   
+        display:flex;
+        justify-content: center;
+    }
+
+    
+    
+            /* Boton para el calculo del costo de envío */
+            .boton-formulario-registro{
+                background-color: #2B3A67;   
+                color: white;
+                margin-top: 20px;
+                }
+    
+
+.infoRegistro{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    border-left: solid black; 
+    width: 50%;
+}
+
+ 
