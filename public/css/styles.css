@@ -132,35 +132,35 @@ input {
 
 /* Main */
 
-main {
+.index-main {
     width: 90%;
     margin: 0 auto;
     padding-bottom: 10px;
 }
 
-main .h3-home {
+.index-main .h3-home {
     text-align: center;
     color: black;
     margin: 10px 0;
 }
 
-main section .producto-oferta {
+.index-main section .producto-oferta {
     border: 1px solid #D9DFE7;
     margin-top: 5px;
     width: 100%;
     position: relative;
 }
 
-main section .producto-oferta img {
+.index-main section .producto-oferta img {
     width: 100%;
 }
 
-main section article .caja-productos{
+.index-main section article .caja-productos{
     background-color: #D9DFE7;
     padding: 10px;
 }
 
-main section article i{
+.index-main section article i{
     display: block;
     color: red;
     font-size: 25px;
@@ -289,7 +289,7 @@ footer section .contacto .whatsapp,
         align-items: flex-start;                     
     }
     
-    main section .producto-oferta{
+    .index-main section .producto-oferta{
         max-width: 45%; 
         margin:5px;  
     }
@@ -331,7 +331,7 @@ footer section .contacto .whatsapp,
 
     /* Main en Desktop */
     
-    main section .producto-oferta{
+    .index-main section .producto-oferta{
         max-width: 23%;
     }
 
