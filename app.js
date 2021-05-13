@@ -11,7 +11,7 @@ app.use(express.static(publicPath));
 
 //Configuración rutas
 app.use('/', rutasMain);
-app.use('/products', rutasProductos);
+app.use('/productos', rutasProductos);
 
 //Configuración del Servidor
 app.listen(3000, function () {

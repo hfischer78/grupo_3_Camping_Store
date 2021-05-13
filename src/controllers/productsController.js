@@ -6,5 +6,4 @@ let controladorProductos = {
     }
 }
 
-
-module.exports= controladorProductos;
+module.exports = controladorProductos;
