@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+
+    <%- include("../partials/head")%>
+
+
+<body>
+
+    <%- include("../partials/header")%>
+    
+    <main class="pageProdDetail">
+        <div class="productPresentation">
+            <div class="imgProduct">
+                <img src="/img/Carpas para Camping.jpg" alt="CarpaParaCamping">
+            </div>
+            <div class="prodSpecification">
+                <div class="prodNPD">
+                    <h2 class="prodNPD">NORTHFACE 4567 ULTRALIGHT TENT</h2>
+                    <h3 class="prodPrice">Precio: $43.990</h3> <h3 class="prodDiscount">Descuento: 30%</h3>
+                </div>
+                <div class="buyElection">
+                    <div class="prodSCQ">
+                        <nav class="prodSize">
+                            <div class="controldelformulario">
+                                <label>Talle</label>
+                                <select name="Size" id=""class="controlSelect">
+                                    <option value="Big">Grande</option>
+                                    <option value="Medium">Mediano</option>
+                                    <option value="Small">Pequeño</option>
+                                </select>
+                            </div>
+                        </nav>
+                        <nav class="prodColor">
+                            <div class="controldelformulario">
+                                <label>Color</label>
+                                <select name="Color" id=""class="controlSelect">
+                                    <option value="yellow">Amarillo</option>
+                                    <option value="orange">Naranja</option>
+                                    <option value="green">Verde</option>
+                                    <option value="lightblue">Celeste</option>
+                                </select>
+                            </div>
+                        </nav>
+                        <nav class="prodQuantity">
+                            <div class="controldelformulario">
+                                <label>Cantidad</label>
+                                <select name="prodQuantity" id=""class="controlSelect">
+                                    <option value="1">1 Carpa</option>
+                                    <option value="2">2 Carpas</option>
+                                    <option value="3">3 Carpas</option>
+                                    <option value="4">4 Carpas</option>
+                                    <option value="5">5 Carpas</option>
+                                    <option value="6">6 Carpas</option>
+                                </select>
+                            </div>
+                        </nav>
+                    </div>
+                    <div>
+                        <button class="buyButton">COMPRAR</button>
+                    </div>    
+                </div>
+            </div>
+        </div>
+        <div class="prodDescription">
+            <h3 class="prodNPD">Descripcion del Producto</h3>
+            <p class="textProdDetail">Large Throw Tent Outdoor 3-4Persons Automatic Speed Open Throwing Pop Up</p>
+            <p class="textProdDetail">The NORTHFACE lanza una carpa que resiste vientos de hasta 100km/h</p>
+            <p class="textProdDetail">La Tienda tiene un escpacio para cuatro personas y se puede estar parado en su interior. Es liviana y facil de transportar</p>
+        </div>
+    </main>
+
+    <%- include("../partials/footer")%>
+
+
+</body>

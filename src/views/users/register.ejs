@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("../partials/head")%>
+
+
+<body>
+
+    <%- include("../partials/header")%>
+
+    <main class= "main-register">
+       
+            <!--Contenedor de formulario y etiqueta de registro-->           
+            <div class="contRegistro">
+                <h3 class="etiquetaRegister">
+                    REGISTRARSE
+                </h3>
+                    <div class="register">
+                        <form action="/" method="GET" class= form-registro >
+                                                    
+                                <div class="control-formulario-registro">
+                                    <label>Nombre de usuario</label>
+                                    <input type="mail" name="nombre" class="control-registro">
+                                </div>
+
+                                <div class="control-formulario-registro">
+                                    <label>Direccion de Correo</label>
+                                    <input type="text" name="nombre" class="control-registro">
+                                </div>
+                
+                    
+                                <div class="control-formulario-registro">
+                                    <label>Contraseña:</label>
+                                    <input type="password" name="password" class="control-registro">
+                                </div>
+                                
+                                <div class="div-btn-registro">
+                                <button type="submit" class="boton-formulario-registro">REGISTRARSE</button>
+                            </div>
+                        </form>
+                    </div> 
+            </div>    
+            
+            
+                 
+            <!-- Contenedor de Informacion sobre el registro-->
+            <div class="infoRegistro">
+                <h3 class="etiquetaRegister">
+                    LOGIN
+                </h3>
+                <p>Registrarse en este sitio le permite acceder al estado y al historial de su pedido. Simplemente complete los campos a continuación y obtendrá una nueva cuenta configurada para usted en poco tiempo. 
+                </p>
+            </div>    
+
+    </main>
+
+
+    
+    <%- include("../partials/footer")%>
+
+
+</body>

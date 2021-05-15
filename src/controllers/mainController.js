@@ -6,11 +6,11 @@ let controlador = {
     },
 
     login: function (renpq, res) {
-        res.render(path.resolve(__dirname,"../views/login.ejs"))
+        res.render(path.resolve(__dirname,"../views/users/login.ejs"))
     },
 
     registro: function (renpq, res) {
-        res.render(path.resolve(__dirname,"../views/register.ejs"))    
+        res.render(path.resolve(__dirname,"../views/users/register.ejs"))    
     },
 
     carrito: function (renpq, res) {

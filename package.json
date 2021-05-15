@@ -2,9 +2,9 @@
   "name": "campingstore",
   "version": "1.0.0",
   "description": "Camping Store:\r Comercializa productos para camping, actividades deportivas (caza, pesca)y turismo aventura. \r La audiencia objetivo del sitio son personas entre 18 y 60 años principalmente, que disfrutan de la vida al aire libre, turismo aventura y actividades deportivas.",
-  "main": "app.js",
+  "main": "./src/app.js",
   "scripts": {
-    "start": "nodemon ./app.js"
+    "start": "nodemon ./src/app.js"
   },
   "repository": {
     "type": "git",
