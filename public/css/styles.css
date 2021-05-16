@@ -177,6 +177,8 @@ input {
     top: 5px; 
 }
 
+
+
 /* Footer */
 
 footer {
@@ -338,6 +340,17 @@ footer section .contacto .whatsapp,
     
     .index-main section .producto-oferta{
         max-width: 23%;
+    }
+
+    @keyframes bounce { 
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+    }
+
+    .pig-sale:hover {
+            animation: bounce 0.3s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
     }
 
 
