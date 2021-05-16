@@ -8,6 +8,7 @@ margin: 20px
 
 .etiquetaRegister{
     text-align: center;
+     
 }
 
 .contRegistro{
@@ -19,6 +20,7 @@ margin: 20px
 
     .register{
         margin-top: 10px;   
+        padding-top: 50px;
         display:flex;
         justify-content: center;
     }

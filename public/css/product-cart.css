@@ -1,5 +1,13 @@
 
 
+
+/* Estilo del main en el carrtito */
+
+.mainCarrito{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 /* Estilo de la etiqueta que contiene el nombre DETALLE DE PRODUCTO */
 
 h2{
