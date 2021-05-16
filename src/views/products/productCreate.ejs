@@ -8,8 +8,71 @@
 <body>
 
     <%- include("../partials/header")%>
-   
-    <h2>ACA VA EL FORMULARIO</h2>
+   <main>
+        <form action="/crearproducto" method="POST"  class="createform">
+            <div class="controldelformulario">
+                <label>Nombre del Producto</label>
+                <input type="text" name="Nombre" class="control">
+            </div>
+            <div class="controldelformulario">
+            <label>Seleccionar una imagen para el Producto:</label>
+            <input type="file" name="fotoDeProducto" accept=".jpg" multiple class="control">
+            </div>
+            <div class="controldelformulario">
+                <label>Precio $ </label>
+                <input type="number"name="Precio" placeholder="123,45"class="control">
+            </div>
+            <div class="controldelformulario">
+                <label>Descuento % </label>
+                <input type="number"name="Descuento" placeholder="30%"class="control">
+            </div>
+            <div class="controldelformulario">
+                <label>Categoria</label>
+                <select name="Categoria" id=""class="control">
+                    <option value="Indumentaria">Indumentaria</option>
+                    <option value="Trekking">Trekking</option>
+                    <option value="Camping">Camping</option>
+                    <option value="Pesca">Pesca</option>
+                </select>
+            </div>
+            
+            <div class="controldelformulario">
+                <label>Talle</label>
+                <select name="Talle" id=""class="control">
+                    <option value="Grande">Grande</option>
+                    <option value="Mediano">Mediano</option>
+                    <option value="Pequeño">Pequeño</option>
+                    <option value="N/A">No Aplica</option>
+                </select>
+            </div>
+            
+            <div class="controldelformulario">
+                <label>Color</label>
+                <select name="Color" id=""class="control">
+                    <option value="Rojo">Rojo</option>
+                    <option value="Amarillo">Amarillo</option>
+                    <option value="Naranja">Naranja</option>
+                    <option value="Blanco">Blanco</option>
+                    <option value="N/A">No Aplica</option>
+                </select>
+            </div>
+            
+            <div  class="controldelformulario">
+                <label for="">Descripcion del Producto</label>
+                <textarea name="descripcion" id="" cols="30" rows="10"class="control"></textarea>
+
+            </div>
+            <div  class="controldelformulario">
+           <label>Esta en oferta?</label>
+            <input type="radio" name="EnOferta">
+            </div>
+            <div  class="controldelformulario">
+        <button type="submit">Guardar</button>
+        <button type="reset">Borrar</button>
+            </div>
+                   
+        </form>
+    </main>
 
     <%- include("../partials/footer")%>
 
