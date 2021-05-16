@@ -1,3 +1,5 @@
+                                        "PRIMER SPRINT"
+
 ##Apectos que funcionaron bien:
 
 >Se asignaron prontamente las tareas, asumiendo cada integrante las responsabilidades de su ejecución
@@ -7,4 +9,21 @@
 
 >Identificamos como oportunidad de mejora reunirnos con mayor frecuencia, para poder coordinar acciones de manera más agil y poder asistirnos entre nosotros.
 >Identificamos como oportunidad de mejora utilizar con mayor profundiad la herramienta de Trello.
+
+
+
+                                        "SEGUNDO SPRINT"
+
+##Apectos que funcionaron bien:
+
+>Volvimos a detectar los aspectos que funcionaron bien en el sprint anterior, como asignar prontamente las tareas e implementar las acciones requeridas.
+>Tras no lograr la implementación de reuniones con mas frecuencia, pudimos apoyarnos más en la herramienta de Trello para mantenernos al tanto de los avances.
+
+##Aspectos que podemos mejorar:
+
+>No esperar al día de la reunión para informar que vamos haciendo y como avanzamos.
+>Tener las presentaciones un día antes para hacer una revisión en conjunto y probarlo.
+>Profundizar más en la utilización de Trello y apoyarnos en eso para suplir las dificultades de encuentros diarios que tenemos para coordinar.
+
+
 
