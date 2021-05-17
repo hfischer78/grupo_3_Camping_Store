@@ -139,6 +139,11 @@ input {
 
 /* Main */
 
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .index-main {
     width: 90%;
     margin: 0 auto;

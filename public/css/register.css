@@ -3,27 +3,41 @@
 
 display:flex;
 justify-content: space-between;
-margin: 20px
+margin: 10px
 }
 
 .etiquetaRegister{
-    text-align: center;
-     
+    text-align: center;         
 }
 
 .contRegistro{
     width: 50%;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;    
 }
 
     .register{
         margin-top: 10px;   
-        padding-top: 50px;
+        padding-top: 40px;
         display:flex;
         justify-content: center;
     }
+
+    .control-formulario-registro{
+        margin: 5px 0px;
+    }
+
+            .control-registro{
+                width:90%;
+                background-color: white;
+                margin-top: 5px;    
+                border-radius: 14px;
+                border: solid 1px #c7c7c7;  
+                font-size: 16px;              
+            }
+
+            .div-btn-registro{
+                text-align: center;
+            }
 
     
     
