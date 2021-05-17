@@ -25,10 +25,14 @@ display: block;
 }
 
 button{
-    background-color: #39b54a;
+    background-color: #2B3A67;
     border: none;
     font-size: 20px;
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
+}
+
+.ButtonMalo{
+    background-color: #FF3E41;
 }

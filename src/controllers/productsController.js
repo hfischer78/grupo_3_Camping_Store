@@ -10,6 +10,11 @@ let controladorProductos = {
     create: function (renpq, res) {
         //res.render(path.resolve(__dirname,"../views/productDetail.ejs"))
     res.render("./products/productCreate")
+    },
+
+    edit: function (renpq, res) {
+        //res.render(path.resolve(__dirname,"../views/productDetail.ejs"))
+    res.render("./products/productEdit")
     }
 
 }
