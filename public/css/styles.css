@@ -59,13 +59,15 @@ body {
     padding-right: 10px;
 }
 
-.shopping-cart a{
-    margin-left: 10px;
+.header-icon {
+    padding-left: 15px;
     font-size: 20px;
     color: white;
 }
 
-
+.container-header-icons {
+    display: flex;
+}
 
 /* Barra de busqueda */
 
@@ -81,6 +83,7 @@ input {
     font-size: 12px;
     display: inline-block;
     width: 80%;
+    line-height: 31px;
 }
 
 .search-bar input {
@@ -103,15 +106,14 @@ input {
     background: transparent;
     border: none;
     cursor: pointer;
-    display: inline-block;
     font-size: 14px;
     top: 0;
     right: 0;
     z-index: 2;
-    width: 10%;
     padding-right: 3px;
     padding-top: 6px;
     padding-bottom: 6px;
+    float: right;
 }
 
 .button-search-bar {
@@ -136,6 +138,11 @@ input {
 }
 
 /* Main */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 .index-main {
     width: 90%;
@@ -176,6 +183,8 @@ input {
     left: 5px; 
     top: 5px; 
 }
+
+
 
 /* Footer */
 
@@ -233,12 +242,27 @@ footer section .contacto .whatsapp,
     text-align:center;
 }
 
+/* Version mobile */
+
+/* Header mobile */
+
+.registrate{
+    display: none;
+}
+
+.ingresa {
+    display: none;
+}
 
 /* Version Tablet */
 
 @media screen and (min-width: 415px) {
 
     /* Header en Tablet */
+
+    .searcher {
+        width: 40%;
+    }
 
     .logo .desktop {
         display: block;
@@ -284,6 +308,16 @@ footer section .contacto .whatsapp,
         justify-content: space-around;
     }
 
+    .registrate {
+        display: block;
+        color: white;
+    }
+
+    .ingresa {
+        display: block;
+        color: white;
+    }
+
     /* Main en Tablet */
 
     .index-main section{
@@ -316,11 +350,15 @@ footer section .contacto .whatsapp,
     }
 }
 
-
 /* Version desktop */
 @media screen and (min-width: 769px) {
 
     /* Header en Desktop */
+    .top-bar {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
     .logo .desktop {
         display: block;
         max-width: 300px;
@@ -338,6 +376,17 @@ footer section .contacto .whatsapp,
     
     .index-main section .producto-oferta{
         max-width: 23%;
+    }
+
+    @keyframes bounce { 
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+    }
+
+    .pig-sale:hover {
+            animation: bounce 0.3s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
     }
 
 

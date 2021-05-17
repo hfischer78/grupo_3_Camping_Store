@@ -1,5 +1,14 @@
 
 
+
+/* Estilo del main en el carrtito */
+
+.mainCarrito{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
 /* Estilo de la etiqueta que contiene el nombre DETALLE DE PRODUCTO */
 
 h2{
@@ -20,7 +29,7 @@ article{
     .cartProduct{
         display:flex;
         justify-content:start;
-        flex-wrap: wrap;
+        /*flex-wrap: wrap;*/
         width: 100%;
         padding: 5px;
         box-sizing: border-box;
@@ -186,6 +195,10 @@ font-weight: bold;
 
 .contenedor-final{
     display: flex;
-    justify-content: space-around;
-
+    justify-content: space-around;    
 }
+
+.contenedor-final div{
+    margin: 0px 5px;
+}
+

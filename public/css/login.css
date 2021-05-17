@@ -1,6 +1,6 @@
 .form-input {
     background-color: white;
-    width: 100%;
+    width: 80%;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     max-width: 500px;
@@ -29,6 +29,7 @@
 .input-group {
     margin-bottom: 20px;
     display: flex;
+    justify-content: center;
 }
 
 .input-group span {
