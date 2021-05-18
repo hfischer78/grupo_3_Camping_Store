@@ -19,6 +19,7 @@
 >Volvimos a detectar los aspectos que funcionaron bien en el sprint anterior, como asignar prontamente las tareas e implementar las acciones requeridas.
 >Tras no lograr la implementación de reuniones con mas frecuencia, pudimos apoyarnos más en la herramienta de Trello para mantenernos al tanto de los avances.
 
+
 ##Aspectos que podemos mejorar:
 
 >No esperar al día de la reunión para informar que vamos haciendo y como avanzamos.
