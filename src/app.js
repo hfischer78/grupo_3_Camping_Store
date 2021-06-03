@@ -1,6 +1,8 @@
 const express = require("express");
 const path = require('path');
 const app = express();
+const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+
 
 let rutasMain = require('./routes/main.js');
 let rutasProductos = require('./routes/products.js');
@@ -13,6 +15,7 @@ const publicPath = path.resolve(__dirname,"../public");
 app.use(express.static(publicPath));
 
 //Configuración rutas
+app.use(methodOverride('_method')); // para usar put and delete
 app.use('/', rutasMain);
 app.use('/products', rutasProductos);
 

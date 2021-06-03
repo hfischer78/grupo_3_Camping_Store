@@ -1,17 +1,37 @@
-let express = require('express');
-let routerProducts = express.Router();
+const express = require('express');
+const routerProducts = express.Router();
+const path = require('path')
+const multer = require('multer');
+
+
+//multer
+const storage = multer.diskStorage({ 
+	  destination: function (req, file, cb) { 
+	     cb(null, './public/img/products'); 
+	  }, 
+	  filename: function (req, file, cb) { 
+	     cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);  } 
+	})
+	
+const uploadFile = multer({ storage });
+
+
 let productsController = require('../controllers/productsController');
 
 
 routerProducts.get("/productDetail", productsController.detalle);
 
-//rutas para Crear productos
-routerProducts.get("/productCreate", productsController.create); // Esta es para que muestre el formulario de creacion de prod
-//routerProducts.post("/productCreate", productsController.store); //Esta es para ejecutar la logica de creacion de prod
+routerProducts.get("/productCreate", productsController.create);
 
-//rutas para Editar productos
-routerProducts.get("/productEdit", productsController.edit); //Esta es para que muestre el formulario de Editar Prod
-//routerProducts.post("/productEdit", productsController.upload); // ESta es para que ejectue y guarde cambios de la edicion de prod
+
+//HF - en desarrollo / implementando logica para editar
+
+/*** EDIT ONE PRODUCT ***/ 
+routerProducts.get('/:id/edit', productsController.edit); // vista para editar
+//routerProducts.put('/:id', uploadFile.single('producto'), productsController.update); // logica de actualizar
+
+// HF - en desarrollo / implementando logica para borrar producto
+routerProducts.delete('/:id', productsController.destroy); //logica para borrar
 
 
 
