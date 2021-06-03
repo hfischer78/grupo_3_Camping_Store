@@ -1,5 +1,5 @@
 
-.creatform{
+.createform{
     padding: 20px 15px;
 }
 .controldelformulario{
@@ -35,4 +35,12 @@ button{
 
 .ButtonMalo{
     background-color: #FF3E41;
+    margin-left: 55px;
+    margin-bottom: 25px;
+    padding: 5px 10px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    
+    border-radius: 5px;
 }

@@ -13,52 +13,27 @@
         <div class= "h3-home">
             <h3>Ofertas destacadas</h3>
         </div>
+
+      
         <section>
+            <% products.forEach (function(id,i) { %>
             <article class="producto-oferta">
-                <img src="./img/caja-pesca.jpg">
+                
+                <img src="./img/products/<%= products[i].image %>">
                 <div class= "caja-productos">
                     <i class="fas fa-piggy-bank pig-sale"></i>
                     <div class="valores-oferta">
-                        <p class="precio">$15.000</p>
-                        <p class="descuento">25% OFF</p>
+                        <p class="precio"><%= products[i].price %></p>
+                        <p class="descuento"><%= products[i].discount %></p>
                     </div>
-                    <div class="descripcion">Caja pesca</div>
+                    <div class="descripcion"><%= products[i].description %></div>
                 </div>
+              
             </article>
-            <article class="producto-oferta">                
-                <img src="./img/silla-plegable.jpg">
-                <div class= "caja-productos">
-                    <i class="fas fa-piggy-bank pig-sale"></i>
-                    <div class="valores-oferta">
-                        <p class="precio">$8.599</p>
-                        <p class="descuento">20% OFF</p>
-                    </div>
-                    <div class="descripcion">Silla plegable</div>
-                </div>
-            </article>
-            <article class="producto-oferta">
-                <img src="./img/bolsa-dormir.jpg">
-                <div class= "caja-productos">
-                    <i class="fas fa-piggy-bank pig-sale"></i>
-                    <div class="valores-oferta">
-                        <p class="precio">$12.500</p>
-                        <p class="descuento">40% OFF</p>
-                    </div>
-                    <div class="descripcion">Bolsa de dormir</div>
-                </div>
-            </article>
-            <article class="producto-oferta">
-                <img src="./img/termo-stanley.jpg">
-                <div class= "caja-productos">
-                    <i class="fas fa-piggy-bank pig-sale"></i>
-                    <div class="valores-oferta">
-                        <p class="precio">$9.700</p>
-                        <p class="descuento">20% OFF</p>
-                    </div>
-                    <div class="descripcion">Termo Stanley 1l</div>
-                </div>
-            </article>
+            <% }) %>
         </section>
+
+        
     </main>
 
     <%- include("./partials/footer")%>

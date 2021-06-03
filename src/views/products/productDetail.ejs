@@ -9,15 +9,16 @@
 
     <%- include("../partials/header")%>
     
+    
     <main class="pageProdDetail">
         <div class="productPresentation">
             <div class="imgProduct">
-                <img src="/img/Carpas para Camping.jpg" alt="CarpaParaCamping">
+                <img src="/img/products/<%= productDetail[0].image %>" alt="imagen del producto">
             </div>
             <div class="prodSpecification">
                 <div class="prodNPD">
-                    <h2 class="prodNPD">NORTHFACE 4567 ULTRALIGHT TENT</h2>
-                    <h3 class="prodPrice">Precio: $43.990</h3> <h3 class="prodDiscount">Descuento: 30%</h3>
+                    <h2 class="prodNPD"><%= productDetail[0].name %></h2>
+                    <h3 class="prodPrice">Precio: <%= productDetail[0].price %></h3> <h3 class="prodDiscount">Descuento: <%= productDetail[0].discount %> %</h3>
                 </div>
                 <div class="buyElection">
                     <div class="prodSCQ">
@@ -64,9 +65,9 @@
         </div>
         <div class="prodDescription">
             <h3 class="prodNPD">Descripcion del Producto</h3>
-            <p class="textProdDetail">Large Throw Tent Outdoor 3-4Persons Automatic Speed Open Throwing Pop Up</p>
-            <p class="textProdDetail">The NORTHFACE lanza una carpa que resiste vientos de hasta 100km/h</p>
-            <p class="textProdDetail">La Tienda tiene un escpacio para cuatro personas y se puede estar parado en su interior. Es liviana y facil de transportar</p>
+            <p class="textProdDetail"><%= productDetail[0].description %></p>
+            <!-- <p class="textProdDetail">The NORTHFACE lanza una carpa que resiste vientos de hasta 100km/h</p>
+            <p class="textProdDetail">La Tienda tiene un escpacio para cuatro personas y se puede estar parado en su interior. Es liviana y facil de transportar</p> -->
         </div>
     </main>
 
