@@ -17,7 +17,21 @@ let controladorProductos = {
     edit: function (renpq, res) {
         //res.render(path.resolve(__dirname,"../views/productDetail.ejs"))
     res.render("./products/productEdit")
-    }
+    },
+
+    // actualizacion de productos.    
+    update: function (req, res) {
+        
+        res.send("EL PRODUCTO SERA EDITADO")
+
+    },
+
+    //eliminacion de producto
+    destroy: function (req, res) {
+        res.send("EL PRODUCTO SERA ELIMINADO")
+        
+
+    },
 
 }
 
