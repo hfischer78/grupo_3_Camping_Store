@@ -1,58 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
- 
 
-    <%- include("../partials/head")%>
+
+<%- include("../partials/head")%>
 
 
 <body>
 
     <%- include("../partials/header")%>
-   <main>
-       <H2>Edita el Producto</H2>
+    <main>
+        <H2>Edita el Producto</H2>
         <!-- <form action="/crearproducto" method="POST"  class="createform"> -->
-        <form action="/products/<%= productToEdit[0].id %>/?_method=PUT" class="createform" method="POST" enctype="multipart/form-data">
+        <form action="/products/<%= productToEdit[0].id %>/?_method=PUT" class="createform" method="POST"
+            enctype="multipart/form-data">
             <div class="controldelformulario">
                 <label>Nombre del Producto</label>
-                <input type="text" name= "name" class="control" value= <%= productToEdit[0].name %>>
+                <input type="text" name="name" class="control" value=<%= productToEdit[0].name %>>
             </div>
             <div class="controldelformulario">
-            <label>Seleccionar una imagen para el Producto:</label>
-            <input type="file" name="image" accept=".jpg" class="control">
+                <label>Seleccionar una imagen para el Producto:</label>
+                <input type="file" name="image" accept=".jpg" class="control">
             </div>
             <div class="controldelformulario">
                 <label>Precio</label>
-                <input type="number"name="price" placeholder="123,45"class="control" value= <%= toThousand(productToEdit[0].price) %>>
-                
+                <input type="number" name="price" placeholder="123,45" class="control"
+                    value=<%= toThousand(productToEdit[0].price) %>>
+
             </div>
             <div class="controldelformulario">
                 <label>Descuento % </label>
-                <input type="number"name="discount" placeholder="30%"class="control" value= <%= productToEdit[0].discount %>>
+                <input type="number" name="discount" placeholder="30%" class="control"
+                    value=<%= productToEdit[0].discount %>>
             </div>
 
-        <!-- </div> -->
-        
-        <div class="controldelformulario">
-            <label>Categoria </label>
-            <input type="text"name="category" placeholder="Camping"class="control" value= <%= productToEdit[0].category %>>
-        </div>
+            <!-- </div> -->
+
+            <div class="controldelformulario">
+                <label>Categoria </label>
+                <input type="text" name="category" placeholder="Camping" class="control"
+                    value=<%= productToEdit[0].category %>>
+            </div>
 
 
-        <div class="controldelformulario">
-            <label>Talle </label>
-            <input type="text"name="size" placeholder="XXL"class="control" value= <%= productToEdit[0].size %>>
-        </div>
+            <div class="controldelformulario">
+                <label>Talle </label>
+                <input type="text" name="size" placeholder="XXL" class="control" value=<%= productToEdit[0].size %>>
+            </div>
 
 
-        <div class="controldelformulario">
-            <label>Color </label>
-            <input type="text"name="color" placeholder="Verde"class="control" value= <%= productToEdit[0].color %>>
-        </div>
+            <div class="controldelformulario">
+                <label>Color </label>
+                <input type="text" name="color" placeholder="Verde" class="control" value=<%= productToEdit[0].color %>>
+            </div>
 
-        <div class="controldelformulario">
-            <label>Condicion </label>
-            <input type="text"name="category_index" placeholder="In-Sales"class="control" value= <%= productToEdit[0].category_index %>>
-        </div>
+            <div class="controldelformulario">
+                <label>Condicion </label>
+                <input type="text" name="category_index" placeholder="In-Sales" class="control"
+                    value=<%= productToEdit[0].category_index %>>
+            </div>
 
 
 
@@ -65,7 +70,7 @@
                     <option value="Pesca">Pesca</option>
                 </select>
             </div> -->
-            
+
             <!-- <div class="controldelformulario">
                 <label>Talle</label>
                 <select name="Talle" id=""class="control">
@@ -75,7 +80,7 @@
                     <option value="N/A">No Aplica</option>
                 </select>
             </div> -->
-            
+
             <!-- <div class="controldelformulario">
                 <label>Color</label>
                 <select name="Color" id=""class="control">
@@ -86,10 +91,11 @@
                     <option value="N/A">No Aplica</option>
                 </select>
             </div> -->
-            
-            <div  class="controldelformulario">
+
+            <div class="controldelformulario">
                 <label for="description">Descripcion del Producto</label>
-                <textarea name="description" id="description" cols="30" rows="10"class="control"><%= productToEdit[0].description %></textarea>
+                <textarea name="description" id="description" cols="30" rows="10"
+                    class="control"><%= productToEdit[0].description %></textarea>
 
             </div>
             <!-- <div  class="controldelformulario">
@@ -97,19 +103,19 @@
             <input type="radio" name="EnOferta">
             </div> -->
 
-            
-                <div  class="controldelformulario">
-                    <button type="submit">Guardar</button>
-                    <button type="reset">Cancelar</button>
-                </div>
-        </form>
-        
-        <form action="/products/<%= productToEdit[0].id %>/?_method=DELETE" method="POST" enctype="multipart/form-data">
-            <button class= "ButtonMalo" type="submit">Eliminar</button>
-            </form>
-                
 
-        
+            <div class="controldelformulario">
+                <button type="submit">Guardar</button>
+                <a class="button" href="/">Cancelar</a>
+            </div>
+        </form>
+
+        <form action="/products/<%= productToEdit[0].id %>/?_method=DELETE" method="POST" enctype="multipart/form-data">
+            <button class="ButtonMalo" type="submit">Eliminar</button>
+        </form>
+
+
+
     </main>
 
     <%- include("../partials/footer")%>

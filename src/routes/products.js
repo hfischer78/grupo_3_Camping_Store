@@ -19,8 +19,13 @@ const uploadFile = multer({ storage });
 let productsController = require('../controllers/productsController');
 
 
-routerProducts.get("/Detail/:id", productsController.detalle); //ok
+// LISTA PRODUCTOS //
+routerProducts.get("/", productsController.index);
 
+// PRODUCT DETAIL //
+routerProducts.get("/detail/:id", productsController.detalle); //ok
+
+// CREATE PRODUCT //
 routerProducts.get("/create", productsController.create); // vista para crear productos / ok
 routerProducts.post('/', uploadFile.single('image'),productsController.store); // logica para crear / ok
 

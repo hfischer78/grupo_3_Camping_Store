@@ -184,6 +184,29 @@ main {
     top: 5px; 
 }
 
+.descuento {
+    color: green;
+    margin-left: 10px;
+}
+
+.valores-oferta {
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.button {
+    background-color: #2B3A67;
+    border: none;
+    font-size: 20px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
 
 
 /* Footer */

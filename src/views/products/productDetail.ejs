@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
- 
 
-    <%- include("../partials/head")%>
+
+<%- include("../partials/head")%>
 
 
 <body>
 
     <%- include("../partials/header")%>
-    
-    
+
+
     <main class="pageProdDetail">
         <div class="productPresentation">
             <div class="imgProduct">
-                <img src="/img/products/<%= productDetail[0].image %>" alt="imagen del producto">
+                <img src="/img/products/<%= (productDetail.image == null) ? 'product-default.png' : productDetail.image %>"
+                    alt="imagen del producto">
             </div>
             <div class="prodSpecification">
                 <div class="prodNPD">
-                    <h2 class="prodNPD"><%= productDetail[0].name %></h2>
-                    <h3 class="prodPrice">Precio: $ <%= toThousand(productDetail[0].price) %></h3> <h3 class="prodDiscount">Descuento: <%= productDetail[0].discount %> %</h3>
+                    <h2 class="prodNPD"><%= productDetail.name %></h2>
+                    <h3 class="prodPrice">Precio: $ <%= toThousand(productDetail.price) %></h3>
+                    <h3 class="prodDiscount">Descuento: <%= productDetail.discount %> %</h3>
                 </div>
-                
-                
+
+
                 <!-- <div class="buyElection"> -->
-                    <!-- <div class="prodSCQ">
+                <!-- <div class="prodSCQ">
                         <nav class="prodSize">
                             <div class="controldelformulario">
                                 <label>Talle</label>
@@ -60,43 +62,43 @@
                         </nav>
 
                     -->
-                    
-                       <div class="controldelformulario">
-            <label>Categoria </label>
-            <input type="text"name="category" placeholder="Camping"class="control" value=" <%= productDetail[0].category %>">
-        </div>
+
+                <div class="controldelformulario">
+                    <label>Categoria </label>
+                    <p><%= productDetail.category %>"></p>
+                </div>
 
 
-        <div class="controldelformulario">
-            <label>Talle </label>
-            <input type="text"name="size" placeholder="XXL"class="control" value= <%= productDetail[0].size %>>
-        </div>
+                <div class="controldelformulario">
+                    <label>Talle </label>
+                    <p><%= productDetail.size %></p>
+                </div>
 
 
-        <div class="controldelformulario">
-            <label>Color </label>
-            <input type="text"name="color" placeholder="Verde"class="control" value=" <%= productDetail[0].color %>">
-        </div>
+                <div class="controldelformulario">
+                    <label>Color </label>
+                   <p><%= productDetail.color %></p> 
+                </div>
 
-        <div class="controldelformulario">
-            <label>Condicion </label>
-            <input type="text"name="category_index" placeholder="In-Sales"class="control" value=" <%= productDetail[0].category_index %>">
-        </div>    
-
-
-                    <!-- </div>  -->
+                <div class="controldelformulario">
+                    <label>Condicion </label>
+                    <p><%= productDetail.category_index %></p>
+                </div>
 
 
-                    
-                    <div>
-                        <button class="buyButton">COMPRAR</button>
-                    </div>    
+                <!-- </div>  -->
+
+
+
+                <div>
+                    <button class="buyButton">COMPRAR</button>
                 </div>
             </div>
         </div>
+        </div>
         <div class="prodDescription">
             <h3 class="prodNPD">Descripcion del Producto</h3>
-            <p class="textProdDetail"><%= productDetail[0].description %></p>
+            <p class="textProdDetail"><%= productDetail.description %></p>
             <!-- <p class="textProdDetail">The NORTHFACE lanza una carpa que resiste vientos de hasta 100km/h</p>
             <p class="textProdDetail">La Tienda tiene un escpacio para cuatro personas y se puede estar parado en su interior. Es liviana y facil de transportar</p> -->
         </div>
