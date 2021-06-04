@@ -17,9 +17,9 @@
       
         <section>
             <% products.forEach (function(id,i) { %>
-            <article class="producto-oferta">
+           <article class="producto-oferta">
                 
-                <img src="./img/products/<%= products[i].image %>">
+            <a href= '/products/Detail/<%= productDetail.id %>'><img src="./img/products/<%= products[i].image %>"></a>
                 <div class= "caja-productos">
                     <i class="fas fa-piggy-bank pig-sale"></i>
                     <div class="valores-oferta">
@@ -29,7 +29,7 @@
                     <div class="descripcion"><%= products[i].description %></div>
                 </div>
               
-            </article>
+            </article> 
             <% }) %>
         </section>
 
