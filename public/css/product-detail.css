@@ -74,11 +74,20 @@ color: green;
 }
 
 .action-buttonEdit{
-    background-color: red;
-    color: white;
-   
     align-items: center;
     margin-left: 40%;
+    
+    background-color: #FF3E41;
+    border: none;
+    font-size: 20px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    
 }
 
 
