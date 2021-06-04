@@ -1,29 +1,5 @@
 [
     {
-        "id": 1,
-        "name": "NASDAQ",
-        "description": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
-        "price": "42684.31",
-        "discount": 86,
-        "category": "adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer",
-        "color": "Green",
-        "size": 96,
-        "category_index": "justo sollicitudin ut suscipit a feugiat",
-        "image": "carpa 1.jpg"
-    },
-    {
-        "id": 2,
-        "name": "NASDAQ",
-        "description": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
-        "price": "13105.17",
-        "discount": 39,
-        "category": "fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit",
-        "color": "Puce",
-        "size": 84,
-        "category_index": "venenatis lacinia aenean sit amet justo morbi",
-        "image": "tempor turpis nec euismod scelerisque"
-    },
-    {
         "id": 3,
         "name": "NYSE",
         "description": "In congue. Etiam justo. Etiam pretium iaculis justo.",
@@ -33,7 +9,7 @@
         "color": "Yellow",
         "size": 14,
         "category_index": "in tempor turpis nec euismod scelerisque quam turpis",
-        "image": "sit amet"
+        "image": null
     },
     {
         "id": 4,
@@ -45,7 +21,7 @@
         "color": "Turquoise",
         "size": 56,
         "category_index": "luctus ultricies eu nibh quisque id justo sit amet",
-        "image": "ante vestibulum ante ipsum primis in faucibus orci"
+        "image": null
     },
     {
         "id": 6,
@@ -57,7 +33,7 @@
         "color": "Teal",
         "size": 66,
         "category_index": "venenatis non sodales sed tincidunt eu felis",
-        "image": "viverra eget congue eget"
+        "image": null
     },
     {
         "id": 9,
@@ -69,7 +45,7 @@
         "color": "Goldenrod",
         "size": 23,
         "category_index": "dapibus dolor vel est donec odio justo",
-        "image": "commodo placerat praesent blandit nam nulla integer"
+        "image": null
     },
     {
         "id": 10,
@@ -81,7 +57,7 @@
         "color": "Fuscia",
         "size": 65,
         "category_index": "curabitur in libero ut massa volutpat",
-        "image": "magna at nunc commodo placerat praesent blandit nam"
+        "image": null
     },
     {
         "id": 11,
@@ -93,7 +69,7 @@
         "color": "Yellow",
         "size": 1,
         "category_index": "mollis molestie lorem quisque ut erat curabitur",
-        "image": "nulla ac enim in tempor turpis nec euismod scelerisque"
+        "image": null
     },
     {
         "id": 12,
@@ -105,7 +81,7 @@
         "color": "Fuscia",
         "size": 58,
         "category_index": "ut suscipit a feugiat et eros vestibulum ac",
-        "image": "porttitor lorem id"
+        "image": null
     },
     {
         "id": 13,
@@ -117,7 +93,7 @@
         "color": "Puce",
         "size": 62,
         "category_index": "nisi eu orci mauris lacinia sapien quis libero",
-        "image": "mauris eget massa tempor convallis nulla neque libero convallis"
+        "image": null
     },
     {
         "id": 14,
@@ -129,7 +105,7 @@
         "color": "Yellow",
         "size": 58,
         "category_index": "velit donec diam neque vestibulum eget",
-        "image": "felis donec semper sapien a libero nam"
+        "image": null
     },
     {
         "id": 15,
@@ -141,7 +117,7 @@
         "color": "Red",
         "size": 100,
         "category_index": "nunc donec quis orci eget orci vehicula condimentum",
-        "image": "nulla integer pede justo lacinia eget tincidunt"
+        "image": null
     },
     {
         "id": 16,
@@ -153,7 +129,7 @@
         "color": "Mauv",
         "size": 27,
         "category_index": "sed nisl nunc rhoncus dui vel sem sed sagittis nam",
-        "image": "ac neque duis bibendum morbi non quam nec dui luctus"
+        "image": null
     },
     {
         "id": 17,
@@ -165,7 +141,7 @@
         "color": "Goldenrod",
         "size": 75,
         "category_index": "ac nulla sed vel enim sit amet",
-        "image": "sollicitudin ut suscipit a feugiat et"
+        "image": null
     },
     {
         "id": 18,
@@ -177,7 +153,7 @@
         "color": "Crimson",
         "size": 35,
         "category_index": "habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam",
-        "image": "in tempor turpis nec euismod"
+        "image": null
     },
     {
         "id": 19,
@@ -189,7 +165,7 @@
         "color": "Violet",
         "size": 47,
         "category_index": "elementum ligula vehicula consequat morbi",
-        "image": "nullam varius nulla facilisi cras non velit"
+        "image": null
     },
     {
         "id": 20,
@@ -201,7 +177,7 @@
         "color": "Blue",
         "size": 80,
         "category_index": "ut erat curabitur gravida nisi at nibh in hac",
-        "image": "libero nam dui proin leo odio porttitor"
+        "image": null
     },
     {
         "id": 21,
@@ -226,5 +202,41 @@
         "size": "",
         "category_index": "una",
         "image": "1622764997159_img_.jpg"
+    },
+    {
+        "id": 22,
+        "name": "Prueba Ax",
+        "description": "Prueba prueba prueba",
+        "price": "200",
+        "discount": "10",
+        "category": "Camping",
+        "color": "Rosa",
+        "size": "S",
+        "category_index": "en-oferta",
+        "image": null
+    },
+    {
+        "id": 23,
+        "name": "Carpa individual ",
+        "description": "Maravillosa carpa para dos personas, anti-lluvia, anti-sol, anti-viento. ",
+        "price": "11000",
+        "discount": "15",
+        "category": "Camping",
+        "color": "Naranja",
+        "size": "2",
+        "category_index": "in-sales",
+        "image": "1622777186491_img_.jpeg"
+    },
+    {
+        "id": "2",
+        "name": "Zapatillas",
+        "description": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\r\n\r\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
+        "price": "6000",
+        "discount": "39",
+        "category": "fermentum",
+        "color": "Puce",
+        "size": "84",
+        "category_index": "venenatis",
+        "image": null
     }
 ]

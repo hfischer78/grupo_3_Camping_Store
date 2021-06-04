@@ -17,14 +17,14 @@
       
         <section>
             <% products.forEach (function(id,i) { %>
-            <article class="producto-oferta">
+            <article class="producto-oferta" >
                 
-                <img src="./img/products/<%= products[i].image %>">
+                <a href="/products/detail/<%= products[i].id %>"><img src="./img/products/<%= (products[i].image == null) ? 'product-default.png' : products[i].image %>"></a>
                 <div class= "caja-productos">
                     <i class="fas fa-piggy-bank pig-sale"></i>
+                    <p class="titulo-producto"><%= products[i].name %></p>
                     <div class="valores-oferta">
-                        <p class="precio"><%= toThousand(products[i].price) %></p>
-                        <p class="descuento"><%= products[i].discount %></p>
+                        <p class="precio">$ <%= toThousand(products[i].price) %> <span class="descuento"><%= products[i].discount %>% OFF</span></p>
                     </div>
                     <div class="descripcion"><%= products[i].description %></div>
                 </div>
