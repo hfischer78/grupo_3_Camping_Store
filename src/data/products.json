@@ -36,18 +36,6 @@
         "image": "1622777186491_img_.jpeg"
     },
     {
-        "id": "10",
-        "name": "Este es un Auto",
-        "description": "LLEVALO QUE VAS A HACER MUCH FACHAAA\r\n\r\ndfadsfasdfdsafdsaf \r\n\r\ndfasfas\r\n\r\nY ASDF",
-        "price": "100999",
-        "discount": "31",
-        "category": "Super deportivo",
-        "color": "Gris",
-        "size": "1",
-        "category_index": "In-Sale",
-        "image": "1622825871236_img_.jpg"
-    },
-    {
         "id": "3",
         "name": "una carpa",
         "description": "In congue. Etiam justo. Etiam pretium iaculis justo.",
@@ -238,5 +226,17 @@
         "size": "47",
         "category_index": "elementum",
         "image": "1622847056922_img_.jpg"
+    },
+    {
+        "id": "10",
+        "name": "Cantimplora",
+        "description": "LLEVALO QUE VAS A HACER MUCH FACHAAA\r\n\r\ndfadsfasdfdsafdsaf \r\n\r\ndfasfas\r\n\r\nY ASDF",
+        "price": "100.999",
+        "discount": "31",
+        "category": "Super",
+        "color": "Gris",
+        "size": "1",
+        "category_index": "In-Sale",
+        "image": "1622849053647_img_.jpg"
     }
 ]

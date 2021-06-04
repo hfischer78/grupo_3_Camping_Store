@@ -157,10 +157,11 @@ main {
 }
 
 .index-main section .producto-oferta {
-    border: 1px solid #D9DFE7;
-    margin-top: 5px;
+    border: 1px solid red;
+   
     width: 100%;
     position: relative;
+    
 }
 
 .index-main section .producto-oferta img {
@@ -208,6 +209,19 @@ main {
     margin: 0;
 }
 
+.descripcion{
+    display: none;
+}
+
+.producto-oferta:hover .descripcion{
+    display: flex;
+    transition: 1s;
+}
+
+.imgProd{
+    
+    height: 250px;
+}
 
 /* Footer */
 
@@ -353,7 +367,7 @@ footer section .contacto .whatsapp,
     
     .index-main section .producto-oferta{
         max-width: 45%; 
-        margin:5px;  
+        margin:10px 5px;  
     }
 
     /* Footer en Tablet */
