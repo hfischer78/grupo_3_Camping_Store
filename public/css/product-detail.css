@@ -73,6 +73,14 @@ color: green;
     margin-top: 30px;
 }
 
+.action-buttonEdit{
+    background-color: red;
+    color: white;
+   
+    align-items: center;
+    margin-left: 40%;
+}
+
 
 @media (min-width: 415px) {
     .buyElection{

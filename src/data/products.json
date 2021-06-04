@@ -48,18 +48,6 @@
         "image": null
     },
     {
-        "id": 10,
-        "name": "NYSE",
-        "description": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
-        "price": "16038.47",
-        "discount": 31,
-        "category": "faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec",
-        "color": "Fuscia",
-        "size": 65,
-        "category_index": "curabitur in libero ut massa volutpat",
-        "image": null
-    },
-    {
         "id": 11,
         "name": "NASDAQ",
         "description": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
@@ -238,5 +226,17 @@
         "size": "84",
         "category_index": "venenatis",
         "image": null
+    },
+    {
+        "id": "10",
+        "name": "Este es un Auto",
+        "description": "LLEVALO QUE VAS A HACER MUCH FACHAAA\r\n\r\ndfadsfasdfdsafdsaf \r\n\r\ndfasfas\r\n\r\nY ASDF",
+        "price": "100999",
+        "discount": "31",
+        "category": "Super deportivo",
+        "color": "Gris",
+        "size": "1",
+        "category_index": "In-Sale",
+        "image": "1622825871236_img_.jpg"
     }
 ]
