@@ -23,7 +23,7 @@ let controladorProductos = {
 
     create: function (req, res) {
         //res.render(path.resolve(__dirname,"../views/productDetail.ejs"))
-    res.render("./products/productCreate")
+    res.render("./products/productCreate",{toThousand})
     },
 
 // Create -  Method to store
@@ -42,13 +42,16 @@ let controladorProductos = {
        let newProduct = {
            //ejemplosss
          "id": newId,
-        // "name": req.body.name,
-        // "price": req.body.price,
-        // "discount": req.body.discount,
-        // "category": req.body.category,
-        // "description": req.body.description,
-        // "image": req.file.filename,
-                    
+         "name": req.body.name,
+         "description": req.body.description, 
+         "price": req.body.price,
+         "discount": req.body.discount,
+         "category": req.body.category,
+         "color": req.body.color,
+         "size": req.body.size,
+         "category_index": req.body.category_index,
+         "image": req.file.filename,
+                        
       };	
     
     // actualizo la variable con el nuevo producto  
@@ -56,38 +59,69 @@ let controladorProductos = {
     //genero nuevo archivo json con todos los productos
     fs.writeFileSync(productsFilePath,JSON.stringify(products,null,4));	
 
-    res.redirect('/products') 
+    res.redirect('/') 
     
 
 },
 
 
+    // vista de edición
     edit: function (req, res) {
-        //res.render(path.resolve(__dirname,"../views/productDetail.ejs"))
-        //res.render("./products/productEdit")
-
+      
     let productToEdit = products.filter(function(producto){
         return producto.id == req.params.id
     })
 
-    res.render("./products/productEdit",{productToEdit})
-
-
+    res.render("./products/productEdit",{productToEdit,toThousand})
    
 },
-
 
     // actualizacion de productos.    
     update: function (req, res) {
         
-        res.send("EL PRODUCTO SERA EDITADO")
+        // genero variable de productos, excluyendo el producto a editar.
+		let productToEdit = products.filter(function(producto){
+			return producto.id != req.params.id
+		})
+	
+		// genero variable con los datos del nuevo producto
+		let newProduct = {
+		    "id": req.params.id,
+            "name": req.body.name,
+            "description": req.body.description, 
+            "price": req.body.price,
+            "discount": req.body.discount,
+            "category": req.body.category,
+            "color": req.body.color,
+            "size": req.body.size,
+            "category_index": req.body.category_index,
+            "image": req.file.filename,
+  		};	
+
+		// agrego el producto editado
+		  productToEdit.push(newProduct);
+
+		//genero nuevo archivo json con todos los productos
+		fs.writeFileSync(productsFilePath,JSON.stringify(productToEdit,null,4));	
+		// redirecciono a productos
+		res.redirect('/') 
+       
 
     },
 
     //eliminacion de producto
-    destroy: function (req, res) {
-        res.send("EL PRODUCTO SERA ELIMINADO")
-     
+    destroy: function (req,res) {
+    
+		// genero variable de productos, excluyendo el producto a editar.
+		let productToEdit = products.filter(function(producto){
+			return producto.id != req.params.id
+		})
+
+		fs.writeFileSync(productsFilePath,JSON.stringify(productToEdit,null,4));
+	
+		
+		res.redirect('/') 
+	    
     },
 
 }

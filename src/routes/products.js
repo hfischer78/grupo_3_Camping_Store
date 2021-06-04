@@ -19,23 +19,18 @@ const uploadFile = multer({ storage });
 let productsController = require('../controllers/productsController');
 
 
-routerProducts.get("/Detail/:id", productsController.detalle);
+routerProducts.get("/Detail/:id", productsController.detalle); //ok
 
-routerProducts.get("/create", productsController.create); // vista para crear productos
-routerProducts.post('/', uploadFile.single('producto'),productsController.store); // logica para crear
-
-
+routerProducts.get("/create", productsController.create); // vista para crear productos / ok
+routerProducts.post('/', uploadFile.single('image'),productsController.store); // logica para crear / ok
 
 
-//HF - en desarrollo / 
-//routerProducts.get("/productEdit", productsController.edit);
-
-/*** EDIT ONE PRODUCT ***/ 
+//*** EDIT ONE PRODUCT ***/ 
 routerProducts.get('/:id/edit', productsController.edit); // vista para editar / ok
-routerProducts.put('/:id', uploadFile.single('producto'), productsController.update); // logica de actualizar
+routerProducts.put('/:id', uploadFile.single('image'), productsController.update); // logica de actualizar / ok
 
 /*** DELETE ONE PRODUCT***/ 
-routerProducts.delete('/:id', productsController.destroy); //logica para borrar
+routerProducts.delete('/:id', productsController.destroy); //logica para borrar / ok
 
 
 

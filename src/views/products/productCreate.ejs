@@ -12,26 +12,30 @@
     <H2>Crea tu Producto</H2>
 
     <form action="/products/" method="POST" class="createform" enctype="multipart/form-data"> 
-
-        <form action="/crearproducto" method="POST"  class="createform">
+        
             <div class="controldelformulario">
                 <label>Nombre del Producto</label>
-                <input type="text" name="Nombre" class="control">
+                <input type="text" name="name" class="control">
             </div>
             <div class="controldelformulario">
             <label>Seleccionar una imagen para el Producto:</label>
-            <input type="file" name="fotoDeProducto" accept=".jpg" multiple class="control">
+            <input type="file" name="image" accept=".jpg" class="control">
             </div>
             <div class="controldelformulario">
-                <label>Precio $ </label>
-                <input type="number"name="Precio" placeholder="123,45"class="control">
+                <label>Precio</label>
+                <input type="number"name="price" placeholder="123,45"class="control">
             </div>
             <div class="controldelformulario">
-                <label>Descuento % </label>
-                <input type="number"name="Descuento" placeholder="30%"class="control">
+                <label>Descuento</label>
+                <input type="number"name="discount" placeholder="30%"class="control">
             </div>
-            <div class="controldelformulario">
-                <label>Categoria</label>
+            
+            
+            <!-- <div class="controldelformulario"> -->
+          
+          
+          
+                <!-- <label>Categoria</label>
                 <select name="Categoria" id=""class="control">
                     <option value="Indumentaria">Indumentaria</option>
                     <option value="Trekking">Trekking</option>
@@ -59,24 +63,51 @@
                     <option value="Blanco">Blanco</option>
                     <option value="N/A">No Aplica</option>
                 </select>
-            </div>
+            </div> -->
             
+
+            <div class="controldelformulario">
+                <label>Categoria </label>
+                <input type="text"name="category" placeholder="Camping"class="control" >
+            </div>
+    
+    
+            <div class="controldelformulario">
+                <label>Talle </label>
+                <input type="text"name="size" placeholder="XXL"class="control">
+            </div>
+    
+    
+            <div class="controldelformulario">
+                <label>Color </label>
+                <input type="text"name="color" placeholder="Verde"class="control" >
+            </div>
+    
+            <div class="controldelformulario">
+                <label>Condicion </label>
+                <input type="text"name="category_index" placeholder="In-Sales"class="control" >
+            </div>
+
+        
+
             <div  class="controldelformulario">
                 <label for="">Descripcion del Producto</label>
-                <textarea name="descripcion" id="" cols="30" rows="10"class="control"></textarea>
+                <textarea name="description" id="" cols="30" rows="10"class="control"></textarea>
 
             </div>
-            <div  class="controldelformulario">
+            <!-- <div  class="controldelformulario">
            <label>Esta en oferta?</label>
             <input type="radio" name="EnOferta">
-            </div>
+            </div> -->
+
             <div  class="controldelformulario">
         <button type="submit">Guardar</button>
         <button type="reset">Borrar</button>
             </div>
                    
-        </form>
-    </main>
+    </form>
+    
+</main>
 
     <%- include("../partials/footer")%>
 

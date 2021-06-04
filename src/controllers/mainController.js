@@ -14,6 +14,9 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 let controlador = {
     home: function (req, res) {
+
+
+        // esto lo dejo para implementar categorias en el hime mas adealante!
         //res.render(path.resolve(__dirname,"../views/index.ejs"))
         
         //     let visited = products.filter(function(categoria){

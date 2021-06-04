@@ -18,10 +18,12 @@
             <div class="prodSpecification">
                 <div class="prodNPD">
                     <h2 class="prodNPD"><%= productDetail[0].name %></h2>
-                    <h3 class="prodPrice">Precio: <%= productDetail[0].price %></h3> <h3 class="prodDiscount">Descuento: <%= productDetail[0].discount %> %</h3>
+                    <h3 class="prodPrice">Precio: $ <%= toThousand(productDetail[0].price) %></h3> <h3 class="prodDiscount">Descuento: <%= productDetail[0].discount %> %</h3>
                 </div>
-                <div class="buyElection">
-                    <div class="prodSCQ">
+                
+                
+                <!-- <div class="buyElection"> -->
+                    <!-- <div class="prodSCQ">
                         <nav class="prodSize">
                             <div class="controldelformulario">
                                 <label>Talle</label>
@@ -56,7 +58,36 @@
                                 </select>
                             </div>
                         </nav>
-                    </div>
+
+                    -->
+                    
+                       <div class="controldelformulario">
+            <label>Categoria </label>
+            <input type="text"name="category" placeholder="Camping"class="control" value=" <%= productDetail[0].category %>">
+        </div>
+
+
+        <div class="controldelformulario">
+            <label>Talle </label>
+            <input type="text"name="size" placeholder="XXL"class="control" value= <%= productDetail[0].size %>>
+        </div>
+
+
+        <div class="controldelformulario">
+            <label>Color </label>
+            <input type="text"name="color" placeholder="Verde"class="control" value=" <%= productDetail[0].color %>">
+        </div>
+
+        <div class="controldelformulario">
+            <label>Condicion </label>
+            <input type="text"name="category_index" placeholder="In-Sales"class="control" value=" <%= productDetail[0].category_index %>">
+        </div>    
+
+
+                    <!-- </div>  -->
+
+
+                    
                     <div>
                         <button class="buyButton">COMPRAR</button>
                     </div>    
