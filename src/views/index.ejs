@@ -13,13 +13,12 @@
         <div class= "h3-home">
             <h3>Ofertas destacadas</h3>
         </div>
-
       
         <section>
             <% products.forEach (function(id,i) { %>
            <article class="producto-oferta">
                 
-            <a href="/products/detail/<%= products[i].id %>"><img src="./img/products/<%= (products[i].image == null) ? 'product-default.png' : products[i].image %>"></a>
+            <a href="/products/detail/<%= products[i].id %>"><img class= "imgProd" src="./img/products/<%= (products[i].image == null) ? 'product-default.png' : products[i].image %>"></a>
                 <div class= "caja-productos">
                     <i class="fas fa-piggy-bank pig-sale"></i>
                     <p class="titulo-producto"><%= products[i].name %></p>
