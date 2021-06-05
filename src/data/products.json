@@ -144,30 +144,6 @@
         "image": null
     },
     {
-        "id": 19,
-        "name": "NASDAQ",
-        "description": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-        "price": "55099.55",
-        "discount": 85,
-        "category": "lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse",
-        "color": "Violet",
-        "size": 47,
-        "category_index": "elementum ligula vehicula consequat morbi",
-        "image": null
-    },
-    {
-        "id": 20,
-        "name": "NYSE",
-        "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
-        "price": "9949.01",
-        "discount": 11,
-        "category": "libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis",
-        "color": "Blue",
-        "size": 80,
-        "category_index": "ut erat curabitur gravida nisi at nibh in hac",
-        "image": null
-    },
-    {
         "id": 21,
         "name": "Bolsa de Dormir",
         "description": "Una linda bolsita para dormir.",
@@ -238,5 +214,29 @@
         "size": "1",
         "category_index": "In-Sale",
         "image": "1622825871236_img_.jpg"
+    },
+    {
+        "id": "19",
+        "name": "NASDAQ-1",
+        "description": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\r\n\r\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "price": "",
+        "discount": "85",
+        "category": "lorem",
+        "color": "Violet",
+        "size": "47",
+        "category_index": "elementum",
+        "image": null
+    },
+    {
+        "id": "20",
+        "name": "Campera",
+        "description": "Campera de abrigo. Super liviana.",
+        "price": "15300",
+        "discount": "10",
+        "category": "Indumentaria",
+        "color": "Negra",
+        "size": "XL",
+        "category_index": "Visited",
+        "image": "1622835497500_img_.jpg"
     }
 ]
