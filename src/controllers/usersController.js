@@ -1,4 +1,7 @@
 const path = require('path');
+const User = require('../models/User.js');
+const bcryptjs = require('bcryptjs')
+
 
 //const productsFilePath = path.join(__dirname, '../data/products.json');
 //const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -12,7 +15,22 @@ let controllerUsers = {
 },
     register: function (req, res) {
     res.render(path.resolve(__dirname,"../views/users/register.ejs"))    
+},
+
+processRegister: function (req, res) {
+    let userToCreate= {
+        // ...req.body,
+    //     // password: bcryptjs.hashSync(req.body.password, 10),
+      firstname: req.body.firstname
+    // //   lastname: req.body.lastname,
+    //   email: req.body.email,
+    //   password: req.body.password
+    }
+   
+    User.create(userToCreate)
+   return res.send('Se creo todo piola')
 }
 }
+
 
 module.exports = controllerUsers;

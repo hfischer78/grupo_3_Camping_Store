@@ -10,6 +10,8 @@ let rutasUsers = require('./routes/users.js');
 
 app.set("view engine", "ejs")
 app.set("views", path.resolve(__dirname,"./views"))
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 //Configuración recursos estáticos
 const publicPath = path.resolve(__dirname,"../public");
