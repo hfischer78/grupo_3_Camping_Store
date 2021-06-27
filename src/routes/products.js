@@ -23,9 +23,7 @@ let productsController = require('../controllers/productsController');
 routerProducts.get("/", productsController.index);
 
 // PRODUCT DETAIL //
-routerProducts.get("/detail/:id", productsController.detalle); //ok
-
-
+routerProducts.get("/detail/:id", productsController.detail); //ok
 
 //*** EDIT ONE PRODUCT ***/ 
 routerProducts.get('/:id/edit', productsController.edit); // vista para editar / ok

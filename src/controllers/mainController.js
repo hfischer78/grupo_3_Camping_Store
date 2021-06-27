@@ -8,11 +8,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 //////
 
-//const path = require('path');
-
-
-
-let controlador = {
+let controller = {
     home: function (req, res) {
 
 
@@ -28,17 +24,7 @@ let controlador = {
 		// })
 
 		res.render(path.resolve(__dirname,'../views/index'),{products,toThousand})
-	},
-
-
-
-    login: function (req, res) {
-        res.render(path.resolve(__dirname,"../views/users/login.ejs"))
-    },
-
-    registro: function (req, res) {
-        res.render(path.resolve(__dirname,"../views/users/register.ejs"))    
-    },
+	},    
 
     carrito: function (req, res) {
         res.render(path.resolve(__dirname,"../views/productCart.ejs"))
@@ -46,4 +32,4 @@ let controlador = {
 }
 
 
-module.exports = controlador;
+module.exports = controller;
