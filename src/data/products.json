@@ -1,17 +1,5 @@
 [
     {
-        "id": 3,
-        "name": "NYSE",
-        "description": "In congue. Etiam justo. Etiam pretium iaculis justo.",
-        "price": "79613.33",
-        "discount": 13,
-        "category": "justo eu massa donec dapibus duis at velit eu est",
-        "color": "Yellow",
-        "size": 14,
-        "category_index": "in tempor turpis nec euismod scelerisque quam turpis",
-        "image": null
-    },
-    {
         "id": 4,
         "name": "NYSE",
         "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
@@ -237,6 +225,18 @@
         "color": "Puce",
         "size": "84",
         "category_index": "venenatis",
+        "image": null
+    },
+    {
+        "id": "3",
+        "name": "NYSE",
+        "description": "In congue. Etiam justo. Etiam pretium iaculis justo.",
+        "price": "",
+        "discount": "13",
+        "category": "justo",
+        "color": "Yellow",
+        "size": "14",
+        "category_index": "in",
         "image": null
     }
 ]
