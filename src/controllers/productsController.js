@@ -8,8 +8,14 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-let controladorProductos = {
-    detalle: function (req, res) {
+let controllerProducts = {
+    
+    index: function (req, res) {
+        res.render(path.resolve(__dirname,'../views/products/productsList'), ({products, toThousand}))        
+
+    },
+
+    detail: function (req, res) {
         let productDetail = products.filter(function (producto) {
             return producto.id == req.params.id;
         });
@@ -116,4 +122,4 @@ let controladorProductos = {
     },
 };
 
-module.exports = controladorProductos;
+module.exports = controllerProducts;
