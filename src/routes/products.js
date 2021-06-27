@@ -23,6 +23,12 @@ let productsController = require('../controllers/productsController');
 // LISTA PRODUCTOS //
 routerProducts.get("/", productsController.index);
 
+// CREACION DE PRODUCTOS -
+routerProducts.get("/productCreate", productsController.create); // vista para crear
+routerProducts.post("/products/", productsController.store); // logica para crear
+
+
+
 // PRODUCT DETAIL //
 routerProducts.get("/detail/:id", productsController.detalle); //ok
 

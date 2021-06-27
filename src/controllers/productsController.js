@@ -27,6 +27,7 @@ let controladorProductos = {
     create: function (req, res) {
         //res.render(path.resolve(__dirname,"../views/productDetail.ejs"))
         res.render("./products/productCreate", { toThousand });
+        
     },
 
     // Create -  Method to store
