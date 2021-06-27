@@ -16,24 +16,34 @@
                     REGISTRARSE
                 </h3>
                     <div class="register">
-                        <form action="/" method="GET" class= form-registro >
+                        <form action="/users/register" method="POST" class= form-registro enctype="multipart/form-data">
                                                     
                                 <div class="control-formulario-registro">
-                                    <label for="nombreUsuario">Nombre de usuario</label>
-                                    <input type="mail" name="nombre" class="control-registro" id="nombreUsuario">
+                                    <label >Nombre</label>
+                                    <input type="text" name="firstname" class="control-registro" >
+                                </div>
+
+                                <!-- <div class="control-formulario-registro">
+                                    <label for="lastname">Apellido</label>
+                                    <input type="text" name="lastname" class="control-registro" id="lastname">
                                 </div>
 
                                 <div class="control-formulario-registro">
-                                    <label for="correo">Direccion de Correo</label>
-                                    <input type="text" name="nombre" class="control-registro" id="correo">
+                                    <label for="email">Direccion de Correo</label>
+                                    <input type="email" name="email" class="control-registro" id="email" >
                                 </div>
                 
                     
                                 <div class="control-formulario-registro">
-                                    <label for="contraseña">Contraseña:</label>
-                                    <input type="password" name="password" class="control-registro" id="contraseña">
+                                    <label for="password">Contraseña:</label>
+                                    <input type="password" name="password" class="control-registro" id="password">
                                 </div>
-                                
+
+                                <div class="control-formulario-registro">
+                                    <label for="avatar">Foto de Perfil:</label>
+                                    <input type="file" name="avatar" class="control-registro" id="avatar">
+                                </div>
+                                 -->
                                 <div class="div-btn-registro">
                                 <button type="submit" class="boton-formulario-registro">REGISTRARSE</button>
                             </div>

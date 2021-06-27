@@ -5,10 +5,13 @@ const methodOverride =  require('method-override'); // Pasar poder usar los mét
 
 
 let rutasMain = require('./routes/main.js');
-let rutasProductos = require('./routes/products.js');
+let rutasProducts = require('./routes/products.js');
+let rutasUsers = require('./routes/users.js');
 
 app.set("view engine", "ejs")
 app.set("views", path.resolve(__dirname,"./views"))
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 //Configuración recursos estáticos
 const publicPath = path.resolve(__dirname,"../public");
@@ -17,7 +20,8 @@ app.use(express.static(publicPath));
 //Configuración rutas
 app.use(methodOverride('_method')); // para usar put and delete
 app.use('/', rutasMain);
-app.use('/products', rutasProductos);
+app.use('/products', rutasProducts);
+app.use('/users', rutasUsers);
 
 //Configuración del Servidor
 app.listen(3000, function () {
