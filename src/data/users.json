@@ -14,5 +14,21 @@
   "email": "horacio_fischer@hotmail.com",
   "password": "$2a$10$jKGZAjHDxF0OI0FNodGThOv3Dpg5qWk4CiZw8FBTxPPfM1PP66D4W",
   "avatar": "1624848094919_img.jpg"
+ },
+ {
+  "id": 3,
+  "firstname": "Sole",
+  "lastname": "Aldao",
+  "email": "soledad_aldao@hotmail.com",
+  "password": "$2a$10$d.5gqGEaR9BXB6yp/Pl/Juv5fEyaT4LCFW0/Wi.zJIrSI3WNtfBJu",
+  "avatar": null
+ },
+ {
+  "id": 4,
+  "firstname": "Axi",
+  "lastname": "gdsdgsd",
+  "email": "axi@gmail.com",
+  "password": "$2a$10$Yfb3YIFOf7HvHwnDesuTs.lDCAStgh7SuYUVqktp3/L.m7wnIZRF6",
+  "avatar": null
  }
 ]

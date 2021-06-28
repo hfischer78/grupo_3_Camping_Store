@@ -10,30 +10,61 @@ const bcryptjs = require('bcryptjs')
 
 
 let controllerUsers = {
-    login: function (req, res) {
-    res.render(path.resolve(__dirname,"../views/users/login.ejs"))
-},
-    register: function (req, res) {
-    res.render(path.resolve(__dirname,"../views/users/register.ejs"))    
-},
-
-processRegister: function (req, res) {
-    let userToCreate= {
-    ...req.body,
-    password: bcryptjs.hashSync(req.body.password, 10),
-    avatar: req.file != undefined ? req.file.filename : null,
-    
-    // console.log(req.body.firstname)
-    // res.send(req.body.firstname)
-    // //   lastname: req.body.lastname,
-    //   email: req.body.email,
-    // password: req.body.password
-    }
    
-    User.create(userToCreate)
-    res.send('Se creo todo piola')
+    register: function (req, res) {
+        res.render(path.resolve(__dirname,"../views/users/register.ejs"))    
+    },
 
-}
+    processRegister: function (req, res) {
+        let userInDb = User.findField('email', req.body.email);
+
+        if(userInDb) {
+            return res.render(path.resolve(__dirname,"../views/users/register.ejs"), {
+                errors: {
+                    email: {
+                        msg: 'Este correo electrónico ya está registrado' //no permite registrar usuario con mismo email, falta hacer que se imprima el mensaje (tags en EJS)
+                    }
+                }
+            })
+        }
+        
+        let userToCreate= {
+            ...req.body,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            avatar: req.file != undefined ? req.file.filename : null,
+        }   
+            User.create(userToCreate)
+            res.redirect('/users/login')
+    },
+   
+    login: function (req, res) {
+        res.render(path.resolve(__dirname,"../views/users/login.ejs"))
+    },
+
+    processLogin: function (req, res){
+        let userToLogin = User.findField('email', req.body.email);
+        
+        if(userToLogin){
+            let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            if(correctPassword){
+                return res.send('Logueado!')
+            }
+            res.render(path.resolve(__dirname,"../views/users/login.ejs"), {
+                errors: {
+                    email: {
+                        msg: 'Credenciales inválidas'
+                    }
+                }
+            })
+        }
+        res.render(path.resolve(__dirname,"../views/users/login.ejs"), {
+            errors: {
+                email: {
+                    msg: 'No estás registrado!'
+                }
+            }
+        })
+    }
 }
 
 

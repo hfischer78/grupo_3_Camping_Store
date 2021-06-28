@@ -6,14 +6,17 @@ const router = require('./main');
 const uploadFile = require('../middlewares/multerMiddleware');
 
 
+// Ruta de redireccionamiento a Register
+routerUsers.get("/register", userController.register);
+
+// Ruta que procesa el Register
+routerUsers.post("/register", uploadFile.single('avatar'), userController.processRegister)
 
 // Ruta de redireccionamiento a LogIn
 routerUsers.get("/login", userController.login);
 
-// Ruta de redireccionamiento a Register
-routerUsers.get("/register", userController.register);
-routerUsers.post("/register", uploadFile.single('avatar'), userController.processRegister)
-
+// Ruta que procesa el Login
+routerUsers.post("/login", userController.processLogin);
 
 
 

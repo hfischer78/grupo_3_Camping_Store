@@ -9,24 +9,24 @@
     <%- include("../partials/header")%>
     
     <main>
-        <div class="form-login">
-            <div class="input-group">
-                <span><i class="fas fa-at"></i></span>
-                <input class="form-input" type="email" placeholder="Email">
-            </div>
-           
-        
-            <div class="input-group">
-                <span><i class="fas fa-lock"></i></span>
-                <input  class="form-input" type="password" placeholder="Contraseña">
-            </div>
+        <form action="/users/login" method="POST">
+            <div class="form-login">
+                <div class="input-group">
+                    <span><i class="fas fa-at"></i></span>
+                    <input class="form-input" type="email" name= "email" placeholder="Email">
+                </div>
+            
+            
+                <div class="input-group">
+                    <span><i class="fas fa-lock"></i></span>
+                    <input  class="form-input" type="password" name= "password"  placeholder="Contraseña">
+                </div>
 
-            <div>
-                <button class="form-submit-button" onclick="location.href= '/'" type="button">
-                    Iniciar Sesión
-                </button>
+                <div>
+                   <button class="form-submit-button" type="submit">Iniciar Sesión</button>
+                </div>
             </div>
-        </div>
+        </form>
     </main>
 
  
