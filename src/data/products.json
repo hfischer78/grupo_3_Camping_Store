@@ -1,17 +1,5 @@
 [
     {
-        "id": 21,
-        "name": "Bolsa de Dormir",
-        "description": "Una linda bolsita para dormir.",
-        "price": "6329",
-        "discount": "10",
-        "category": "Camping",
-        "color": "Naranja furioso",
-        "size": "no tiene",
-        "category_index": "Visited",
-        "image": "1622763767922_img_.jpg"
-    },
-    {
         "id": "8",
         "name": "TERMO",
         "description": "Hermoso termo, para compartir momentos en familia.",
@@ -238,5 +226,29 @@
         "size": "1",
         "category_index": "In-Sale",
         "image": "1622849053647_img_.jpg"
+    },
+    {
+        "id": "21",
+        "name": "Bolsa",
+        "description": "Una linda bolsita para dormir, y dormir bien.",
+        "price": "6.329",
+        "discount": "10",
+        "category": "Camping",
+        "color": "Naranja",
+        "size": "no",
+        "category_index": "Visited",
+        "image": null
+    },
+    {
+        "id": 24,
+        "name": "Mate",
+        "description": "Mate ideal para codear con amigos, ALL THE NIGHT!\r\n",
+        "price": "999",
+        "discount": "20",
+        "category": "Camping",
+        "color": "",
+        "size": "",
+        "category_index": "In-Sales",
+        "image": "1624838891931_img_.jpg"
     }
 ]
