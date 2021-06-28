@@ -4,72 +4,15 @@
   "first_name": "Jaquith",
   "last_name": "Freddi",
   "email": "jfreddi0@kickstarter.com",
-  "password": "LBrZeV6"
+  "password": "LBrZeV6",
+  "avatar": ""
  },
  {
   "id": 2,
-  "first_name": "Stanly",
-  "last_name": "Cud",
-  "email": "scud1@mashable.com",
-  "password": "7Oq5UQgZ"
- },
- {
-  "id": 3,
-  "first_name": "Leontine",
-  "last_name": "Perfect",
-  "email": "lperfect2@arizona.edu",
-  "password": "dHvTJlg2"
- },
- {
-  "id": 4,
-  "first_name": "Tyrone",
-  "last_name": "Wrathmell",
-  "email": "twrathmell3@ezinearticles.com",
-  "password": "tNMqCe9vf"
- },
- {
-  "id": 5,
-  "first_name": "Tootsie",
-  "last_name": "Furney",
-  "email": "tfurney4@businessweek.com",
-  "password": "RgVdmqVc"
- },
- {
-  "id": 6,
-  "first_name": "Link",
-  "last_name": "Doberer",
-  "email": "ldoberer5@virginia.edu",
-  "password": "GFRROa"
- },
- {
-  "id": 7,
-  "first_name": "Daryle",
-  "last_name": "Grigolli",
-  "email": "dgrigolli6@github.io",
-  "password": "obcjqz3SF"
- },
- {
-  "id": 8,
-  "first_name": "Lexie",
-  "last_name": "Doul",
-  "email": "ldoul7@shutterfly.com",
-  "password": "TZw3Hsd6km"
- },
- {
-  "id": 9,
-  "first_name": "Floris",
-  "last_name": "Bohje",
-  "email": "fbohje8@vinaora.com",
-  "password": "pENyUlgVe"
- },
- {
-  "id": 10,
-  "first_name": "Clarisse",
-  "last_name": "Plaister",
-  "email": "cplaister9@moonfruit.com",
-  "password": "QZhg33cmb"
- },
- {
-  "id": 11
+  "firstname": "Horacio",
+  "lastname": "Fischer",
+  "email": "horacio_fischer@hotmail.com",
+  "password": "$2a$10$jKGZAjHDxF0OI0FNodGThOv3Dpg5qWk4CiZw8FBTxPPfM1PP66D4W",
+  "avatar": "1624848094919_img.jpg"
  }
 ]

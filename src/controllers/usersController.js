@@ -19,16 +19,20 @@ let controllerUsers = {
 
 processRegister: function (req, res) {
     let userToCreate= {
-        // ...req.body,
-    //     // password: bcryptjs.hashSync(req.body.password, 10),
-      firstname: req.body.firstname
+    ...req.body,
+    password: bcryptjs.hashSync(req.body.password, 10),
+    avatar: req.file != undefined ? req.file.filename : null,
+    
+    // console.log(req.body.firstname)
+    // res.send(req.body.firstname)
     // //   lastname: req.body.lastname,
     //   email: req.body.email,
-    //   password: req.body.password
+    // password: req.body.password
     }
    
     User.create(userToCreate)
-   return res.send('Se creo todo piola')
+    res.send('Se creo todo piola')
+
 }
 }
 
