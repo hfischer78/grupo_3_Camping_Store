@@ -223,6 +223,10 @@ main {
     height: 250px;
 }
 
+.text-danger{
+    color: red
+}
+
 /* Footer */
 
 footer {
