@@ -38,5 +38,13 @@
   "email": "sebacalvo@hotmail.com",
   "password": "$2a$10$kJ1hXvFCDFYoa9PLFS0QXeFSV7/23Fj6gSizttTgev0Z4WppUxqli",
   "avatar": "1624941924987_img.jpg"
+ },
+ {
+  "id": 6,
+  "firstname": "seba",
+  "lastname": "calvo",
+  "email": "sebacalvo@gmail.com",
+  "password": "$2a$10$8iQuikQncRIvWSoL8dJQm.kjbBQDhqiwS9lfpXTA7HO3q0zIPStUa",
+  "avatar": "1625010829802_img.jpg"
  }
 ]

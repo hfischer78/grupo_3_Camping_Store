@@ -10,14 +10,14 @@ const validations = require('../middlewares/validateRegisterMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
-const uploadFile1 = require('../middlewares/multerMiddleware');
+const multerFunction = require('../middlewares/multerMiddleware');
 
 
 // Ruta de redireccionamiento a Register
 routerUsers.get("/register", guestMiddleware, userController.register);
 
 // Ruta que procesa el Register
-routerUsers.post("/register", uploadFile1.single('avatar'), userController.processRegister)
+routerUsers.post("/register", multerFunction("users").single('avatar'), userController.processRegister)
 
 // Ruta de redireccionamiento a LogIn
 routerUsers.get("/login", guestMiddleware, userController.login);

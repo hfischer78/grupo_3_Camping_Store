@@ -16,7 +16,7 @@ let controllerUsers = {
     },
 
     processRegister: function (req, res) {
-        let userInDb = User.findField('email', req.body.email);
+        let userInDb = User.findByField('email', req.body.email);
 
         if(userInDb) {
             return res.render(path.resolve(__dirname,"../views/users/register.ejs"), {

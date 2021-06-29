@@ -250,5 +250,17 @@
         "size": "",
         "category_index": "In-Sales",
         "image": "1624838891931_img_.jpg"
+    },
+    {
+        "id": 25,
+        "name": "Montañas",
+        "description": "",
+        "price": "190",
+        "discount": "14",
+        "category": "Super deportivo",
+        "color": "Gris",
+        "size": "1",
+        "category_index": "In-Sale",
+        "image": "1625010692783_img.jpg"
     }
 ]
