@@ -38,3 +38,14 @@
 
 >Creemos que podemos mejorar y profundizar nuestros conocimientos tecnicos para lograr una mejor aplicación y tener mayor rapidez y agilidad a la hora del desarrollo.
 
+##CUARTO SPRINT##
+
+##Aspectos que fucionaron bien ##
+
+>Dada la complejidad de este sprint, decidimos seguir implementando lo que veníamos haciendo en los últimos sprints de juntarnos a codear y sacar las tareas entre todos. 
+
+>Nos gusto haberlo hecho de esa manera esta vez ya que fuimos mucho más productivos y teníamos mayor conocimiento de lo que estaban trabajando nuestros compañeros.
+
+##Aspectos que podemos mejorar:
+
+>Para el proximo sprint, queremos seguir dandole mucha importancia a Trello porque ha sido clave en la división de tareas a completar.
