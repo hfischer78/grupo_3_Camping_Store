@@ -29,7 +29,7 @@ const User = {
 
         return userFound
     },
-    findField: function (field, text) {
+    findByField: function (field, text) {
         let allUsers= this.findAll();
         let userFound= allUsers.find(oneUser => oneUser[field] === text);
 

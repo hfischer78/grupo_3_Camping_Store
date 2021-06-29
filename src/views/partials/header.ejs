@@ -23,15 +23,42 @@
                 <div class="shopping-cart">
                     <a class="header-icon" href= "/productCart"><i class="fas fa-shopping-cart"></i></a>
                 </div>
-    
-                <div class="registrate">
+               
+                
+                <% if (locals.isLogged) {%>
+
+                <div class="ingresa">
+                    <a class="header-icon" href="/users/logout"><i class="fas fa-sign-out-alt"></i></a>
+                </div>
+                 <div class="ingresa">
+                    <!-- <a class="header-icon" href="/users/profile"> <img src="/img/users/<%= locals.userLogged.avatar %>" width="30" style="border-radius: 100%;"></i></a> -->
+                <a class="header-icon" href="/users/profile"><i class="fas fa-user"></i></a>
+                </div>
+                
+							<!-- <img src="/img/users/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;">
+							Hi <%= locals.userLogged.firstname %> 
+						
+							<a class="dropdown-item" href="/users/profile">My profile</a>
+							
+							<a class="dropdown-item" href="/users/logout">Logout</a>
+						</ul>
+					</li> -->
+
+                <% } else {%>
+         
+                <div class="registrate" >
                     <a class="header-icon" href="/users/register"><i class="fas fa-user-plus"></i></a>
                 </div>
     
                 <div class="ingresa">
                     <a class="header-icon" href="/users/login"><i class="fas fa-sign-in-alt"></i></a>
                 </div>
+             <% } %>
+            
             </div>
+
+       
+         
 
             <div class="menu-bar">
                 <i class="fas fa-bars"></i>

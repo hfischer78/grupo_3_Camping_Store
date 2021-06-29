@@ -1,6 +1,6 @@
 const path = require('path');
 const User = require('../models/User.js');
-const bcryptjs = require('bcryptjs')
+const bcryptjs = require('bcryptjs');
 
 
 //const productsFilePath = path.join(__dirname, '../data/products.json');
@@ -42,12 +42,17 @@ let controllerUsers = {
     },
 
     processLogin: function (req, res){
-        let userToLogin = User.findField('email', req.body.email);
+        let userToLogin = User.findByField('email', req.body.email);
         
         if(userToLogin){
             let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if(correctPassword){
-                return res.send('Logueado!')
+              delete userToLogin.password
+                req.session.userLogged = userToLogin;
+                if (req.body.remember_user){
+                    res.cookie("userEmail",req.body.email,{maxAge: (1000*60)})
+                }
+              return res.redirect("/users/profile")
             }
             res.render(path.resolve(__dirname,"../views/users/login.ejs"), {
                 errors: {
@@ -55,7 +60,7 @@ let controllerUsers = {
                         msg: 'Credenciales inválidas'
                     }
                 }
-            })
+            });
         }
         res.render(path.resolve(__dirname,"../views/users/login.ejs"), {
             errors: {
@@ -64,8 +69,22 @@ let controllerUsers = {
                 }
             }
         })
-    }
+    },
+
+    profile: function (req, res) {
+        
+        return res.render(path.resolve(__dirname,"../views/users/userProfile.ejs"),{
+            user:req.session.userLogged
+        });
+    },
+    
+	logout: (req, res) => {
+		res.clearCookie('userEmail');
+		req.session.destroy();
+		return res.redirect('/');
+	},
 }
+
 
 
 module.exports = controllerUsers;

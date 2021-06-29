@@ -30,5 +30,13 @@
   "email": "axi@gmail.com",
   "password": "$2a$10$Yfb3YIFOf7HvHwnDesuTs.lDCAStgh7SuYUVqktp3/L.m7wnIZRF6",
   "avatar": null
+ },
+ {
+  "id": 5,
+  "firstname": "seba",
+  "lastname": "calvo",
+  "email": "sebacalvo@hotmail.com",
+  "password": "$2a$10$kJ1hXvFCDFYoa9PLFS0QXeFSV7/23Fj6gSizttTgev0Z4WppUxqli",
+  "avatar": "1624941924987_img.jpg"
  }
 ]
