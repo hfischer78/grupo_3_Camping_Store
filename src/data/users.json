@@ -1,21 +1,5 @@
 [
  {
-  "id": 1,
-  "first_name": "Jaquith",
-  "last_name": "Freddi",
-  "email": "jfreddi0@kickstarter.com",
-  "password": "LBrZeV6",
-  "avatar": ""
- },
- {
-  "id": 2,
-  "firstname": "Horacio",
-  "lastname": "Fischer",
-  "email": "horacio_fischer@hotmail.com",
-  "password": "$2a$10$jKGZAjHDxF0OI0FNodGThOv3Dpg5qWk4CiZw8FBTxPPfM1PP66D4W",
-  "avatar": "1624848094919_img.jpg"
- },
- {
   "id": 3,
   "firstname": "Sole",
   "lastname": "Aldao",
@@ -38,5 +22,13 @@
   "email": "sebacalvo@hotmail.com",
   "password": "$2a$10$kJ1hXvFCDFYoa9PLFS0QXeFSV7/23Fj6gSizttTgev0Z4WppUxqli",
   "avatar": "1624941924987_img.jpg"
+ },
+ {
+  "id": 6,
+  "firstname": "Horacio",
+  "lastname": "Fischer",
+  "email": "horacio_fischer@hotmail.com",
+  "password": "$2a$10$TVmTKxWAgq5XS8FV/.WZGO7a6i.LAsTrPGI34hcq2GQQXvDZT.3f.",
+  "avatar": "1625001196073_img.jpg"
  }
 ]
