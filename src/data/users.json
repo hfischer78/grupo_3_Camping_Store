@@ -25,11 +25,10 @@
  },
  {
   "id": 6,
-  "firstname": "seba",
-  "lastname": "calvo",
-  "email": "sebacalvo@gmail.com",
-  "password": "$2a$10$8iQuikQncRIvWSoL8dJQm.kjbBQDhqiwS9lfpXTA7HO3q0zIPStUa",
-  "avatar": "1625010829802_img.jpg"
-
+  "firstname": "Horacio",
+  "lastname": "Fischer",
+  "email": "horacio_fischer@hotmail.com",
+  "password": "$2a$10$Te3vVdd1/Xw/mMfH4X/6YOq/VdwoSXZRAfKLkfmbDJ9XNfiSEgsgi",
+  "avatar": "1625422174460_img.jpg"
  }
 ]
