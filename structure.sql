@@ -1,3 +1,5 @@
+CREATE SCHEMA `campingstore_db` ;
+
 CREATE TABLE users(
 id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 first_name VARCHAR(200),
