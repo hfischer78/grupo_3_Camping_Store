@@ -25,7 +25,11 @@ let controllerProducts = {
     //   //res.render(path.resolve(__dirname,'../views/products/productsList'), ({products, toThousand}))        
             //res.send("pasito a pasito")
 
-                     db.Product.findAll()
+                     db.Product.findAll({
+                     include: ['Color'],
+                     include: ['Size'],
+                     include: ['Category']
+                     })
                      .then(products => {
                          //res.render('moviesList.ejs', {movies})
                          res.send(products)

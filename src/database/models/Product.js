@@ -55,18 +55,37 @@ module.exports = (sequelize, dataTypes) => {
     
     const Product = sequelize.define(alias, cols, config); 
 
-    // Actor.associate = function (models) {
-    //     Actor.belongsToMany(models.Movie, { // models.Movie -> Movies es el valor de alias en movie.js
-    //         as: "movies",
-    //         through: 'actor_movie',
-    //         foreignKey: 'actor_id',
-    //         otherKey: 'movie_id',
-    //         timestamps: false
-    //     })
-    
+     Product.associate = function (models) {
+         Product.belongsTo(models.Color, { 
+              as: "Color",
+              foreignKey: 'color_id',
+             // timestamps: false
+         })
+     }
+
+
+
+     Product.associate = function (models) {
+        Product.belongsTo(models.Size, { 
+             as: "Size",
+             foreignKey: 'size_id',
+            // timestamps: false
+        })
+    }
+
+
+    Product.associate = function (models) {
+        Product.belongsToMany(models.Category, { 
+             as: "Category",
+             through: 'Category_Product',
+             foreignKey: 'product_id',
+             otherKey: 'category_id',
+             timestamps: false
+
+
+        })
+    }
+
 
     return Product
 };
-
-
-

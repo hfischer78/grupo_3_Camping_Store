@@ -25,18 +25,13 @@ module.exports = (sequelize, dataTypes) => {
     
     const Color = sequelize.define(alias, cols, config); 
 
-    // Actor.associate = function (models) {
-    //     Actor.belongsToMany(models.Movie, { // models.Movie -> Movies es el valor de alias en movie.js
-    //         as: "movies",
-    //         through: 'actor_movie',
-    //         foreignKey: 'actor_id',
-    //         otherKey: 'movie_id',
-    //         timestamps: false
-    //     })
-    
-
+     Color.associate = function (models) {
+         Color.hasMany(models.Product, { 
+                  as: "Product",
+                  foreignKey: 'color_id',
+                //  timestamps: false
+         })
+     }    
+  
     return Color
 };
-
-
-
