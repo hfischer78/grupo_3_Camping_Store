@@ -12,6 +12,7 @@ let rutasMain = require('./routes/main.js');
 let rutasProducts = require('./routes/products.js');
 let rutasUsers = require('./routes/users.js');
 
+
 app.use(session({
     secret: "Es secreto",
     resave: false ,
@@ -34,6 +35,7 @@ app.use(methodOverride('_method')); // para usar put and delete
 app.use('/', rutasMain);
 app.use('/products', rutasProducts);
 app.use('/users', rutasUsers);
+
 
 
 //Configuración del Servidor

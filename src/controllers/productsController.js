@@ -8,7 +8,31 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
+
+// conexion con la DB
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+const moment = require('moment');
+
+const Product = db.Product;
+
+
 let controllerProducts = {
+
+   
+             prueba: function (req, res) {
+    //   //res.render(path.resolve(__dirname,'../views/products/productsList'), ({products, toThousand}))        
+            //res.send("pasito a pasito")
+
+                     db.Product.findAll()
+                     .then(products => {
+                         //res.render('moviesList.ejs', {movies})
+                         res.send(products)
+                     })
+
+                     },
+            
     
     index: function (req, res) {
         res.render(path.resolve(__dirname,'../views/products/productsList'), ({products, toThousand}))        
