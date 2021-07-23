@@ -31,7 +31,7 @@ let controllerProducts = {
                      include: ['Category']
                      })
                      .then(products => {
-                         //res.render('moviesList.ejs', {movies})
+                        // res.render('../views/products/prueba.ejs', {products, toThousand})
                          res.send(products)
                      })
 
