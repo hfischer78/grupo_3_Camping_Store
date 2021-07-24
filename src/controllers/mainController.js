@@ -1,10 +1,20 @@
 const fs = require('fs');
 const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+//const productsFilePath = path.join(__dirname, '../data/products.json');
+//const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+
+ // conexion con la DB
+ const db = require('../database/models');
+ const sequelize = db.sequelize;
+ const { Op } = require("sequelize");
+ const moment = require('moment');
+
+const Product = db.Product;
+
 
 //////
 
@@ -23,7 +33,20 @@ let controller = {
 		// 	return categoria.category == "in-sale"
 		// })
 
-		res.render(path.resolve(__dirname,'../views/index'),{products,toThousand})
+        db.Products.findAll({
+            include: [
+            {association: 'colors'},
+            {association:'sizes'},
+            {association:'categories'}
+            ]
+        })
+         
+             .then(products => {
+                res.render('../views/index', {products, toThousand})
+                //res.send(products)
+             })
+
+		//res.render(path.resolve(__dirname,'../views/index'),{products,toThousand})
 	},    
 
     carrito: function (req, res) {

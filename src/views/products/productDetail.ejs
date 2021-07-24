@@ -9,7 +9,6 @@
 
     <%- include("../partials/header")%>
 
-
     <main class="pageProdDetail">
         <div class="productPresentation">
             <div class="imgProduct">
@@ -20,7 +19,8 @@
                 <div class="prodNPD">
                     <h2 class="prodNPD"><%= productDetail.name %></h2>
                     <h3 class="prodPrice">Precio: $ <%= toThousand(productDetail.price) %></h3>
-                    <h3 class="prodDiscount">Descuento: <%= productDetail.discount %> %</h3>
+                    <h3 class="prodDiscount">Descuento: <%= productDetail.discount %> %</h3> 
+                    
                 </div>
 
 
@@ -63,33 +63,21 @@
 
                     -->
 
-                <div class="controldelformulario">
-                    <label>Categoria </label>
-                    <p><%= productDetail.category %>"></p>
-                </div>
+                
 
 
                 <div class="controldelformulario">
                     <label>Talle </label>
-                    <p><%= productDetail.size %></p>
+                    <p><%= productDetail.sizes.size %></p>
                 </div>
 
 
                 <div class="controldelformulario">
                     <label>Color </label>
-                   <p><%= productDetail.color %></p> 
+                   <p><%= productDetail.colors.color %></p> 
                 </div>
 
-                <div class="controldelformulario">
-                    <label>Condicion </label>
-                    <p><%= productDetail.category_index %></p>
-                </div>
-
-
-                <!-- </div>  -->
-
-
-
+                
                 <div>
                     <button class="buyButton">COMPRAR</button>
                 </div>

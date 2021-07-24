@@ -12,7 +12,7 @@ const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 // conexion con la DB
 const db = require('../database/models');
 const sequelize = db.sequelize;
-const { Op } = require("sequelize");
+const { Op, Association } = require("sequelize");
 const moment = require('moment');
 
 const Product = db.Product;
@@ -20,132 +20,109 @@ const Product = db.Product;
 
 let controllerProducts = {
 
-   
-             prueba: function (req, res) {
-    //   //res.render(path.resolve(__dirname,'../views/products/productsList'), ({products, toThousand}))        
-            //res.send("pasito a pasito")
-
-                     db.Product.findAll({
-                     include: ['Color'],
-                     include: ['Size'],
-                     include: ['Category']
-                     })
-                     .then(products => {
-                        // res.render('../views/products/prueba.ejs', {products, toThousand})
-                         res.send(products)
-                     })
-
-                     },
-            
     
     index: function (req, res) {
-        res.render(path.resolve(__dirname,'../views/products/productsList'), ({products, toThousand}))        
+           db.Products.findAll({
+                include: [
+                {association: 'colors'},
+                {association:'sizes'},
+                {association:'categories'}
+                ]
+            })
 
+            .then(products => {
+                res.render('../views/products/productsList', {products, toThousand})
+            })
     },
 
     detail: function (req, res) {
-        let productDetail = products.filter(function (producto) {
-            return producto.id == req.params.id;
-        });
-        productDetail = productDetail[0];
+            db.Products.findByPk(req.params.id,{
+                include: [
+                {association: 'colors'},
+                {association:'sizes'},
+                {association:'categories'}
+                ]
+            })
 
-        res.render("./products/productDetail", { productDetail, toThousand });
+            .then(productDetail => {
+             res.render('../views/products/productDetail', {productDetail, toThousand}) 
+                                         
+            })
     },
 
+
     create: function (req, res) {
-        //res.render(path.resolve(__dirname,"../views/productDetail.ejs"))
-        res.render("./products/productCreate", { toThousand });
+            res.render("./products/productCreate", { toThousand });
         
     },
 
     // Create -  Method to store
     store: (req, res) => {
-        //para obtener id.
-        let max = 1;
-        for (let i = 0; i < products.length; i++) {
-            if (max < products[i].id) {
-                max = products[i].id;
-            }
-        }
-
-        let newId = max + 1;
-
-        // actualizar cada uno de los atributos del JSON
-        let newProduct = {
-            //ejemplosss
-            id: newId,
+       
+        db.Products.create({
             name: req.body.name,
             description: req.body.description,
             price: req.body.price,
             discount: req.body.discount,
-            category: req.body.category,
-            color: req.body.color,
-            size: req.body.size,
-            category_index: req.body.category_index,
+            // category: req.body.category,
+            color_id: req.body.color,
+            size_id: req.body.size,
             image: req.file != undefined ? req.file.filename : null,
-        };
-
-        // actualizo la variable con el nuevo producto
-        products.push(newProduct);
-        //genero nuevo archivo json con todos los productos
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 4));
+        })  
 
         res.redirect("/");
     },
 
     // vista de edición
-    edit: function (req, res) {
-        let productToEdit = products.filter(function (producto) {
-            return producto.id == req.params.id;
-        });
+    edit: (req, res) => {
+        db.Products.findByPk(req.params.id,{
+            include: [
+            {association: 'colors'},
+            {association:'sizes'},
+            {association:'categories'}
+            ]
+        })
 
-        res.render("./products/productEdit", { productToEdit, toThousand });
+        .then(productToEdit => {
+           //res.send(productDetail)
+            res.render('../views/products/productEdit', {productToEdit, toThousand})                
+        })
     },
 
     // actualizacion de productos.
     update: function (req, res) {
         // genero variable de productos, excluyendo el producto a editar.
-        let productToEdit = products.filter(function (producto) {
-            return producto.id != req.params.id;
-        });
+        // let productToEdit = products.filter(function (producto) {
+        //     return producto.id != req.params.id;
 
-        // genero variable con los datos del nuevo producto
-        let newProduct = {
-            id: req.params.id,
-            name: req.body.name,
-            description: req.body.description,
-            price: req.body.price,
-            discount: req.body.discount,
-            category: req.body.category,
-            color: req.body.color,
-            size: req.body.size,
-            category_index: req.body.category_index,
-            image: req.file != undefined ? req.file.filename : null,
-        };
+        db.Products.update(
+            {
+                id: req.params.id,
+                name: req.body.name,
+                description: req.body.description,
+                price: req.body.price,
+                discount: req.body.discount,
+                //category: req.body.category,
+                color_id: req.body.color,
+                size_id: req.body.size,
+                image: req.file != undefined ? req.file.filename : null,
+            },
 
-        // agrego el producto editado
-        productToEdit.push(newProduct);
+            {
+                where: {id: req.params.id }
+            });
 
-        //genero nuevo archivo json con todos los productos
-        fs.writeFileSync(
-            productsFilePath,
-            JSON.stringify(productToEdit, null, 4)
-        );
-        // redirecciono a productos
-        res.redirect("/");
-    },
+            // redirecciono a productos
+            res.redirect("/");
+        },       
+
 
     //eliminacion de producto
     destroy: function (req, res) {
-        // genero variable de productos, excluyendo el producto a editar.
-        let productToEdit = products.filter(function (producto) {
-            return producto.id != req.params.id;
-        });
 
-        fs.writeFileSync(
-            productsFilePath,
-            JSON.stringify(productToEdit, null, 4)
-        );
+        db.Products.destroy({
+            where: {id: req.params.id }
+        })
 
         res.redirect("/");
     },

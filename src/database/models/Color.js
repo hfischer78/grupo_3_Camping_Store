@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Color';
+    let alias = 'Colors';
     
     let cols = {
         id: {
@@ -11,6 +11,12 @@ module.exports = (sequelize, dataTypes) => {
         color: {
         type: dataTypes.STRING(100),
         },
+
+        deleted_at: {
+            
+            type: dataTypes.DATE, 
+                // field: "deleted_at" 
+            }
         
                
     };
@@ -26,8 +32,8 @@ module.exports = (sequelize, dataTypes) => {
     const Color = sequelize.define(alias, cols, config); 
 
      Color.associate = function (models) {
-         Color.hasMany(models.Product, { 
-                  as: "Product",
+         Color.hasMany(models.Products, { 
+                  as: "product",
                   foreignKey: 'color_id',
                 //  timestamps: false
          })

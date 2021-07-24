@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Product';
+    let alias = 'Products';
     
     let cols = {
         id: {
@@ -24,6 +24,12 @@ module.exports = (sequelize, dataTypes) => {
 
         },
 
+        discount: {
+            // decimal
+        type: dataTypes.DECIMAL(3,1),
+
+        },
+
         color_id: {
         // int
         type: dataTypes.BIGINT,
@@ -39,15 +45,23 @@ module.exports = (sequelize, dataTypes) => {
 
         image: {
         // varchar   
-        type: dataTypes.STRING, 
+        type: dataTypes.STRING,
+        },
 
+        deleted_at: {
+            
+        type: dataTypes.DATE, 
+            // field: "deleted_at" 
         }
         
     };
     
     let config = {
+        //underscore: true,
+        // implica tratar como camel todas las columnas. productId
         tableName: 'products',
         timestamps: false,
+        paranoid: true
         // createdAt: 'created_at',
         // updatedAt: 'updated_at',
         // deletedAt: false
@@ -56,35 +70,48 @@ module.exports = (sequelize, dataTypes) => {
     const Product = sequelize.define(alias, cols, config); 
 
      Product.associate = function (models) {
-         Product.belongsTo(models.Color, { 
-              as: "Color",
+         Product.belongsTo(models.Colors, { 
+              as: "colors",
               foreignKey: 'color_id',
              // timestamps: false
+         }),
+
+         Product.belongsTo(models.Sizes, { 
+              as: "sizes",
+              foreignKey: 'size_id',
+              // timestamps: false
+        }),
+
+          Product.belongsToMany(models.Categories, { 
+              as: "categories",
+              through: 'Category_Products',
+              foreignKey: 'product_id',
+              otherKey: 'category_id',
+              timestamps: false
          })
-     }
-
-
-
-     Product.associate = function (models) {
-        Product.belongsTo(models.Size, { 
-             as: "Size",
-             foreignKey: 'size_id',
-            // timestamps: false
-        })
     }
 
 
-    Product.associate = function (models) {
-        Product.belongsToMany(models.Category, { 
-             as: "Category",
-             through: 'Category_Product',
-             foreignKey: 'product_id',
-             otherKey: 'category_id',
-             timestamps: false
 
 
-        })
-    }
+    // Product.associate = function (models) {
+    //       Product.belongsTo(models.Sizes, { 
+    //            as: "Sizes",
+    //            foreignKey: 'size_id',
+    //           // timestamps: false
+    //       })
+    // }
+
+
+    //  Product.associate = function (models) {
+    //      Product.belongsToMany(models.Categories, { 
+    //           as: "Categories",
+    //           through: 'Category_Products',
+    //           foreignKey: 'product_id',
+    //           otherKey: 'category_id',
+    //           timestamps: false
+    //     })
+    // }
 
 
     return Product

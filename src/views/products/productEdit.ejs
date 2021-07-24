@@ -10,12 +10,12 @@
     <%- include("../partials/header")%>
     <main>
         <H2>Edita el Producto</H2>
-        <!-- <form action="/crearproducto" method="POST"  class="createform"> -->
-        <form action="/products/<%= productToEdit[0].id %>/?_method=PUT" class="createform" method="POST"
+        
+            <form action="/products/<%= productToEdit.id %>/?_method=PUT" class="createform" method="POST"
             enctype="multipart/form-data">
             <div class="controldelformulario">
                 <label>Nombre del Producto</label>
-                <input type="text" name="name" class="control" value=<%= productToEdit[0].name %>>
+                <input type="text" name="name" class="control" value=<%= productToEdit.name %>>
             </div>
             <div class="controldelformulario">
                 <label>Seleccionar una imagen para el Producto:</label>
@@ -24,84 +24,36 @@
             <div class="controldelformulario">
                 <label>Precio</label>
                 <input type="number" name="price" placeholder="123,45" class="control"
-                    value=<%= toThousand(productToEdit[0].price) %>>
+                    value=<%= toThousand(productToEdit.price) %>>
 
             </div>
             <div class="controldelformulario">
                 <label>Descuento % </label>
                 <input type="number" name="discount" placeholder="30%" class="control"
-                    value=<%= productToEdit[0].discount %>>
+                    value=<%= productToEdit.discount %>>
             </div>
 
-            <!-- </div> -->
+           
 
             <div class="controldelformulario">
-                <label>Categoria </label>
-                <input type="text" name="category" placeholder="Camping" class="control"
-                    value=<%= productToEdit[0].category %>>
-            </div>
-
-
-            <div class="controldelformulario">
-                <label>Talle </label>
-                <input type="text" name="size" placeholder="XXL" class="control" value=<%= productToEdit[0].size %>>
+                <label>Codigo de Talle </label>
+                <input type="text" name="size" placeholder="XXL" class="control" value=<%= productToEdit.size_id %>>
             </div>
 
 
             <div class="controldelformulario">
-                <label>Color </label>
-                <input type="text" name="color" placeholder="Verde" class="control" value=<%= productToEdit[0].color %>>
+                <label>Codigo Color </label>
+                <input type="text" name="color" placeholder="Verde" class="control" value=<%= productToEdit.color_id %>>
             </div>
 
-            <div class="controldelformulario">
-                <label>Condicion </label>
-                <input type="text" name="category_index" placeholder="In-Sales" class="control"
-                    value=<%= productToEdit[0].category_index %>>
-            </div>
-
-
-
-            <!-- <div class="controldelformulario">
-                <label>Categoria</label>
-                <select name="Categoria" id=""class="control">
-                    <option value="Indumentaria">Indumentaria</option>
-                    <option value="Trekking">Trekking</option>
-                    <option value="Camping">Camping</option>
-                    <option value="Pesca">Pesca</option>
-                </select>
-            </div> -->
-
-            <!-- <div class="controldelformulario">
-                <label>Talle</label>
-                <select name="Talle" id=""class="control">
-                    <option value="Grande">Grande</option>
-                    <option value="Mediano">Mediano</option>
-                    <option value="Pequeño">Pequeño</option>
-                    <option value="N/A">No Aplica</option>
-                </select>
-            </div> -->
-
-            <!-- <div class="controldelformulario">
-                <label>Color</label>
-                <select name="Color" id=""class="control">
-                    <option value="Rojo">Rojo</option>
-                    <option value="Amarillo">Amarillo</option>
-                    <option value="Naranja">Naranja</option>
-                    <option value="Blanco">Blanco</option>
-                    <option value="N/A">No Aplica</option>
-                </select>
-            </div> -->
-
+           
             <div class="controldelformulario">
                 <label for="description">Descripcion del Producto</label>
                 <textarea name="description" id="description" cols="30" rows="10"
-                    class="control"><%= productToEdit[0].description %></textarea>
+                    class="control"><%= productToEdit.description %></textarea>
 
             </div>
-            <!-- <div  class="controldelformulario">
-           <label>Esta en oferta?</label>
-            <input type="radio" name="EnOferta">
-            </div> -->
+           
 
 
             <div class="controldelformulario">
@@ -110,7 +62,7 @@
             </div>
         </form>
 
-        <form action="/products/<%= productToEdit[0].id %>/?_method=DELETE" method="POST" enctype="multipart/form-data">
+        <form action="/products/<%= productToEdit.id %>/?_method=DELETE" method="POST" enctype="multipart/form-data">
             <button class="ButtonMalo" type="submit">Eliminar</button>
         </form>
 

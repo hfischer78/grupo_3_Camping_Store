@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Category_Product';
+    let alias = 'Category_Products';
     
     let cols = {
         id: {
@@ -17,6 +17,12 @@ module.exports = (sequelize, dataTypes) => {
         type: dataTypes.BIGINT(10)
 
         },
+
+        deleted_at: {
+            
+            type: dataTypes.DATE, 
+                // field: "deleted_at" 
+            }
         
     };
     

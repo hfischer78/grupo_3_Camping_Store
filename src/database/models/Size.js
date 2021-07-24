@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Size';
+    let alias = 'Sizes';
     
     let cols = {
         id: {
@@ -8,9 +8,15 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         
-        Size: {
+        size: {
         type: dataTypes.STRING(100),
         },
+
+        deleted_at: {
+            
+            type: dataTypes.DATE, 
+                // field: "deleted_at" 
+            }
         
                
     };
@@ -25,13 +31,13 @@ module.exports = (sequelize, dataTypes) => {
     
     const Size = sequelize.define(alias, cols, config); 
 
-    Size.associate = function (models) {
-        Size.hasMany(models.Product, { 
-                 as: "Product",
-                 foreignKey: 'size_id',
-               //  timestamps: false
-        })
-    }    
+     Size.associate = function (models) {
+         Size.hasMany(models.Products, { 
+                  as: "products",
+                  foreignKey: 'size_id',
+                //  timestamps: false
+         })
+     }    
     
 
     return Size

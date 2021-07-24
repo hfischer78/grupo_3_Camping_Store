@@ -20,7 +20,7 @@ const uploadFile = require('../middlewares/multerMiddleware');
 let productsController = require('../controllers/productsController');
 
 // RUTA DE PRUEBA 
-routerProducts.get("/prueba", productsController.prueba);
+//routerProducts.get("/prueba", productsController.prueba);
 
 // LISTA PRODUCTOS //
 routerProducts.get("/", productsController.index);

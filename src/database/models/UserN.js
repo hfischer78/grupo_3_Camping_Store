@@ -3,7 +3,7 @@ module.exports = (sequelize, dataTypes) => {
   
   /// IMPORTANTE: AJUSTAR NOMBRE!! QUITANDO LA N. TENER CUIDADO HAY VARIABLES IGUALES EN OTROS ARCHIVOS.
   
-    let alias = 'UserN';
+    let alias = 'UsersN';
     
     let cols = {
         id: {
