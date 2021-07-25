@@ -1,7 +1,7 @@
 const express = require("express");
 const session = require("express-session");
 const cookies = require("cookie-parser");
-const userLoggedMidddleware = require("./middlewares/userLoggedMiddleware");
+//const userLoggedMidddleware = require("./middlewares/userLoggedMiddleware");
 const path = require('path');
 const app = express();
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
@@ -21,7 +21,7 @@ app.use(session({
 app.use(cookies());
 app.set("view engine", "ejs")
 app.set("views", path.resolve(__dirname,"./views"))
-app.use(userLoggedMidddleware)
+//app.use(userLoggedMidddleware)
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
