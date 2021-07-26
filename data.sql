@@ -50,16 +50,16 @@ INSERT INTO sizes (id, size)
 VALUES (DEFAULT, 'XL');
 
 INSERT INTO products (id, name, description, price, color_id, size_id, image)
-VALUES (DEFAULT, 'Remera', 'ad lorem ipsum', 750, 4, 3, 'image.jpg');
+VALUES (DEFAULT, 'Remera', 'ad lorem ipsum', 750, 4, 3, '1627336961734_img.jpeg');
 
 INSERT INTO products (id, name, description, price, color_id, size_id, image)
-VALUES (DEFAULT, 'Buzo', 'ad lorem ipsum', 2550, 1, 2, 'image1.jpg');
+VALUES (DEFAULT, 'Buzo', 'ad lorem ipsum', 2550, 1, 2, '1627333628339_img.jpeg');
 
 INSERT INTO products (id, name, description, price, color_id, size_id, image)
-VALUES (DEFAULT, 'Pantalón', 'ad lorem ipsum', 3500, 3, 1, 'image2.jpg');
+VALUES (DEFAULT, 'Pantalón', 'ad lorem ipsum', 3500, 3, 1, '1627333796125_img.jpeg');
 
 INSERT INTO products (id, name, description, price, color_id, size_id, image)
-VALUES (DEFAULT, 'Carpa', 'ad lorem ipsum', 17500, 1, 1, 'image3.jpg');
+VALUES (DEFAULT, 'Carpa', 'ad lorem ipsum', 17500, 1, 1, '1627334162753_img.jpeg');
 
 INSERT INTO orders_products (id, product_id, order_id)
 VALUES (DEFAULT, 1,4);
