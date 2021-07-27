@@ -49,3 +49,16 @@
 ##Aspectos que podemos mejorar:
 
 >Para el proximo sprint, queremos seguir dandole mucha importancia a Trello porque ha sido clave en la división de tareas a completar.
+
+
+##QUINTO SPRINT##
+
+##Aspectos que fucionaron bien ##
+
+>Continuamos implementando lo que veníamos haciendo en los últimos sprints de juntarnos a codear y sacar las tareas entre todos (pair programming). 
+
+>Hubo una buena comunicación en el equipo para poder realizar aquellas tareas que fueron asignadas individualmente, lo que permitió finalizar los requerimientos en tiempo y forma.
+
+##Aspectos que podemos mejorar:
+
+>Como objetivo para el proximo sprint, ya que se trata de uno de los últimos nos gustaría perfeccionar la página y ajustar detalles. También continuar con el trabajo coordinado como venimos haciendo e implementar los nuevos conocimientos adquiridos para dejar el proyecto lo más funcional y amigable para el cliente.
