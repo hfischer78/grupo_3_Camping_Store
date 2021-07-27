@@ -1,14 +1,14 @@
 INSERT INTO users (id, first_name, last_name, email, password, avatar, user_type)
-VALUES (DEFAULT, 'Axel', 'Hurtado', 'axi_hurtado@gmail.com', 'fsakfhskjhgsag', 'avatar.jpg', DEFAULT);
+VALUES (DEFAULT, 'Axel', 'Hurtado', 'axelandre91@gmail.com', 'aguanteelgrupotres', '1627166511237_img.png', DEFAULT);
 
 INSERT INTO users (id, first_name, last_name, email, password, avatar, user_type)
-VALUES (DEFAULT, 'Horacio', 'Fischer', 'horacio_fischer@hotmail.com', 'fsakfhskjhgsag', 'avatar1.jpg', DEFAULT);
+VALUES (DEFAULT, 'Horacio', 'Fischer', 'horacio_fischer@hotmail.com', 'aguanteelgrupotres', '1627166511237_img.png', DEFAULT);
 
 INSERT INTO users (id, first_name, last_name, email, password, avatar, user_type)
-VALUES (DEFAULT, 'Sebastián', 'Calvo', 'sebacalvo@hotmail.com', 'fsakfhskjhgsag', 'avatar2.jpg', DEFAULT);
+VALUES (DEFAULT, 'Sebastián', 'Calvo', 'sebacalvo@hotmail.com', 'aguanteelgrupotres', '1627166511237_img.png', DEFAULT);
 
 INSERT INTO users (id, first_name, last_name, email, password, avatar, user_type)
-VALUES (DEFAULT, 'Soledad', 'Aldao', 'solealdao@hotmail.com', 'fsakfhskjhgsag', 'avatar3.jpg', DEFAULT);
+VALUES (DEFAULT, 'Soledad', 'Aldao', 'soledad_aldao@hotmail.com', 'aguanteelgrupotres', '1627166511237_img.png', DEFAULT);
 
 INSERT INTO orders (id, user_id, total, date)
 VALUES (DEFAULT, 1, 1800, now());
@@ -20,7 +20,16 @@ INSERT INTO orders (id, user_id, total, date)
 VALUES (DEFAULT, 1, 2600, now());
 
 INSERT INTO orders (id, user_id, total, date)
+VALUES (DEFAULT, 1, 2300, now());
+
+INSERT INTO orders (id, user_id, total, date)
 VALUES (DEFAULT, 1, 1000, now());
+
+INSERT INTO orders (id, user_id, total, date)
+VALUES (DEFAULT, 1, 1400, now());
+
+INSERT INTO orders (id, user_id, total, date)
+VALUES (DEFAULT, 1, 3700, now());
 
 INSERT INTO colors (id, color)
 VALUES (DEFAULT, 'Azul');
@@ -50,16 +59,29 @@ INSERT INTO sizes (id, size)
 VALUES (DEFAULT, 'XL');
 
 INSERT INTO products (id, name, description, price, color_id, size_id, image)
-VALUES (DEFAULT, 'Remera', 'ad lorem ipsum', 750, 4, 3, '1627336961734_img.jpeg');
+VALUES (DEFAULT, 'Remera térmica', 'ad lorem ipsum', 750, 4, 3, '1627330632133_img.jpeg');
 
 INSERT INTO products (id, name, description, price, color_id, size_id, image)
-VALUES (DEFAULT, 'Buzo', 'ad lorem ipsum', 2550, 1, 2, '1627333628339_img.jpeg');
+VALUES (DEFAULT, 'Campera', 'ad lorem ipsum', 3550, 1, 2, '1622826329595_img_.jpg');
 
 INSERT INTO products (id, name, description, price, color_id, size_id, image)
-VALUES (DEFAULT, 'Pantalón', 'ad lorem ipsum', 3500, 3, 1, '1627333796125_img.jpeg');
+VALUES (DEFAULT, 'Set cocina', 'ad lorem ipsum', 2500, 3, 1, '1622849053647_img_.jpg');
 
 INSERT INTO products (id, name, description, price, color_id, size_id, image)
-VALUES (DEFAULT, 'Carpa', 'ad lorem ipsum', 17500, 1, 1, '1627334162753_img.jpeg');
+VALUES (DEFAULT, 'Caja de pesca', 'ad lorem ipsum', 3500, 3, 1, '1622845646182_img_.jpg');
+
+INSERT INTO products (id, name, description, price, color_id, size_id, image)
+VALUES (DEFAULT, 'Pantalón trekking', 'ad lorem ipsum', 4500, 3, 3, '1627333796125_img.jpeg');
+
+INSERT INTO products (id, name, description, price, color_id, size_id, image)
+VALUES (DEFAULT, 'Pasamontañas', 'ad lorem ipsum', 10500, 3, 1, '1622846164000_img_.jpg');
+
+INSERT INTO products (id, name, description, price, color_id, size_id, image)
+VALUES (DEFAULT, 'Bolsa de dormir', 'ad lorem ipsum', 17500, 1, 1, '1622846125469_img_.jpg');
+
+INSERT INTO products (id, name, description, price, color_id, size_id, image)
+VALUES (DEFAULT, 'Carpa', 'ad lorem ipsum', 40500, 1, 1, '1622777186491_img_.jpeg');
+
 
 INSERT INTO orders_products (id, product_id, order_id)
 VALUES (DEFAULT, 1,4);
@@ -98,4 +120,16 @@ INSERT INTO categories_products (id, product_id, category_id)
 VALUES (DEFAULT, 3,2);
 
 INSERT INTO categories_products (id, product_id, category_id)
-VALUES (DEFAULT, 4,4);
+VALUES (DEFAULT, 4,2);
+
+INSERT INTO categories_products (id, product_id, category_id)
+VALUES (DEFAULT, 5,3);
+
+INSERT INTO categories_products (id, product_id, category_id)
+VALUES (DEFAULT, 6,3);
+
+INSERT INTO categories_products (id, product_id, category_id)
+VALUES (DEFAULT, 7,4);
+
+INSERT INTO categories_products (id, product_id, category_id)
+VALUES (DEFAULT, 8,4);
