@@ -219,8 +219,7 @@ main {
 }
 
 .imgProd{
-    
-    height: 250px;
+    height: 250px
 }
 
 .text-danger{
@@ -450,4 +449,10 @@ footer section .contacto .whatsapp,
 .Picture{
 width: 200px
 
+}
+
+.imagenDetalle {
+     max-width: 300px;
+    padding: 5px;
+    
 }
