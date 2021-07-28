@@ -1,14 +1,14 @@
 INSERT INTO users (id, first_name, last_name, email, password, avatar, user_type)
-VALUES (DEFAULT, 'Axel', 'Hurtado', 'axelandre91@gmail.com', 'aguanteelgrupotres', '1627166511237_img.png', DEFAULT);
+VALUES (DEFAULT, 'Axel', 'Hurtado', 'axelandre91@gmail.com', '$2a$10$9ur/K3iJE8nQR/yuPCU.euCR00Qm5IT1kAle6ZgQ4toM6HdCRen2S', '1627166511237_img.png', DEFAULT);
 
 INSERT INTO users (id, first_name, last_name, email, password, avatar, user_type)
-VALUES (DEFAULT, 'Horacio', 'Fischer', 'horacio_fischer@hotmail.com', 'aguanteelgrupotres', '1627166511237_img.png', DEFAULT);
+VALUES (DEFAULT, 'Horacio', 'Fischer', 'horacio_fischer@hotmail.com', '$2a$10$9ur/K3iJE8nQR/yuPCU.euCR00Qm5IT1kAle6ZgQ4toM6HdCRen2S', '1627166511237_img.png', DEFAULT);
 
 INSERT INTO users (id, first_name, last_name, email, password, avatar, user_type)
-VALUES (DEFAULT, 'Sebastián', 'Calvo', 'sebacalvo@hotmail.com', 'aguanteelgrupotres', '1627166511237_img.png', DEFAULT);
+VALUES (DEFAULT, 'Sebastián', 'Calvo', 'sebacalvo@hotmail.com', '$2a$10$9ur/K3iJE8nQR/yuPCU.euCR00Qm5IT1kAle6ZgQ4toM6HdCRen2S', '1627166511237_img.png', DEFAULT);
 
 INSERT INTO users (id, first_name, last_name, email, password, avatar, user_type)
-VALUES (DEFAULT, 'Soledad', 'Aldao', 'soledad_aldao@hotmail.com', 'aguanteelgrupotres', '1627166511237_img.png', DEFAULT);
+VALUES (DEFAULT, 'Soledad', 'Aldao', 'soledad_aldao@hotmail.com', '$2a$10$9ur/K3iJE8nQR/yuPCU.euCR00Qm5IT1kAle6ZgQ4toM6HdCRen2S', '1627166511237_img.png', DEFAULT);
 
 INSERT INTO orders (id, user_id, total, date)
 VALUES (DEFAULT, 1, 1800, now());
@@ -58,29 +58,29 @@ VALUES (DEFAULT, 'L');
 INSERT INTO sizes (id, size)
 VALUES (DEFAULT, 'XL');
 
-INSERT INTO products (id, name, description, price, color_id, size_id, image)
-VALUES (DEFAULT, 'Remera térmica', 'ad lorem ipsum', 750, 4, 3, '1627330632133_img.jpeg');
+INSERT INTO products (id, name, description, price, color_id, size_id, discount, image)
+VALUES (DEFAULT, 'Remera térmica', 'ad lorem ipsum', 750, 4, 3,20, '1627330632133_img.jpeg');
 
-INSERT INTO products (id, name, description, price, color_id, size_id, image)
-VALUES (DEFAULT, 'Campera', 'ad lorem ipsum', 3550, 1, 2, '1622826329595_img_.jpg');
+INSERT INTO products (id, name, description, price, color_id, size_id, discount, image)
+VALUES (DEFAULT, 'Campera', 'ad lorem ipsum', 3550, 1, 2, 5,'1622826329595_img_.jpg');
 
-INSERT INTO products (id, name, description, price, color_id, size_id, image)
-VALUES (DEFAULT, 'Set cocina', 'ad lorem ipsum', 2500, 3, 1, '1622849053647_img_.jpg');
+INSERT INTO products (id, name, description, price, color_id, size_id, discount, image)
+VALUES (DEFAULT, 'Set cocina', 'ad lorem ipsum', 2500, 3, 1,5, '1622849053647_img_.jpg');
 
-INSERT INTO products (id, name, description, price, color_id, size_id, image)
-VALUES (DEFAULT, 'Caja de pesca', 'ad lorem ipsum', 3500, 3, 1, '1622845646182_img_.jpg');
+INSERT INTO products (id, name, description, price, color_id, size_id, discount, image)
+VALUES (DEFAULT, 'Caja de pesca', 'ad lorem ipsum', 3500, 3, 1,20, '1622845646182_img_.jpg');
 
-INSERT INTO products (id, name, description, price, color_id, size_id, image)
-VALUES (DEFAULT, 'Pantalón trekking', 'ad lorem ipsum', 4500, 3, 3, '1627333796125_img.jpeg');
+INSERT INTO products (id, name, description, price, color_id, size_id, discount, image)
+VALUES (DEFAULT, 'Pantalón trekking', 'ad lorem ipsum', 4500, 3, 1,10, '1627333796125_img.jpeg');
 
-INSERT INTO products (id, name, description, price, color_id, size_id, image)
-VALUES (DEFAULT, 'Pasamontañas', 'ad lorem ipsum', 10500, 3, 1, '1622846164000_img_.jpg');
+INSERT INTO products (id, name, description, price, color_id, size_id, discount, image)
+VALUES (DEFAULT, 'Pasamontañas', 'ad lorem ipsum', 10500, 3, 1,30, '1622846164000_img_.jpg');
 
-INSERT INTO products (id, name, description, price, color_id, size_id, image)
-VALUES (DEFAULT, 'Bolsa de dormir', 'ad lorem ipsum', 17500, 1, 1, '1622846125469_img_.jpg');
+INSERT INTO products (id, name, description, price, color_id, size_id, discount, image)
+VALUES (DEFAULT, 'Bolsa de dormir', 'ad lorem ipsum', 17500, 1, 1,35, '1622846125469_img_.jpg');
 
-INSERT INTO products (id, name, description, price, color_id, size_id, image)
-VALUES (DEFAULT, 'Carpa', 'ad lorem ipsum', 40500, 1, 1, '1622777186491_img_.jpeg');
+INSERT INTO products (id, name, description, price, color_id, size_id, discount, image)
+VALUES (DEFAULT, 'Carpa', 'ad lorem ipsum', 40500, 1, 1,40, '1622777186491_img_.jpeg');
 
 
 INSERT INTO orders_products (id, product_id, order_id)

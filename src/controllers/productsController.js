@@ -31,9 +31,36 @@ let controllerProducts = {
             })
 
             .then(products => {
-                res.render('../views/products/productsList', {products, toThousand})
+               
+               res.render('../views/products/productsList', {products, toThousand})
             })
     },
+
+
+//// para probar categorias
+
+
+    
+categoryList: function (req, res) {
+
+    
+     db.Products.findAll(
+        {
+          include: [
+          {association: 'colors'},
+          {association:'sizes'},
+          {association:'categories',where: {id: req.params.id}},
+          ],
+       }     
+      )
+
+      .then(products => {
+    
+       //res.send(products)
+      res.render('../views/products/productsCategory', {products, toThousand})
+      })
+},
+
 
     detail: function (req, res) {
             db.Products.findByPk(req.params.id,{

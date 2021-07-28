@@ -22,6 +22,10 @@ let productsController = require('../controllers/productsController');
 // RUTA DE PRUEBA 
 //routerProducts.get("/prueba", productsController.prueba);
 
+// LISTA PRODUCTOS POR CATEGORIAS //
+routerProducts.get("/categoria/:id", productsController.categoryList);
+
+
 // LISTA PRODUCTOS //
 routerProducts.get("/", productsController.index);
 
