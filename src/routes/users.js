@@ -16,8 +16,8 @@ const multerFunction = require('../middlewares/multerMiddleware');
 // Ruta de redireccionamiento a Register
 routerUsers.get("/register", guestMiddleware, userController.register);
 
-// Ruta que procesa el Register
-routerUsers.post("/register", multerFunction("users").single('avatar'), userController.processRegister)
+// Ruta que procesa el Register (inclui el middleware de validateRegister, con le nombre de la constante validations)
+routerUsers.post("/register", multerFunction("users").single('avatar'),validations, userController.processRegister) 
 
 // Ruta de redireccionamiento a LogIn
 routerUsers.get("/login", guestMiddleware, userController.login);

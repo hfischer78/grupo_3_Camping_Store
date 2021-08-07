@@ -15,7 +15,7 @@ const { Op, Association } = require("sequelize");
 const moment = require('moment');
 
 const User = db.User;
-
+const {validationResult} = require("express-validator");
 
 let controllerUsers = {
    
@@ -26,7 +26,10 @@ let controllerUsers = {
 
     // proceso de registro
     processRegister: function (req, res) {
-
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0){
+            return res.render(path.resolve(__dirname,"../views/users/register.ejs"), {errors : resultValidation.mapped(), oldData: req.body});
+        }
         // acceso a la DB para verificar si el mail que se pretende registrar ya esta registrado    
         db.Users.findOne({where: { email: req.body.email} })
        .then(users => {
