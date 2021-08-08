@@ -41,3 +41,7 @@
     color: #7b7b7bfa
 }
 
+.errorMsg {
+    justify-content: center;
+    margin-bottom: 10px;
+}

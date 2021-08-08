@@ -88,16 +88,17 @@ let controllerUsers = {
              }
              res.render(path.resolve(__dirname,"../views/users/login.ejs"), {
                  errors: {
-                     email: {
-                         msg: 'Credenciales inválidas'
+                     password: {
+                         msg: 'La password no es la correcta'
                      }
-                 }
+                 },
+                 oldData: req.body
              });
          }
          res.render(path.resolve(__dirname,"../views/users/login.ejs"), {
              errors: {
                  email: {
-                     msg: 'No estás registrado!'
+                     msg: 'Este email no esta registrado en nuetra base de datos'
                  }
              }
          })
