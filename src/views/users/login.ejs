@@ -10,12 +10,17 @@
     
     <main>
         <form action="/users/login" method="POST">
+            
+            <div class= "errores">
+                <ul></ul>
+            </div>
+            
             <div class="form-login">
                 <div class="input-group">
                     <span><i class="fas fa-at"></i></span>
                     <input class="form-input" type="email" name= "email" placeholder="Email" value="<%= locals.oldData ? oldData.email : null %>">
                 </div>
-             <div class="errorMsg">   
+            <div class="errorMsg">   
                     <% if (locals.errors && errors.email) { %>
                     <div class= 'text-danger'>
                         <%= errors.email.msg %>
@@ -42,14 +47,13 @@
                             <BR><BR>
 
                 <div>
-                   <button class="form-submit-button" type="submit">Iniciar Sesión</button>
-                   
+                <button class="form-submit-button" type="submit">Iniciar Sesión</button>
                 </div>
             </div>
         </form>
     </main>
 
- 
-    <%- include("../partials/footer")%>
 
+    <%- include("../partials/footer")%>
+    <script src="/js/login.js"></script> 
 </body>
