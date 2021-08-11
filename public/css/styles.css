@@ -84,6 +84,7 @@ input {
     display: inline-block;
     width: 80%;
     line-height: 31px;
+    outline: none
 }
 
 .search-bar input {
