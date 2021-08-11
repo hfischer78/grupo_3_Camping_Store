@@ -19,7 +19,7 @@
             <div class="form-login">
                 <div class="input-group">
                     <span><i class="fas fa-at"></i></span>
-                    <input class="form-input" type="text" name= "email" placeholder="Email" value="<%= locals.oldData ? oldData.email : null %>">
+                    <input id="test-email" class="form-input" type="text" name= "email" placeholder="Email" value="<%= locals.oldData ? oldData.email : null %>">
                 </div>
             <div class="errorMsg">   
                     <% if (locals.errors && errors.email) { %>
@@ -31,7 +31,7 @@
             
                 <div class="input-group">
                     <span><i class="fas fa-lock"></i></span>
-                    <input  class="form-input" type="password" name= "password"  placeholder="Contraseña">
+                    <input id="test-password" class="form-input" type="password" name= "password"  placeholder="Contraseña">
                 </div>
             <div class="errorMsg">  
                 <% if (locals.errors && errors.password) { %>
@@ -41,9 +41,7 @@
                 <% } %>
             </div>
                             <div>
-							
 									<input type="checkbox"  name="remember_user"> Recordar mi usuario
-								
 							</div> 
                             <BR><BR>
 

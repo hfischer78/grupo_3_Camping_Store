@@ -1,34 +1,38 @@
 window.onload = function () {
     let formulario= document.querySelector("#form-login");
 
-    formulario.addEventListener("submit", function (e) {
+    formulario.addEventListener("submit", function(event) {
 
         let errores= []
 
-        let emailField= document.querySelector("input.email");
+        let emailField= document.querySelector("#test-email");
 
-        if(emailField=="") {
+        if(emailField.value=="") {
             errores.push("Ingresa un email válido")
+            emailField.innerHTML = "El campo emailz no puede estar vacio"
         } else if (emailField.value.lenght<8){
             errores.push("Ingresa un email válido")
         }
 
-        let passwordField= document.querySelector("input.password");
+        let passwordField= document.querySelector("#test-password");
         
-        if(passwordField=="") {
+        if(passwordField.value=="") {
             errores.push("Debes ingresar tu contraseña")
+            emailField.innerHTML = "El campo password no puede estar vacio"
         } else if (passwordField.value.lenght<8){
             errores.push("Debes ingresar tu contraseña")
         }
 
         if (errores.length>0) {
-            e.preventDefault();
+            event.preventDefault();
 
-            let ulErrores= document.querySelector("div.errores ul")
+            let ulErrores= document.querySelector(".errores ul")
 
             for (let i=0; i<errores.length; i++) {
                 ulErrores.innerHTML +- "<li>" + errores[i] + "</li>"
             }
+        } else {
+            formulario.submit();
         }
     })
 }
