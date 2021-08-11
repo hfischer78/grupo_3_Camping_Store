@@ -5,20 +5,21 @@
 
 
 <body>
+    
 
     <%- include("../partials/header")%>
     
     <main>
-        <form action="/users/login" method="POST">
+        <form id="form-login" action="/users/login" method="POST">
             
-            <div class= "errores">
+            <div class="errores">
                 <ul></ul>
             </div>
             
             <div class="form-login">
                 <div class="input-group">
                     <span><i class="fas fa-at"></i></span>
-                    <input class="form-input" type="email" name= "email" placeholder="Email" value="<%= locals.oldData ? oldData.email : null %>">
+                    <input class="form-input" type="text" name= "email" placeholder="Email" value="<%= locals.oldData ? oldData.email : null %>">
                 </div>
             <div class="errorMsg">   
                     <% if (locals.errors && errors.email) { %>
@@ -55,5 +56,5 @@
 
 
     <%- include("../partials/footer")%>
-    <script src="/js/login.js"></script> 
+    <script defer src="/js/login.js"></script> 
 </body>

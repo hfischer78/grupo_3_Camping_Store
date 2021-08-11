@@ -37,7 +37,6 @@ app.use('/products', rutasProducts);
 app.use('/users', rutasUsers);
 
 
-
 //Configuración del Servidor
 app.listen(3000, function () {
 console.log("Servidor corriendo en el puerto 3000");

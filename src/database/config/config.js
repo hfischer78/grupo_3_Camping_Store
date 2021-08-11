@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "",
+    "password": "Aahv1891-",
     "database": "camping_store",
     "host": "127.0.0.1",
     "dialect": "mysql",
