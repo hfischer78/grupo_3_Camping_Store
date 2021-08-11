@@ -86,21 +86,18 @@ categoryList: function (req, res) {
     // Create -  Method to store
     store: (req, res) => {
        
-        db.Products.create({
-            name: req.body.name,
-            description: req.body.description,
-            price: req.body.price,
-            discount: req.body.discount,
-            // category: req.body.category,
-            color_id: req.body.color,
-            size_id: req.body.size,
+        let productToCreate={
+            ...req.body,
             image: req.file != undefined ? req.file.filename : null,
-        })  
-
-        res.redirect("/");
-    },
-
-    // vista de edición
+            }
+ 
+        db.Products.create(productToCreate)
+         
+           res.redirect("/");
+     },
+ 
+     // vista de edición
+ 
     edit: (req, res) => {
         db.Products.findByPk(req.params.id,{
             include: [
