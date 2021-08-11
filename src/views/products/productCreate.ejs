@@ -16,11 +16,7 @@
             <div class="controldelformulario">
                 <label>Nombre del Producto</label>
                 <input type="text" name="name" class="control">
-            </div>
-            <div class="controldelformulario">
-            <label>Seleccionar una imagen para el Producto:</label>
-            <input type="file" name="image" accept=".jpg" class="control">
-            </div>
+            </div>           
             <div class="controldelformulario">
                 <label>Precio</label>
                 <input type="number"name="price" placeholder="123,45"class="control">
@@ -29,60 +25,40 @@
                 <label>Descuento</label>
                 <input type="number"name="discount" placeholder="30%"class="control">
             </div>
-            
-            
-            <!-- <div class="controldelformulario"> -->
-          
-          
-          
-                <!-- <label>Categoria</label>
-                <select name="Categoria" id=""class="control">
+                        
+            <div class="controldelformulario">
+                <label>Categoría</label>
+                <select name="category" placeholder="Camping" class="control">
                     <option value="Indumentaria">Indumentaria</option>
-                    <option value="Trekking">Trekking</option>
-                    <option value="Camping">Camping</option>
                     <option value="Pesca">Pesca</option>
+                    <option value="Trekking">Trekking</option>
+                    <option value="Camping">Camping</option>                    
                 </select>
             </div>
             
             <div class="controldelformulario">
                 <label>Talle</label>
-                <select name="Talle" id=""class="control">
-                    <option value="Grande">Grande</option>
-                    <option value="Mediano">Mediano</option>
-                    <option value="Pequeño">Pequeño</option>
-                    <option value="N/A">No Aplica</option>
+                <select name="size" class="control" placeholder="XXL">
+                    <option>XS</option>
+                    <option>S</option>
+                    <option >M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                    <option>No aplica</option>
                 </select>
             </div>
             
             <div class="controldelformulario">
                 <label>Color</label>
-                <select name="Color" id=""class="control">
-                    <option value="Rojo">Rojo</option>
-                    <option value="Amarillo">Amarillo</option>
-                    <option value="Naranja">Naranja</option>
-                    <option value="Blanco">Blanco</option>
-                    <option value="N/A">No Aplica</option>
+                <select name="color" class="control" placeholder="Verde">
+                    <option>Azul</option>
+                    <option>Verde</option>
+                    <option>Rojo</option>
+                    <option>Negro</option>
+                    <option>No Aplica</option>
                 </select>
-            </div> -->
-            
-
-            <!-- <div class="controldelformulario">
-                <label>Categoria </label>
-                <input type="text"name="category" placeholder="Camping"class="control" >
-            </div>
-     -->
-    
-            <div class="controldelformulario">
-                <label>Codigo Talle </label>
-                <input type="text"name="size" placeholder="XXL"class="control">
-            </div>
-    
-    
-            <div class="controldelformulario">
-                <label>Codigo Color </label>
-                <input type="text"name="color" placeholder="Verde"class="control" >
-            </div>
-    
+            </div> 
+                
             <!-- <div class="controldelformulario">
                 <label>Condicion </label>
                 <input type="text"name="category_index" placeholder="In-Sales"class="control" >
@@ -93,7 +69,11 @@
             <div  class="controldelformulario">
                 <label for="">Descripcion del Producto</label>
                 <textarea name="description" id="" cols="30" rows="10"class="control"></textarea>
+            </div>
 
+            <div class="controldelformulario">
+                <label>Seleccionar una imagen para el Producto:</label>
+                <input type="file" name="image" accept=".jpg" class="control">
             </div>
             <!-- <div  class="controldelformulario">
            <label>Esta en oferta?</label>
