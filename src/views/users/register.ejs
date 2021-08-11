@@ -16,21 +16,34 @@
                     REGISTRARSE
                 </h3>
                     <div class="register">
+                       
                         <form action="/users/register" method="POST" class= form-registro enctype="multipart/form-data">
                                                     
                                 <div class="control-formulario-registro">
                                     <label >Nombre</label>
-                                    <input type="text" name="first_name" class="control-registro" id="first_name">
+                                    <input type="text" name="first_name" class="control-registro" id="first_name" value="<%= locals.oldData ? oldData.first_name : null %>">
+                                    <% if (locals.errors && errors.first_name) { %>
+                                        <div class= 'text-danger'>
+                                            <%= errors.first_name.msg %>
+                                        </div>
+                                    <% } %>
+                                
                                 </div>
 
                                 <div class="control-formulario-registro">
                                     <label for="last_name">Apellido</label>
-                                    <input type="text" name="last_name" class="control-registro" id="last_name">
+                                    <input type="text" name="last_name" class="control-registro" id="last_name" value="<%= locals.oldData ? oldData.last_name : null %>">
+                                    <% if (locals.errors && errors.last_name) { %>
+                                        <div class= 'text-danger'>
+                                            <%= errors.last_name.msg %>
+                                        </div>
+                                    <% } %>
+                               
                                 </div>
 
                                 <div class="control-formulario-registro">
                                     <label for="email">Direccion de Correo</label>
-                                    <input type="email" name="email" class="control-registro" id="email" >
+                                    <input type="email" name="email" class="control-registro" id="email" value="<%= locals.oldData ? oldData.email : null %>">
                                     <% if (locals.errors && errors.email) { %>
                                         <div class= 'text-danger'>
                                             <%= errors.email.msg %>
@@ -41,12 +54,22 @@
                     
                                 <div class="control-formulario-registro">
                                     <label for="password">Contraseña:</label>
-                                    <input type="password" name="password" class="control-registro" id="password">
+                                    <input type="password" name="password" class="control-registro"  id="password" value="<%= locals.oldData ? oldData.password : null %>">
+                                    <% if (locals.errors && errors.password) { %>
+                                        <div class= 'text-danger'>
+                                            <%= errors.password.msg %>
+                                        </div>
+                                    <% } %>
                                 </div>
 
                                 <div class="control-formulario-registro">
                                     <label for="avatar">Foto de Perfil:</label>
                                     <input type="file" name="avatar" class="control-registro" id="avatar">
+                                    <% if (locals.errors && errors.avatar) { %>
+                                        <div class= 'text-danger'>
+                                            <%= errors.avatar.msg %>
+                                        </div>
+                                    <% } %>
                                 </div>
 
                                  

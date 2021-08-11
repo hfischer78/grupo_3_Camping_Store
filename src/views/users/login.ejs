@@ -5,48 +5,54 @@
 
 
 <body>
+    
 
     <%- include("../partials/header")%>
     
     <main>
-        <form action="/users/login" method="POST">
+        <form id="form-login" action="/users/login" method="POST">
+            
+            <div class="errores">
+                <ul></ul>
+            </div>
+            
             <div class="form-login">
                 <div class="input-group">
                     <span><i class="fas fa-at"></i></span>
-                    <input class="form-input" type="email" name= "email" placeholder="Email">
-                    <% if (locals.errors && errors.email) { %>
-                        <div class= 'text-danger'>
-                            <%= errors.email.msg %>
-                        </div>
-                    <% } %>
+                    <input id="test-email" class="form-input" type="text" name= "email" placeholder="Email" value="<%= locals.oldData ? oldData.email : null %>">
                 </div>
-            
+            <div class="errorMsg">   
+                    <% if (locals.errors && errors.email) { %>
+                    <div class= 'text-danger'>
+                        <%= errors.email.msg %>
+                    </div>
+                <% } %>
+            </div>
             
                 <div class="input-group">
                     <span><i class="fas fa-lock"></i></span>
-                    <input  class="form-input" type="password" name= "password"  placeholder="Contraseña">
-                    <% if (locals.errors && errors.password) { %>
-                        <div class= 'text-danger'>
-                            <%= errors.password.msg %>
-                        </div>
-                    <% } %>
+                    <input id="test-password" class="form-input" type="password" name= "password"  placeholder="Contraseña">
                 </div>
+            <div class="errorMsg">  
+                <% if (locals.errors && errors.password) { %>
+                    <div class= 'text-danger'>
+                        <%= errors.password.msg %>
+                    </div>
+                <% } %>
+            </div>
                             <div>
-							
 									<input type="checkbox"  name="remember_user"> Recordar mi usuario
-								
 							</div> 
                             <BR><BR>
 
                 <div>
-                   <button class="form-submit-button" type="submit">Iniciar Sesión</button>
-                   
+                <button class="form-submit-button" type="submit">Iniciar Sesión</button>
                 </div>
             </div>
         </form>
     </main>
 
- 
-    <%- include("../partials/footer")%>
 
+    <%- include("../partials/footer")%>
+    <script defer src="/js/login.js"></script> 
 </body>

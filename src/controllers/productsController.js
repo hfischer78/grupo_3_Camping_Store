@@ -41,25 +41,25 @@ let controllerProducts = {
 
 
     
-categoryList: function (req, res) {
+    categoryList: function (req, res) {
 
-    
-     db.Products.findAll(
-        {
-          include: [
-          {association: 'colors'},
-          {association:'sizes'},
-          {association:'categories',where: {id: req.params.id}},
-          ],
-       }     
-      )
+        
+        db.Products.findAll(
+            {
+            include: [
+            {association: 'colors'},
+            {association:'sizes'},
+            {association:'categories',where: {id: req.params.id}},
+            ],
+        }     
+        )
 
-      .then(products => {
-    
-       //res.send(products)
-      res.render('../views/products/productsCategory', {products, toThousand})
-      })
-},
+        .then(products => {
+        
+        //res.send(products)
+        res.render('../views/products/productsCategory', {products, toThousand})
+        })
+    },
 
 
     detail: function (req, res) {
@@ -86,6 +86,7 @@ categoryList: function (req, res) {
     // Create -  Method to store
     store: (req, res) => {
        
+
         let productToCreate={
             ...req.body,
             image: req.file != undefined ? req.file.filename : null,
