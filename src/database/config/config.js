@@ -1,10 +1,13 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "Aahv1891-",
-    "database": "camping_store",
+    "password": "",
+    // PARA AXI "password": "Aahv1891-",
+    // PARA AXI "database": "camping_store",
+    "database": "campingstore_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
+    // PARA HORACIO "port": "3307"
     "port": "3306"
   },
   "test": {
