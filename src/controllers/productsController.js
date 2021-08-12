@@ -92,9 +92,12 @@ let controllerProducts = {
             image: req.file != undefined ? req.file.filename : null,
             }
  
-        db.Products.create(productToCreate)
+         db.Products.create(productToCreate)
          
-           res.redirect("/");
+            res.redirect("/");
+
+           
+
      },
  
      // vista de edición
