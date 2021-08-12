@@ -3,33 +3,34 @@ window.onload = function () {
 
     formulario.addEventListener("submit", function(event) {
 
-        let errores= []
+        let errores = []
 
-        let emailField= document.querySelector("#test-email");
+        let emailField = document.querySelector("#test-email");
+        let emailFieldError = document.querySelector("#email-error");
 
-        if(emailField.value=="") {
+        if (emailField.value == "") {
             errores.push("Ingresa un email válido")
-            // emailField.innerHTML = "El campo email no puede estar vacio"
+            emailFieldError.innerHTML = "El campo email no puede estar vacio"
+        } else {
+            emailFieldError.innerHTML = ""
         }
-        //  else if (emailField.value.lenght<8){
-        //     errores.push("Ingresa un email válido")
-        // }
 
-        let passwordField= document.querySelector("#test-password");
+        let passwordField = document.querySelector("#test-password");
         
-        if(passwordField.value=="") {
+        if (passwordField.value == "") {
             errores.push("Debes ingresar tu contraseña")
-            // emailField.innerHTML = "El campo password no puede estar vacio"
-        } else if (passwordField.value.length<8){
-            errores.push("Debes ingresar tu contraseña")
+            let passwordFieldError = document.querySelector("#password-error");
+            passwordFieldError.innerHTML = 'El campo password no puede estar vacio'
+        } else {
+            passwordFieldError.innerHTML = ""
         }
 
-        if (errores.length>0) {
+        if (errores.length > 0) {
             event.preventDefault();
 
-            let ulErrores= document.querySelector(".errores ul")
+            let ulErrores = document.querySelector(".errores ul")
 
-            for (let i=0; i<errores.length; i++) {
+            for (let i = 0; i < errores.length; i++) {
                 ulErrores.innerHTML +- "<li>" + errores[i] + "</li>"
             }
         } else {
