@@ -36,7 +36,7 @@ window.onload = function () {
 
         // function getFileExtension(filename) {
         //     return filename.substring(filename.lastIndexOf('.')+1, filename.length) || filename;
-        }
+        
         
         // Errores
         if (errores.length > 0) {
