@@ -10,16 +10,18 @@
     <%- include("../partials/header")%>
     <main>
         <H2>Edita el Producto</H2>
-        
-            <form action="/products/<%= productToEdit.id %>/?_method=PUT" class="createform" method="POST"
-            enctype="multipart/form-data">
+
+        <form action="/products/<%= productToEdit.id %>/?_method=PUT" class="createform" method="POST"
+            enctype="multipart/form-data" id="create-form">
             <div class="controldelformulario">
                 <label>Nombre del Producto</label>
-                <input type="text" name="name" class="control" value=<%= productToEdit.name %>>
+                <input type="text" name="name" class="control" id="name-field" value=<%= productToEdit.name %>>
+                <div class="text-danger" id="name-error"></div>
             </div>
             <div class="controldelformulario">
                 <label>Seleccionar una imagen para el Producto:</label>
-                <input type="file" name="image" accept=".jpg" class="control">
+                <input type="file" name="image" accept=".jpg" class="control" id="image-field">
+                <div class="text-danger" id="image-error"></div>
             </div>
             <div class="controldelformulario">
                 <label>Precio</label>
@@ -33,7 +35,6 @@
                     value=<%= productToEdit.discount %>>
             </div>
 
-           
 
             <div class="controldelformulario">
                 <label>Codigo de Talle </label>
@@ -46,14 +47,14 @@
                 <input type="text" name="color" placeholder="Verde" class="control" value=<%= productToEdit.color_id %>>
             </div>
 
-           
+
             <div class="controldelformulario">
                 <label for="description">Descripcion del Producto</label>
-                <textarea name="description" id="description" cols="30" rows="10"
+                <textarea name="description" id="description-field" cols="30" rows="10"
                     class="control"><%= productToEdit.description %></textarea>
-
+                <div class="text-danger" id="description-error"></div>
             </div>
-           
+
 
 
             <div class="controldelformulario">
@@ -72,6 +73,6 @@
 
     <%- include("../partials/footer")%>
 
-    <script src="/js/productEdit.js"></script> 
+    <script src="/js/productEdit.js"></script>
 
 </body>
