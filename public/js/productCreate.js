@@ -1,4 +1,8 @@
 window.onload = function () {
+    function getFileExtension(filename) {
+        return filename.substring(filename.lastIndexOf('.')+1, filename.length) || filename;
+    }
+
     let formulario= document.querySelector("#create-form");
 
     formulario.addEventListener("submit", function(event) {
@@ -19,26 +23,32 @@ window.onload = function () {
 
         // Error descripcion
         let descriptionField = document.querySelector("#description-field");
-        
+        let descriptionFieldError = document.querySelector("#description-error");
+
         if (descriptionField.value.length < 20) {
             event.preventDefault();
             errores.push("Ingresa una descripcion de mas de 20 caracteres")
-            let descriptionFieldError = document.querySelector("#description-error");
             descriptionFieldError.innerHTML = "La descripción del producto debe tener más de 20 caracteres"
         } else {
             descriptionFieldError.innerHTML = ""
         }
         
         // Error extension de la imagen del producto
-        let fileField= document.querySelector("#file-field")
-        let allowedFiles= ['.jpg', '.jpeg', '.png', '.gif']
-        let fileExtension= path.extname(file.originalname);
+        let fileField= document.querySelector("#image-field")
+        let allowedFiles= ['jpg', 'jpeg', 'png', 'gif']
+        let fileExtension = getFileExtension(fileField.value)
+        let fileFieldError= document.querySelector("#image-error")
 
-        // function getFileExtension(filename) {
-        //     return filename.substring(filename.lastIndexOf('.')+1, filename.length) || filename;
-        
-        
+        if (!allowedFiles.includes(fileExtension.toLowerCase())) {
+            event.preventDefault();
+            errores.push("Ingresa una extensión válida")
+            fileFieldError.innerHTML = "Selecciona una imagen con una extensión válida (jpg, jpeg, png, gif)"
+        } else {
+            fileFieldError.innerHTML = ""
+        }
+
         // Errores
+        
         if (errores.length > 0) {
             event.preventDefault();
 
