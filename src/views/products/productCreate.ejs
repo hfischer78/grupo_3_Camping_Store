@@ -15,15 +15,26 @@
 
             <div class="controldelformulario">
                 <label>Nombre del Producto</label>
-                <input type="text" name="name" class="control" id="name-field">
+                <input type="text" name="name" class="control" id="name-field" value="<%= locals.oldData ? oldData.name : null %>">
                 <div class="text-danger" id="name-error"></div>
+                <% if (locals.errors && errors.name) { %>
+                    <div class= 'text-danger'>
+                        <%= errors.name.msg %>
+                    </div>
+                <% } %>
             </div>
             
             <div class="controldelformulario">
                 <label>Seleccionar una imagen para el Producto:</label>
                 <input type="file" name="image" accept=".jpg" class="control" id="image-field">
                 <div class="text-danger" id="image-error"></div>
+                <% if (locals.errors && errors.image) { %>
+                    <div class= 'text-danger'>
+                        <%= errors.image.msg %>
+                    </div>
+                <% } %>
             </div>
+
             <div class="controldelformulario">
                 <label>Precio</label>
                 <input type="number" name="price" placeholder="123,45" class="control">
@@ -33,10 +44,7 @@
                 <input type="number" name="discount" placeholder="30%" class="control">
             </div>
 
-
             <!-- <div class="controldelformulario"> -->
-
-
 
             <!-- <label>Categoria</label>
                 <select name="Categoria" id=""class="control">
@@ -97,8 +105,13 @@
 
             <div class="controldelformulario">
                 <label for="">Descripcion del Producto</label>
-                <textarea name="description" id="description-field" cols="30" rows="10" class="control"></textarea>
+                <textarea name="description" id="description-field" cols="30" rows="10" class="control" value="<%= locals.oldData ? oldData.description : null %>"></textarea>
                 <div class="text-danger" id="description-error"></div>
+                <% if (locals.errors && errors.description) { %>
+                    <div class= 'text-danger'>
+                        <%= errors.description.msg %>
+                    </div>
+                <% } %>
             </div>
             <!-- <div  class="controldelformulario">
             <label>Esta en oferta?</label>

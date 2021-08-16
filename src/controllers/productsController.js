@@ -14,12 +14,11 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op, Association } = require("sequelize");
 const moment = require('moment');
-
+const {validationResult} = require("express-validator");
 const Product = db.Product;
 
 
 let controllerProducts = {
-
     
     index: function (req, res) {
            db.Products.findAll({
@@ -38,11 +37,8 @@ let controllerProducts = {
 
 
 //// para probar categorias
-
-
     
     categoryList: function (req, res) {
-
         
         db.Products.findAll(
             {
@@ -85,6 +81,11 @@ let controllerProducts = {
 
     // Create -  Method to store
     store: (req, res) => {
+
+        let resultProductsValidation = validationResult(req);
+        if (resultProductsValidation.errors.length > 0){
+            return res.render("./products/productCreate", { toThousand }, {errors : resultProductsValidation.mapped(), oldData: req.body});
+        }
        
 
         let productToCreate={
@@ -122,6 +123,11 @@ let controllerProducts = {
         // genero variable de productos, excluyendo el producto a editar.
         // let productToEdit = products.filter(function (producto) {
         //     return producto.id != req.params.id;
+
+        let resultProductsValidation = validationResult(req);
+        if (resultProductsValidation.errors.length > 0){
+            return res.render('../views/products/productEdit', {productToEdit, toThousand}, {errors : resultProductsValidation.mapped(), oldData: req.body});
+        }
 
         db.Products.update(
             {

@@ -17,11 +17,21 @@
                 <label>Nombre del Producto</label>
                 <input type="text" name="name" class="control" id="name-field" value=<%= productToEdit.name %>>
                 <div class="text-danger" id="name-error"></div>
+                <% if (locals.errors && errors.name) { %>
+                    <div class= 'text-danger'>
+                        <%= errors.name.msg %>
+                    </div>
+                <% } %>
             </div>
             <div class="controldelformulario">
                 <label>Seleccionar una imagen para el Producto:</label>
                 <input type="file" name="image" accept=".jpg" class="control" id="image-field">
                 <div class="text-danger" id="image-error"></div>
+                <% if (locals.errors && errors.image) { %>
+                    <div class= 'text-danger'>
+                        <%= errors.image.msg %>
+                    </div>
+                <% } %>
             </div>
             <div class="controldelformulario">
                 <label>Precio</label>
@@ -53,6 +63,11 @@
                 <textarea name="description" id="description-field" cols="30" rows="10"
                     class="control"><%= productToEdit.description %></textarea>
                 <div class="text-danger" id="description-error"></div>
+                <% if (locals.errors && errors.description) { %>
+                    <div class= 'text-danger'>
+                        <%= errors.description.msg %>
+                    </div>
+                <% } %>
             </div>
 
 
