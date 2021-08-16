@@ -62,3 +62,20 @@
 ##Aspectos que podemos mejorar:
 
 >Como objetivo para el proximo sprint, ya que se trata de uno de los últimos nos gustaría perfeccionar la página y ajustar detalles. También continuar con el trabajo coordinado como venimos haciendo e implementar los nuevos conocimientos adquiridos para dejar el proyecto lo más funcional y amigable para el cliente.
+
+##SEXTO SPRINT##
+
+##Aspectos que fucionaron bien ##
+
+>Destacamos el trabajo en equipo al igual que en los sprint anteriores. Seguimos implementando la modalidad de reunirnos para codear, y completar luego cuando fue necesario las tareas en forma individual. 
+
+>Consideramos que es una metodologia de trabajo que funciona muy bien para nosotros y queremos mantenerla.
+
+>Hemos podido cumplir con los plazos de entrega sin problemas.
+
+##Aspectos que podemos mejorar:
+
+>Debemos seguir trabajando para mejorar detalles de nuestro sitio, y funcionalidades.
+
+
+
