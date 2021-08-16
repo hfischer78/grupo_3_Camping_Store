@@ -89,8 +89,15 @@ let controllerProducts = {
        
 
         let productToCreate={
-            ...req.body,
-            image: req.file != undefined ? req.file.filename : null,
+           // ...req.body,
+           name: req.body.name,
+           description: req.body.description,
+           price: req.body.price,
+           discount: req.body.discount,
+           //category: req.body.category,
+           color_id: req.body.color,
+           size_id: req.body.size,
+           image: req.file != undefined ? req.file.filename : null,
             }
  
          db.Products.create(productToCreate)
