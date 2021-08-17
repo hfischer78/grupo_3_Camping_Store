@@ -69,7 +69,18 @@
                     </select>
     
             </div>
-    
+            
+            
+            <div class="controldelformulario">
+                <label for="Categorias">Categorias</label>
+                <BR>
+               
+                <% categories.forEach (function(id,i) { %> 
+                    
+                    <input type="checkbox" name="Categorias" value=<%= categories[i].id %>> <%= categories[i].name %>
+                <% }) %>    
+            </div>
+            <BR>
 
 
             <div class="controldelformulario">

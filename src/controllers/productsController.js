@@ -172,7 +172,14 @@ let controllerProducts = {
                     db.Categories.findAll()
                     .then(categories => {
 
-                        res.render('../views/products/productEdit', {productToEdit,sizes,colors, categories, toThousand})
+                            db.Category_Products.findByPk(1)
+                            .then(categoryProducts => {
+
+                                res.render('../views/products/productEdit', {productToEdit,sizes,colors, categories, categoryProducts, toThousand})
+                                
+
+                            })
+
                     })
 
                 })                
