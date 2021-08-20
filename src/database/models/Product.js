@@ -61,6 +61,7 @@ module.exports = (sequelize, dataTypes) => {
         tableName: 'products',
         timestamps: false,
         paranoid: true
+        
         // createdAt: 'created_at',
         // updatedAt: 'updated_at',
         // deletedAt: false
@@ -86,32 +87,10 @@ module.exports = (sequelize, dataTypes) => {
               through: 'Category_Products',
               foreignKey: 'product_id',
               otherKey: 'category_id',
-              timestamps: false
+              //timestamps: false
+               
          })
     }
-
-
-
-
-    // Product.associate = function (models) {
-    //       Product.belongsTo(models.Sizes, { 
-    //            as: "Sizes",
-    //            foreignKey: 'size_id',
-    //           // timestamps: false
-    //       })
-    // }
-
-
-    //  Product.associate = function (models) {
-    //      Product.belongsToMany(models.Categories, { 
-    //           as: "Categories",
-    //           through: 'Category_Products',
-    //           foreignKey: 'product_id',
-    //           otherKey: 'category_id',
-    //           timestamps: false
-    //     })
-    // }
-
 
     return Product
 };

@@ -107,6 +107,7 @@ let controllerProducts = {
         }
        
 
+
         let productToCreate={
            name: req.body.name,
            description: req.body.description,
@@ -117,32 +118,30 @@ let controllerProducts = {
            image: req.file != undefined ? req.file.filename : null,
             }
  
-         db.Products.create(productToCreate)
-        
-            // accedemos a la tabla de productos para tomar al id del producto recien creado, para luego ingresarlo a tablas.
-            db.Products.findAll(
-            {
-                order: [
-                    ['id', 'DESC'],
-                ],
-                limit: 1
-            })
 
-                .then(AProduct => {
-                    // recorremos las categorias del body y las incluimos en un array para luego ingresar los datos a la DV
+        db.Products.create(productToCreate)
+        .then( product => {
+
+            console.log(product.id)
+
                      let categorias = req.body.Categorias
+                     if (categorias.length = 1) {
+                            categoryToCreate = {
+                            product_id: product.id,
+                            category_id: categorias
+                            }
+                     } else {
                         categorias.forEach (function(id,i) {
                             categoryToCreate = {  
-                                product_id: AProduct[0].id,
+                                product_id: product.id,
                                 category_id: categorias[i]
-                                
-                             }     
-                              // cargamos los datos en la DB
-                             db.Category_Products.create(categoryToCreate)
-                             res.redirect("/");
-                        }) // cerramos for each
-            
-                }) // cerramos then.
+                             }  //cierra variable categoryToCreate     
+                        }) // cerramos for each     
+                    } // cierra el else
+                    // cargamos los datos en la DB
+                            db.Category_Products.create(categoryToCreate)
+                res.redirect("/");        
+        })  // cerramos then de product creat
    
         }, // cerramos método del controlador.
  
@@ -172,11 +171,15 @@ let controllerProducts = {
                     db.Categories.findAll()
                     .then(categories => {
 
-                            db.Category_Products.findByPk(1)
+                            db.Category_Products.findAll({
+                                where: {
+                                    product_id: req.params.id 
+                                }
+                            })
                             .then(categoryProducts => {
 
-                                res.render('../views/products/productEdit', {productToEdit,sizes,colors, categories, categoryProducts, toThousand})
-                                
+                               res.render('../views/products/productEdit', {productToEdit,sizes,colors, categories, categoryProducts, toThousand})
+                            //    res.send(categoryProducts)
 
                             })
 
@@ -186,28 +189,13 @@ let controllerProducts = {
             })    
         })    
        
-         // desde aca estaba
-        // db.Products.findByPk(req.params.id,{
-        //     include: [
-        //     {association: 'colors'},
-        //     {association:'sizes'},
-        //     {association:'categories'}
-        //     ]
-        // })
-
-        // .then(productToEdit => {
-        //    //res.send(productDetail)
-        //     res.render('../views/products/productEdit', {productToEdit, toThousand})                
-        // })
+       
 
     },
 
     // actualizacion de productos.
     update: function (req, res) {
-        // genero variable de productos, excluyendo el producto a editar.
-        // let productToEdit = products.filter(function (producto) {
-        //     return producto.id != req.params.id;
-
+       
         let resultProductsValidation = validationResult(req);
         if (resultProductsValidation.errors.length > 0){
             return res.render('../views/products/productEdit', {productToEdit, toThousand}, {errors : resultProductsValidation.mapped(), oldData: req.body});
@@ -236,14 +224,26 @@ let controllerProducts = {
 
 
     //eliminacion de producto
-    destroy: function (req, res) {
+    destroy: (req, res) => {
 
-        db.Products.destroy({
-            where: {id: req.params.id }
-        })
+        
+        db.Category_Products.destroy(
+             {
+             where: {product_id: req.params.id}
+             })
 
-        res.redirect("/");
-    },
-};
+            
+         .then(a => {
+
+            db.Products.destroy(
+                 {
+                 where: {id: req.params.id}
+                 })
+
+               res.redirect("/")
+         })
+    }
+
+}
 
 module.exports = controllerProducts;

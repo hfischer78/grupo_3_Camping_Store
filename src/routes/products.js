@@ -3,6 +3,7 @@ const routerProducts = express.Router();
 const path = require('path')
 const productsValidations = require('../middlewares/productsMiddleware');
 const uploadFile = require('../middlewares/multerMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 let productsController = require('../controllers/productsController');
 
@@ -17,7 +18,7 @@ routerProducts.get("/categoria/:id", productsController.categoryList);
 routerProducts.get("/", productsController.index);
 
 // CREACION DE PRODUCTOS -
-routerProducts.get("/create", productsController.create); // vista para crear productos / ok
+routerProducts.get("/create",productsController.create); // vista para crear productos / ok
 routerProducts.post('/', uploadFile("products").single('image'), productsValidations, productsController.store); // logica para crear / ok
 
 //estas borrarlas
