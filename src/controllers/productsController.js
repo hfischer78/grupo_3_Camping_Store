@@ -17,6 +17,9 @@ const moment = require('moment');
 const {validationResult} = require("express-validator");
 const Product = db.Product;
 
+// traigo esta base de datos de usuario, para luego habilitar o no ver ciertas cosas
+const User = db.User;
+
 
 let controllerProducts = {
     
