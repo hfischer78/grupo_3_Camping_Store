@@ -26,6 +26,7 @@
             <div class="controldelformulario">
                 <label>Seleccionar una imagen para el Producto:</label>
                 <input type="file" name="image" accept=".jpg" class="control" id="image-field">
+                <div><%=productToEdit.image%> </div>
                 <div class="text-danger" id="image-error"></div>
                 <% if (locals.errors && errors.image) { %>
                     <div class= 'text-danger'>
@@ -47,15 +48,49 @@
 
 
             <div class="controldelformulario">
-                <label>Codigo de Talle </label>
-                <input type="text" name="size" placeholder="XXL" class="control" value=<%= productToEdit.size_id %>>
+                <label>Codigo Talle</label>
+                
+                <select name="size"  class="control">
+                    <option selected value=<%= productToEdit.size_id%>> <%=productToEdit.sizes.size%> </option>   
+                    <% sizes.forEach (function(id,i) { %> 
+                    <option value=<%= sizes[i].id %>> <%= sizes[i].size %> </option>   
+                    <% }) %>
+                    </select>
             </div>
-
-
+    
+           
             <div class="controldelformulario">
-                <label>Codigo Color </label>
-                <input type="text" name="color" placeholder="Verde" class="control" value=<%= productToEdit.color_id %>>
+                <label>Codigo Color</label>
+                    <select name="color"  class="control">
+                    <option selected value=<%= productToEdit.color_id%>> <%=productToEdit.colors.color%> </option>   
+                    <% colors.forEach (function(id,i) { %> 
+                    <option value=<%= colors[i].id %>> <%= colors[i].color %> </option>   
+                    <% }) %>
+                    </select>
+    
             </div>
+            
+            <div>
+                <% categoryProducts.forEach (function(id,i) { %> 
+                    
+                <%= categoryProducts[i].category_id %>
+
+                <% }) %>
+
+            </div>
+
+
+            
+            <div class="controldelformulario">
+                <label for="Categorias">Categorias</label>
+                <BR>
+               
+                <% categories.forEach (function(id,i) { %> 
+                    
+                    <input type="checkbox" name="Categorias" value=<%= categories[i].id %>> <%= categories[i].name %>
+                <% }) %>    
+            </div>
+            <BR>
 
 
             <div class="controldelformulario">

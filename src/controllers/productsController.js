@@ -16,6 +16,10 @@ const { Op, Association } = require("sequelize");
 const moment = require('moment');
 const {validationResult} = require("express-validator");
 const Product = db.Product;
+const Size = db.Size;
+const Color = db.Color;
+const Category = db.Category;
+const Category_Product = db.Category_Product;
 
 // traigo esta base de datos de usuario, para luego habilitar o no ver ciertas cosas
 const User = db.User;
@@ -78,7 +82,22 @@ let controllerProducts = {
 
 
     create: function (req, res) {
-            res.render("./products/productCreate", { toThousand });
+         
+           db.Sizes.findAll()
+                                      
+           .then(sizes => {
+            
+                db.Colors.findAll()
+                                    
+                .then(colors => {
+                    db.Categories.findAll()
+                    .then(categories => {
+
+                        res.render("./products/productCreate", {sizes, colors, categories, toThousand });          
+                    })    
+
+            })
+        })  
         
     },
 
@@ -91,29 +110,50 @@ let controllerProducts = {
         }
        
 
+
         let productToCreate={
-           // ...req.body,
            name: req.body.name,
            description: req.body.description,
            price: req.body.price,
            discount: req.body.discount,
-           //category: req.body.category,
            color_id: req.body.color,
            size_id: req.body.size,
            image: req.file != undefined ? req.file.filename : null,
             }
  
-         db.Products.create(productToCreate)
-         
-            res.redirect("/");
 
-           
+        db.Products.create(productToCreate)
+        .then( product => {
 
-     },
+            console.log(product.id)
+
+                     let categorias = req.body.Categorias
+                     if (categorias.length = 1) {
+                            categoryToCreate = {
+                            product_id: product.id,
+                            category_id: categorias
+                            }
+                     } else {
+                        categorias.forEach (function(id,i) {
+                            categoryToCreate = {  
+                                product_id: product.id,
+                                category_id: categorias[i]
+                             }  //cierra variable categoryToCreate     
+                        }) // cerramos for each     
+                    } // cierra el else
+                    // cargamos los datos en la DB
+                            db.Category_Products.create(categoryToCreate)
+                res.redirect("/");        
+        })  // cerramos then de product creat
+   
+        }, // cerramos método del controlador.
  
      // vista de edición
  
     edit: (req, res) => {
+       
+        //db.Products.findByPk(req.params.id)
+
         db.Products.findByPk(req.params.id,{
             include: [
             {association: 'colors'},
@@ -122,18 +162,43 @@ let controllerProducts = {
             ]
         })
 
+
         .then(productToEdit => {
-           //res.send(productDetail)
-            res.render('../views/products/productEdit', {productToEdit, toThousand})                
-        })
+        
+            db.Sizes.findAll()
+            .then(sizes => {
+         
+                 db.Colors.findAll()
+                .then(colors => {
+                   
+                    db.Categories.findAll()
+                    .then(categories => {
+
+                            db.Category_Products.findAll({
+                                where: {
+                                    product_id: req.params.id 
+                                }
+                            })
+                            .then(categoryProducts => {
+
+                               res.render('../views/products/productEdit', {productToEdit,sizes,colors, categories, categoryProducts, toThousand})
+                            //    res.send(categoryProducts)
+
+                            })
+
+                    })
+
+                })                
+            })    
+        })    
+       
+       
+
     },
 
     // actualizacion de productos.
     update: function (req, res) {
-        // genero variable de productos, excluyendo el producto a editar.
-        // let productToEdit = products.filter(function (producto) {
-        //     return producto.id != req.params.id;
-
+       
         let resultProductsValidation = validationResult(req);
         if (resultProductsValidation.errors.length > 0){
             return res.render('../views/products/productEdit', {productToEdit, toThousand}, {errors : resultProductsValidation.mapped(), oldData: req.body});
@@ -162,14 +227,26 @@ let controllerProducts = {
 
 
     //eliminacion de producto
-    destroy: function (req, res) {
+    destroy: (req, res) => {
 
-        db.Products.destroy({
-            where: {id: req.params.id }
-        })
+        
+        db.Category_Products.destroy(
+             {
+             where: {product_id: req.params.id}
+             })
 
-        res.redirect("/");
-    },
-};
+            
+         .then(a => {
+
+            db.Products.destroy(
+                 {
+                 where: {id: req.params.id}
+                 })
+
+               res.redirect("/")
+         })
+    }
+
+}
 
 module.exports = controllerProducts;

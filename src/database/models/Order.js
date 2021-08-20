@@ -30,6 +30,7 @@ module.exports = (sequelize, dataTypes) => {
     let config = {
         tableName: 'orders',
         timestamps: false,
+        
         // createdAt: 'created_at',
         // updatedAt: 'updated_at',
         // deletedAt: false

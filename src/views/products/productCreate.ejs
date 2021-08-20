@@ -44,64 +44,38 @@
                 <input type="number" name="discount" placeholder="30%" class="control">
             </div>
 
-            <!-- <div class="controldelformulario"> -->
 
-            <!-- <label>Categoria</label>
-                <select name="Categoria" id=""class="control">
-                    <option value="Indumentaria">Indumentaria</option>
-                    <option value="Trekking">Trekking</option>
-                    <option value="Camping">Camping</option>
-                    <option value="Pesca">Pesca</option>
-                </select>
-            </div>
+        <div class="controldelformulario">
+            <label>Codigo Talle</label>
             
-            <div class="controldelformulario">
-                <label>Talle</label>
-                <select name="Talle" id=""class="control">
-                    <option value="Grande">Grande</option>
-                    <option value="Mediano">Mediano</option>
-                    <option value="Pequeño">Pequeño</option>
-                    <option value="N/A">No Aplica</option>
+            <select name="size"  class="control">
+                <% sizes.forEach (function(id,i) { %> 
+                <option value=<%= sizes[i].id %>> <%= sizes[i].size %> </option>   
+               
+                <% }) %>
                 </select>
-            </div>
-            
-            <div class="controldelformulario">
-                <label>Color</label>
-                <select name="Color" id=""class="control">
-                    <option value="Rojo">Rojo</option>
-                    <option value="Amarillo">Amarillo</option>
-                    <option value="Naranja">Naranja</option>
-                    <option value="Blanco">Blanco</option>
-                    <option value="N/A">No Aplica</option>
+        </div>
+
+       
+        <div class="controldelformulario">
+            <label>Codigo Color</label>
+                <select name="color"  class="control">
+                <% colors.forEach (function(id,i) { %> 
+                <option value=<%= colors[i].id %>> <%= colors[i].color %> </option>   
+                <% }) %>
                 </select>
-            </div> -->
+        </div>
 
+        <div class="controldelformulario">
+            <label for="Categorias">Categorias</label>
+            <BR>
+            <% categories.forEach (function(id,i) { %> 
+                <input type="checkbox" name="Categorias" value=<%= categories[i].id %>> <%= categories[i].name %>
+            <% }) %>    
+        </div>
+        <BR>
 
-            <!-- <div class="controldelformulario">
-                <label>Categoria </label>
-                <input type="text"name="category" placeholder="Camping"class="control" >
-            </div>
-    -->
-
-            <div class="controldelformulario">
-                <label>Codigo Talle </label>
-                <input type="text" name="size" placeholder="XXL" class="control">
-
-            </div>
-
-
-            <div class="controldelformulario">
-                <label>Codigo Color </label>
-                <input type="text" name="color" placeholder="Verde" class="control">
-
-            </div>
-
-            <!-- <div class="controldelformulario">
-                <label>Condicion </label>
-                <input type="text"name="category_index" placeholder="In-Sales"class="control" >
-            </div> -->
-
-
+        
 
             <div class="controldelformulario">
                 <label for="">Descripcion del Producto</label>
@@ -113,10 +87,10 @@
                     </div>
                 <% } %>
             </div>
-            <!-- <div  class="controldelformulario">
-            <label>Esta en oferta?</label>
-            <input type="radio" name="EnOferta">
-            </div> -->
+
+            
+
+
 
             <div class="controldelformulario">
                 <button type="submit">Guardar</button>
