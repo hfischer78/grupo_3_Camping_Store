@@ -15,7 +15,9 @@
             enctype="multipart/form-data" id="create-form">
             <div class="controldelformulario">
                 <label>Nombre del Producto</label>
-                <input type="text" name="name" class="control" id="name-field" value=<%= productToEdit.name %>>
+                <% console.log(productToEdit.name) %>
+                <input type="text" name="name" class="control" id="name-field" value="<%= productToEdit.name %>">
+                
                 <div class="text-danger" id="name-error"></div>
                 <% if (locals.errors && errors.name) { %>
                     <div class= 'text-danger'>
@@ -23,6 +25,21 @@
                     </div>
                 <% } %>
             </div>
+
+            <div class="">
+                <P>Imagen del producto</P> 
+                <img class="imagenDetalle" src="/img/products/<%= (productToEdit.image == null) ? 'product-default.png' : productToEdit.image %>"
+                    alt="imagen del producto" >
+            </div>
+            <BR><BR>
+            <!-- <div class="controldelformulario">
+                <label for="EdicionImagen">DESEA EDITAR LA IMAGEN DEL PRODUCTO</label>
+                <BR>
+                    <input type="checkbox" name="EdicionImagen" value="SI"> SI
+                    <input type="checkbox" name="EdicionImagen" value="NO"> NO
+            </div> -->
+
+
             <div class="controldelformulario">
                 <label>Seleccionar una imagen para el Producto:</label>
                 <input type="file" name="image" accept=".jpg" class="control" id="image-field">
@@ -62,7 +79,7 @@
             <div class="controldelformulario">
                 <label>Codigo Color</label>
                     <select name="color"  class="control">
-                    <option selected value=<%= productToEdit.color_id%>> <%=productToEdit.colors.color%> </option>   
+                    <option selected value=<%= productToEdit.color_id %>> <%=productToEdit.colors.color%> </option>   
                     <% colors.forEach (function(id,i) { %> 
                     <option value=<%= colors[i].id %>> <%= colors[i].color %> </option>   
                     <% }) %>

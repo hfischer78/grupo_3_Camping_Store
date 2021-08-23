@@ -19,7 +19,7 @@ function userLoggedMiddleware(req, res, next) {
 
 	if (emailInCookie) {
 		db.Users.findOne({where: { email: emailInCookie} })
-		.then(users1 => {
+		.then(users => {
 		// variable con el dato del mail para validacion
 		userFromCookie = users
    		}); // cierre del then!
@@ -36,6 +36,7 @@ function userLoggedMiddleware(req, res, next) {
 		res.locals.userLogged = req.session.userLogged;
 	}
 
+	console.log("ACA",req.session)
 
 	next();
 }

@@ -122,24 +122,28 @@ let controllerProducts = {
         db.Products.create(productToCreate)
         .then( product => {
 
-            console.log(product.id)
-
                      let categorias = req.body.Categorias
-                     if (categorias.length = 1) {
+                     if (categorias.length == 1) {
                             categoryToCreate = {
                             product_id: product.id,
                             category_id: categorias
                             }
+                    db.Category_Products.create(categoryToCreate)
+
                      } else {
+
                         categorias.forEach (function(id,i) {
                             categoryToCreate = {  
                                 product_id: product.id,
                                 category_id: categorias[i]
+                               
                              }  //cierra variable categoryToCreate     
+                             db.Category_Products.create(categoryToCreate)
                         }) // cerramos for each     
+                        
                     } // cierra el else
                     // cargamos los datos en la DB
-                            db.Category_Products.create(categoryToCreate)
+                           
                 res.redirect("/");        
         })  // cerramos then de product creat
    
