@@ -79,3 +79,4 @@
 
 
 
+Para no devolver la contraseña cuando se logea el usuario podes usar un map en el mismo controller

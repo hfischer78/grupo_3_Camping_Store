@@ -10,11 +10,12 @@
 		<div class="container" style="margin-top: 40px;">
 		<div class="row">
 			<div class="col-md-3">
-				<h2>Hi <%= user.firstname %> </h2>
+				<h2> Hola <%= user.first_name %>  <%= user.last_name %></h2>
 				<img class= "Picture" src="/img/users/<%= user.avatar %> ">
 				<br>
 				<br>
 				<div class="alert alert-success"><%= user.email %> </div>
+				<div class="alert alert-success"><%= user.user_type %> </div>
 			</div>
 		</div>
 	</div>

@@ -21,6 +21,9 @@ const Color = db.Color;
 const Category = db.Category;
 const Category_Product = db.Category_Product;
 
+// traigo esta base de datos de usuario, para luego habilitar o no ver ciertas cosas
+const User = db.User;
+
 
 let controllerProducts = {
     
