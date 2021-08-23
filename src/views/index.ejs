@@ -7,7 +7,32 @@
 <body>
     <%- include("./partials/header")%>
 
-    <div class="banner-home"><img src='./img/banner-home.jpg' alt='banner'></div>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img class= "img-carousel" src="./img/img-carousel-1.jpg" style="width:100%">          
+        </div>
+        
+        <div class="mySlides fade">         
+          <img class= "img-carousel" src="./img/img-carousel-2.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <img class= "img-carousel" src="./img/img-carousel-3.jpg" style="width:100%">
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+
 
     <main class="index-main">
         <div class= "h3-home">
@@ -36,6 +61,8 @@
     </main>
 
     <%- include("./partials/footer")%>
+
+    <script src="/js/slideShow.js"></script>
 </body>
 
 </html>

@@ -51,6 +51,10 @@ let controller = {
 
     carrito: function (req, res) {
         res.render(path.resolve(__dirname,"../views/productCart.ejs"))
+    },
+
+    about: function (req, res) {
+        res.render(path.resolve(__dirname,"../views/aboutUs.ejs"))
     }
 }
 
