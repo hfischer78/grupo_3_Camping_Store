@@ -26,21 +26,26 @@
                 <% } %>
             </div>
 
-            <div class="">
-                <P>Imagen del producto</P> 
-                <img class="imagenDetalle" src="/img/products/<%= (productToEdit.image == null) ? 'product-default.png' : productToEdit.image %>"
+            
+            <div class="tituloImagen" >Imagen del producto</div>  
+             
+
+            <div class="imagenProductoEdit">
+                     
+                
+                <img class="imagenProductoDetalle" src="/img/products/<%= (productToEdit.image == null) ? 'product-default.png' : productToEdit.image %>"
                     alt="imagen del producto" >
+                
+                    <p class="controldelformularioEditOption">
+                        <input type="radio" name="editar-imagen" value="editar">
+                        <label for="EdicionImagen">EDITAR IMAGEN.</label>
+                    </p>    
+                                   
+
             </div>
-            <BR><BR>
-            <!-- <div class="controldelformulario">
-                <label for="EdicionImagen">DESEA EDITAR LA IMAGEN DEL PRODUCTO</label>
-                <BR>
-                    <input type="checkbox" name="EdicionImagen" value="SI"> SI
-                    <input type="checkbox" name="EdicionImagen" value="NO"> NO
-            </div> -->
 
 
-            <div class="controldelformulario">
+            <div class="controldelformularioImagenEdit">
                 <label>Seleccionar una imagen para el Producto:</label>
                 <input type="file" name="image" accept=".jpg" class="control" id="image-field">
                 <div><%=productToEdit.image%> </div>
@@ -51,6 +56,7 @@
                     </div>
                 <% } %>
             </div>
+
             <div class="controldelformulario">
                 <label>Precio</label>
                 <input type="number" name="price" placeholder="123,45" class="control"

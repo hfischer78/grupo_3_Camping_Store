@@ -1,0 +1,57 @@
+
+.tituloImagen{
+    margin: 40px;
+    color: red
+    
+
+}
+
+
+.tituloImagen:hover .tituloImagen {
+
+    color:black
+}
+
+
+
+.imagenProductoEdit{
+    margin: 40px;
+    display: flex
+ 
+}
+
+
+
+
+/* .descripcion{
+    display: none;
+}
+
+.producto-oferta:hover .descripcion{
+    display: flex;
+    transition: 1s;
+} */
+
+
+
+.controldelformularioImagenEdit{
+    margin-bottom: 15px;
+    width: 75%;
+    margin-left: 40px;
+    display: block  
+
+}
+
+
+.imagenProductoEdit p {
+
+    margin: 30px;
+    margin-left: 40px;
+
+}
+
+.imagenProductoDetalle {
+    
+    border: 1px solid red;
+    height: 250px;
+}
