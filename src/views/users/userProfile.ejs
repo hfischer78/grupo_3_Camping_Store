@@ -3,24 +3,63 @@
  <%- include("../partials/head")%>
 <body>
 	<%- include("../partials/header")%>
-	
-	<!-- Container -->
-	<div class="perfilUsuario" >
-	
-		<div class="container" style="margin-top: 40px;">
-		<div class="row">
+    <main class="pageProdDetail mainDetail">
+        <div>
 			<div class="col-md-3">
 				<h2> Hola <%= user.first_name %>  <%= user.last_name %></h2>
-				<img class= "Picture" src="/img/users/<%= user.avatar %> ">
-				<br>
-				<br>
-				<div class="alert alert-success"><%= user.email %> </div>
-				<div class="alert alert-success"><%= user.user_type %> </div>
-			</div>
-		</div>
-	</div>
-	</div>
-	<!-- //Container -->
+			</div>	
+        <div class="productPresentation">
+            <div class= "imgProduct">
+                <img class="imagenDetalle" src="/img/users/<%= user.avatar %>"
+                    alt="imagen del producto" >
+            </div>
+            <div class="prodSpecification">
+                <div class="prodNPD">
+                    
+                    <h3 class="prodPrice">E-mail: <%= user.email %> </h3>
+                    <h3 class="prodDiscount">Tipo de Usuario: <% if (user.user_type == 1) {%> "Sos grossooo" 
+						<% } else {%>
+						"Bien pero no tan groso"
+					<!-- Container -->
+					<% } %></h3> 
+                    
+                </div>
+
+
+                
+
+                
+                
+				<% if (user.user_type == 1) {%>	
+					<!-- Deberiamos en este botton de abajo poner que si el user_type es 0, entonces no pueda ir a crear -->
+					<!-- Deberia ser en la ruta del create  -->
+				<div><H1></H1></div>
+					<div class="CreateBotton"><a href="/products/create" class="action-buttonEdit">CREAR PRODUCTO</a></div>
+					<% } else {%>
+						<div class="prodNPD"><h2>Para Crear productos contactar al administrador</h2></div>
+					<!-- Container -->
+					<% } %>
+
+
+
+            </div>
+        </div>
+        </div>
+        <div class="prodDescription">
+            <h3 class="prodNPD">Descripcion del Usuario</h3>
+            <p class="textProdDetail"></p>
+            
+        </div>
+        
+    </div>
+    
+<!-- Container -->
+
+
+</main>	
+	<!-- Container -->
+	
+	
 	
 <%- include("../partials/footer")%>
 </body>
