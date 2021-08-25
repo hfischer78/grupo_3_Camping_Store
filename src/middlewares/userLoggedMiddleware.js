@@ -21,6 +21,7 @@ async function userLoggedMiddleware(req, res, next) {
 		db.Users.findOne({where: { email: emailInCookie} })
 		.then(users => {
 		// variable con el dato del mail para validacion
+
 await	(userFromCookie = users)
 
 
@@ -29,16 +30,30 @@ await	(userFromCookie = users)
 
 ///
 
+
 	if (userFromCookie) {
 		req.session.userLogged = userFromCookie;
+
+		if (req.session.userLogged) {
+			res.locals.isLogged = true;
+			res.locals.userLogged = req.session.userLogged;
+		}
+	
+		console.log("ACA",req.session)
 	}
 
-	if (req.session.userLogged) {
-		res.locals.isLogged = true;
-		res.locals.userLogged = req.session.userLogged;
-	}
 
-	console.log("ACA",req.session)
+
+	
+
+
+		
+	
+
+
+  
+///
+
 
 	next();
 }

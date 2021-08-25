@@ -71,6 +71,11 @@ let controllerUsers = {
      // proceso de login
     processLogin: function (req, res){
 
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0){
+            return res.render(path.resolve(__dirname,"../views/users/login.ejs"), {errors : resultValidation.mapped(), oldData: req.body});
+        }
+
         db.Users.findOne({where: { email: req.body.email} })
         .then(users => {
             // variable con el dato del mail para validacion
