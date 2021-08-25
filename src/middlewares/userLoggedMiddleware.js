@@ -6,7 +6,7 @@ const moment = require('moment');
 const User = db.User;
 
 
-function userLoggedMiddleware(req, res, next) {
+async function userLoggedMiddleware(req, res, next) {
 	res.locals.isLogged = false;
 
 	
@@ -21,7 +21,9 @@ function userLoggedMiddleware(req, res, next) {
 		db.Users.findOne({where: { email: emailInCookie} })
 		.then(users => {
 		// variable con el dato del mail para validacion
-		userFromCookie = users
+await	(userFromCookie = users)
+
+
    		}); // cierre del then!
 	}
 
