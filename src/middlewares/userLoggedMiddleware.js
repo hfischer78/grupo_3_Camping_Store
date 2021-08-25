@@ -6,7 +6,7 @@ const moment = require('moment');
 const User = db.User;
 
 
-async function userLoggedMiddleware(req, res, next) {
+function userLoggedMiddleware(req, res, next) {
 	res.locals.isLogged = false;
 
 	
@@ -22,7 +22,7 @@ async function userLoggedMiddleware(req, res, next) {
 		.then(users => {
 		// variable con el dato del mail para validacion
 
-await	(userFromCookie = users)
+		userFromCookie = users
 
 
    		}); // cierre del then!
@@ -42,16 +42,6 @@ await	(userFromCookie = users)
 		console.log("ACA",req.session)
 	}
 
-
-
-	
-
-
-		
-	
-
-
-  
 ///
 
 

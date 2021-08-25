@@ -49,6 +49,8 @@ window.onload = function () {
 
         let imageField= document.querySelector(".controldelformularioEditOption")
         
+        
+
         imageField.addEventListener ("click",function(event){
             imageField.classList.toggle("controldelformularioImagenEdit")
         })
