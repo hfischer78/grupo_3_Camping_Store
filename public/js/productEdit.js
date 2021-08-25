@@ -47,6 +47,15 @@ window.onload = function () {
             fileFieldError.innerHTML = ""
         }
 
+        let imageField= document.querySelector(".controldelformularioEditOption")
+        
+        imageField.addEventListener ("click",function(event){
+            imageField.classList.toggle("controldelformularioImagenEdit")
+        })
+            
+        
+
+
         // Errores
         
         if (errores.length > 0) {

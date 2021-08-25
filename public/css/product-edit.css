@@ -7,11 +7,6 @@
 }
 
 
-.tituloImagen:hover .tituloImagen {
-
-    color:black
-}
-
 
 
 .imagenProductoEdit{
@@ -38,8 +33,12 @@
     margin-bottom: 15px;
     width: 75%;
     margin-left: 40px;
-    display: block  
+    display: block
 
+}
+
+.controldelformularioEditOption{
+    display: block;
 }
 
 

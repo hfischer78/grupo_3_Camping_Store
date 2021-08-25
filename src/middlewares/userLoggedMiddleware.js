@@ -22,21 +22,32 @@ function userLoggedMiddleware(req, res, next) {
 		.then(users => {
 		// variable con el dato del mail para validacion
 		userFromCookie = users
-   		}); // cierre del then!
-	}
-
-///
-
+		 
+	}); // cierre del then!
+}
 	if (userFromCookie) {
 		req.session.userLogged = userFromCookie;
+
+		if (req.session.userLogged) {
+			res.locals.isLogged = true;
+			res.locals.userLogged = req.session.userLogged;
+		}
+	
+		console.log("ACA",req.session)
 	}
 
-	if (req.session.userLogged) {
-		res.locals.isLogged = true;
-		res.locals.userLogged = req.session.userLogged;
-	}
 
-	console.log("ACA",req.session)
+
+	
+
+
+		
+	
+
+
+  
+///
+
 
 	next();
 }

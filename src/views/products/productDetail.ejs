@@ -23,10 +23,10 @@
                     <h3 class="prodDiscount">Descuento: <%= productDetail.discount %> %</h3> 
                     <div class="controldelformulariodetail">
                         <label>Talle: <%= productDetail.sizes.size %> </label>
+
                         
                     </div>
     
-                      
     
                     <div class="controldelformulariodetail">
                         <label>Color:  <%= productDetail.colors.color %></label>
@@ -34,7 +34,8 @@
                     </div> 
                 </div>
 
-
+                <%= userLogged.user_type %>
+                
                 <!-- <div class="buyElection"> -->
                 <!-- <div class="prodSCQ">
                         <nav class="prodSize">
