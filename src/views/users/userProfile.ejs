@@ -17,13 +17,26 @@
                 <div class="prodNPD">
                     
                     <h3 class="prodPrice">E-mail: <%= user.email %> </h3>
-                    <h3 class="prodDiscount">Tipo de Usuario: <% if (user.user_type == 1) {%> "Sos grossooo" 
+                    <h3 class="prodDiscount">Tipo de Usuario: <% if (user.user_type == 1) {%> "Sos el Administrador" 
 						<% } else {%>
-						"Bien pero no tan groso"
+						"Usuario habilitado para comprar"
 					<!-- Container -->
 					<% } %></h3> 
-
-					
+							
+					 
+				<% if (user.user_type == 1) {%>	
+					<!-- Deberiamos en este botton de abajo poner que si el user_type es 0, entonces no pueda ir a crear -->
+					<!-- Deberia ser en la ruta del create  -->
+					<div class="botonesDelAdmin">
+					<div ><a href="/http://localhost:3000/dashboard" class="action-buttonEditProfile">DASHBOARD</a></div>
+					<div ><a href="/products/create" class="action-buttonEditProfile">CREAR PRODUCTO</a></div>
+					<% } else {%>
+					</div>
+						<div class="prodNPD"><h2>Para Crear productos contactar al administrador</h2></div>
+					<!-- Container -->
+					<% } %>
+				
+					</div>
                     
                 </div>
 
@@ -31,18 +44,7 @@
                 
 
                 
-                
-				<% if (user.user_type == 1) {%>	
-					<!-- Deberiamos en este botton de abajo poner que si el user_type es 0, entonces no pueda ir a crear -->
-					<!-- Deberia ser en la ruta del create  -->
-				<div><H1></H1></div>
-					<div ><a href="/products/create" class="action-buttonEdit">CREAR PRODUCTO</a></div>
-					<% } else {%>
-						<div class="prodNPD"><h2>Para Crear productos contactar al administrador</h2></div>
-					<!-- Container -->
-					<% } %>
-
-
+               
 
             </div>
         </div>
