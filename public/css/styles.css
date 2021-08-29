@@ -27,6 +27,15 @@ header nav ul {
     width: 100%; 
 }
 
+header nav ul li a {    
+    transition: all 450ms;
+}
+
+header nav ul li a:hover{  
+    color: rgb(80, 79, 82);
+    background-color: rgb(250, 167, 167);
+}
+
 body {
     font-family: 'Lato', sans-serif;
     background-color: #F2F4F7;
@@ -68,6 +77,14 @@ body {
 
 .container-header-icons {
     display: flex;
+}
+
+header i {    
+    transition: all 450ms;
+}
+
+header i:hover{  
+    color: rgb(80, 79, 82);    
 }
 
 /* Barra de busqueda */
@@ -131,12 +148,6 @@ input {
 
 .category-bar {
     display: none;
-}
-
-/* Banner */
-
-.banner-home img {
-    width: 100%;
 }
 
 /* Main */
@@ -209,6 +220,13 @@ main {
     font-size: 100%;
     line-height: 1.15;
     margin: 0;
+    transition: all 450ms;
+}
+
+.button:hover {
+    background-color: #D9DFE7;
+    color: #202030;
+    
 }
 
 .descripcion{
@@ -237,7 +255,7 @@ main {
 .slideshow-container {
   max-width: 1200px;
   position: relative;
-  margin: auto;
+  margin: 35px auto 5px;
 }
 
 /* Next & previous buttons */
@@ -385,12 +403,17 @@ footer section .nosotros ul {
 
 footer section .nosotros ul li {
     font-size: 12px;
-    list-style-type: none;
+    list-style-type: none;    
 }
 
 footer section .nosotros ul li a {
     text-decoration: none;
     color: #D9DFE7;
+    transition: all 450ms;
+}
+
+footer section .nosotros ul li a:hover{  
+    color: rgb(80, 79, 82);
 }
 
 footer section .redes .iconos-redes {
@@ -409,6 +432,14 @@ footer section .contacto .whatsapp,
     font-size: 70%;
     padding-top: 10px;
     text-align:center;
+}
+
+footer section i:hover{  
+    color: rgb(80, 79, 82);
+}
+
+footer section i{
+    transition: all 450ms;
 }
 
 /* Version mobile */
@@ -583,5 +614,30 @@ width: 200px
 .imagenDetalle {
      max-width: 200px;
     padding: 5px;
+    
+}
+.botonesDelAdmin{
+    display: flex;
+    
+    flex-direction: row;
+    width: 100%;
+}
+
+
+.action-buttonEditProfile{
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+    
+    background-color: #2B3A67;
+    border: none;
+    font-size: 20px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
     
 }

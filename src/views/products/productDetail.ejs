@@ -95,7 +95,7 @@
         
        
     </div>
-    <% if (userLogged.user_type == 1) {%>	
+    <% if (locals.userLogged  && userLogged.user_type == 1) {%>	
     <div><a href="/products/<%= productDetail.id %>/edit" class="action-buttonEdit">EDITAR PRODUCTO</a></div>
 <!-- Container -->
     <% } else {%>

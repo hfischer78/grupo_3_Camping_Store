@@ -170,9 +170,15 @@ article{
         /* Boton para el calculo del costo de envío */
         .boton{
          background-color: #2B3A67;   
-         color: white
-            
-    }
+         color: white;
+         transition: all 450ms;
+        }
+
+        .boton:hover{
+            background-color: #cbd7e7;
+            color: #202030;
+        }
+        
 
 
 /* RESUMEN DE COMPRA */
