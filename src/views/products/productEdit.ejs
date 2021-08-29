@@ -38,9 +38,8 @@
                 
                     <p class="controldelformularioEditOption">
                         <input type="radio" name="editar-imagen" value="editar">
-                        <label for="EdicionImagen">EDITAR IMAGEN.</label>
-                    </p>    
-                                   
+                        <label for="EdicionImagen">EDITAR IMAGEN</label>
+                    </p>                                      
 
             </div>
 
@@ -71,7 +70,7 @@
 
 
             <div class="controldelformulario">
-                <label>Codigo Talle</label>
+                <label>Código Talle</label>
                 
                 <select name="size"  class="control">
                     <option selected value=<%= productToEdit.size_id%>> <%=productToEdit.sizes.size%> </option>   
@@ -83,7 +82,7 @@
     
            
             <div class="controldelformulario">
-                <label>Codigo Color</label>
+                <label>Código Color</label>
                     <select name="color"  class="control">
                     <option selected value=<%= productToEdit.color_id %>> <%=productToEdit.colors.color%> </option>   
                     <% colors.forEach (function(id,i) { %> 
@@ -105,19 +104,18 @@
 
             
             <div class="controldelformulario">
-                <label for="Categorias">Categorias</label>
-                <BR>
-               
+                <label for="Categorias">Categorías</label>
+                               
                 <% categories.forEach (function(id,i) { %> 
                     
-                    <input type="checkbox" name="Categorias" value=<%= categories[i].id %>> <%= categories[i].name %>
+                <div class= "checkbox-edit"><input type="checkbox" name="Categorias" value=<%= categories[i].id %>> <%= categories[i].name %>
+                </div>
                 <% }) %>    
-            </div>
-            <BR>
+            </div>           
 
 
             <div class="controldelformulario">
-                <label for="description">Descripcion del Producto</label>
+                <label for="description">Descripción del Producto</label>
                 <textarea name="description" id="description-field" cols="30" rows="10"
                     class="control"><%= productToEdit.description %></textarea>
                 <div class="text-danger" id="description-error"></div>
@@ -136,7 +134,7 @@
             </div>
         </form>
 
-        <form action="/products/<%= productToEdit.id %>/?_method=DELETE" method="POST" enctype="multipart/form-data">
+        <form class= "erase-button" action="/products/<%= productToEdit.id %>/?_method=DELETE" method="POST" enctype="multipart/form-data">
             <button class="ButtonMalo" type="submit">Eliminar</button>
         </form>
 

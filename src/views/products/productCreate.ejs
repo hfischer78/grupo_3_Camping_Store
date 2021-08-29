@@ -46,7 +46,7 @@
 
 
         <div class="controldelformulario">
-            <label>Codigo Talle</label>
+            <label>Código Talle</label>
             
             <select name="size"  class="control">
                 <% sizes.forEach (function(id,i) { %> 
@@ -58,7 +58,7 @@
 
        
         <div class="controldelformulario">
-            <label>Codigo Color</label>
+            <label>Código Color</label>
                 <select name="color"  class="control">
                 <% colors.forEach (function(id,i) { %> 
                 <option value=<%= colors[i].id %>> <%= colors[i].color %> </option>   
@@ -67,18 +67,18 @@
         </div>
 
         <div class="controldelformulario">
-            <label for="Categorias">Categorias</label>
-            <BR>
+            <label for="Categorias">Categorías</label>            
             <% categories.forEach (function(id,i) { %> 
-                <input type="checkbox" name="Categorias" value=<%= categories[i].id %>> <%= categories[i].name %>
-            <% }) %>    
-        </div>
-        <BR>
+                <div class= "checkbox-create"><input type="checkbox" name="Categorias" value=<%= categories[i].id %>> <%= categories[i].name %>
+                </div>
+            <% }) %>
+                
+        </div>        
 
         
 
-            <div class="controldelformulario">
-                <label for="">Descripcion del Producto</label>
+        <div class="controldelformulario">
+                <label for="">Descripción del Producto</label>
                 <textarea name="description" id="description-field" cols="30" rows="10" class="control" value="<%= locals.oldData ? oldData.description : null %>"></textarea>
                 <div class="text-danger" id="description-error"></div>
                 <% if (locals.errors && errors.description) { %>
@@ -86,16 +86,13 @@
                         <%= errors.description.msg %>
                     </div>
                 <% } %>
-            </div>
+        </div>
 
             
-
-
-
-            <div class="controldelformulario">
+        <div class="controldelformulario">
                 <button type="submit">Guardar</button>
                 <button type="reset">Borrar</button>
-            </div>
+        </div>
 
         </form>
 

@@ -1,21 +1,13 @@
-
 .tituloImagen{
     margin: 40px;
-    color: red
-    
-
+    color: red 
 }
-
-
 
 
 .imagenProductoEdit{
     margin: 40px;
-    display: flex
- 
+    display: flex 
 }
-
-
 
 
 /* .descripcion{
@@ -30,11 +22,9 @@
 
 
 .controldelformularioImagenEdit{
-    margin-bottom: 15px;
-    width: 75%;
-    margin-left: 40px;
-    display: block
-
+    margin: 15px auto;
+    width: 75%;    
+    display: block    
 }
 
 .controldelformularioEditOption{
@@ -43,14 +33,22 @@
 
 
 .imagenProductoEdit p {
-
     margin: 30px;
     margin-left: 40px;
-
 }
 
 .imagenProductoDetalle {
     
     border: 1px solid red;
     height: 250px;
+}
+
+.erase-button{
+    text-align:center
+
+}
+
+.checkbox-edit{
+    display:block;
+    margin-left: 10px
 }
