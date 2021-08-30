@@ -1,63 +1,122 @@
+.main-register {
 
-.main-register{
-
-display:flex;
-justify-content: space-between;
-margin: 10px
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto
 }
 
-.etiquetaRegister{
-    text-align: center;         
+.etiquetaRegister {
+    text-align: center;
 }
 
-.contRegistro{
-    width: 50%;
-    justify-content: center;    
+.contRegistro {
+    width: 60%;
+    justify-content: center;
 }
 
-    .register{
-        margin-top: 10px;   
-        padding-top: 40px;
-        display:flex;
-        justify-content: center;
-    }
+.register {
+    margin-top: 10px;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}
 
-    .control-formulario-registro{
-        margin: 5px 0px;
-    }
+.control-formulario-registro {
+    margin: 5px 0px;
+}
 
-            .control-registro{
-                width:90%;
-                background-color: white;
-                margin-top: 5px;    
-                border-radius: 14px;
-                border: solid 1px #c7c7c7;  
-                font-size: 16px;              
-            }
+.control-registro {
+    width: 90%;
+    background-color: white;
+    margin-top: 5px;
+    border-radius: 14px;
+    border: solid 1px #c7c7c7;
+    font-size: 16px;
+}
 
-            .div-btn-registro{
-                text-align: center;
-            }
+.div-btn-registro {
+    text-align: center;
+}
 
-    
-    
-            /* Boton para el calculo del costo de envío */
-            .boton-formulario-registro{
-                background-color: #2B3A67;   
-                color: white;
-                margin-top: 20px;
-                }
-    
 
-.infoRegistro{
+
+/* Boton para el calculo del costo de envío */
+.boton-formulario-registro {
+    background-color: #2B3A67;
+    color: white;
+    margin-top: 20px;
+}
+
+
+.infoRegistro {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
     text-align: center;
-    border-left: solid black; 
-    width: 50%;
+    border-left: solid black;
+    width: 40%;
 }
 
+.infoRegistro p {
+    padding-left: 30px;
+}
 
+/* Classes from Login */
 
- 
+.form-input {
+    background-color: white;
+    width: 90%;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    max-width: 600px;
+    font-size: 12px;
+    border: solid 1px #c7c7c7;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+.form-submit-button {
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: none;
+    max-width: 500px;
+    background-color: #2B3A67; 
+    color: white;
+}
+
+.form-login {
+    padding: 40px 40px;
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.input-group span {
+    padding: 9px;
+    border: solid 1px #c7c7c7;
+    background: white;
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+    color: #7b7b7bfa
+}
+
+.input-group-label {
+    display: block;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.errorMsg {
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.form-registro {
+    width: 80%;
+}

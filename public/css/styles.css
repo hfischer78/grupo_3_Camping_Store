@@ -166,16 +166,98 @@ main {
 .index-main .h3-home {
     text-align: center;
     color: black;
-    margin: 10px 0;
+    margin: 20px 0;
+    font-size: 26px;
 }
 
 .index-main section .producto-oferta {
-    border: 1px solid red;
-   
+    border: 1px solid #D9DFE7;
     width: 100%;
     position: relative;
-    
 }
+
+.index-main section .category-box {
+    width: 100%;
+    position: relative;
+}
+.index-main section .category-box a {
+    transition: all 450ms 
+}
+.index-main section .category-box:hover a {
+    box-shadow: #202030;
+}
+
+.category-box img {
+    width: 100%;
+    transition: all 450ms 
+}
+
+.category-box {
+    transition: all 450ms; 
+    position: relative;
+    border: 1px solid #D9DFE7;
+}
+
+.category-box:hover img {
+    opacity: 0.5;
+}
+
+.category-box:hover .category-title{
+    visibility: visible;
+    opacity: 1;
+}
+
+.category-title {
+    visibility: hidden;
+    transition: all 150ms;
+    font-size: 25px;
+    position: absolute;
+    left: 40px;
+    bottom: 150px;
+    color: black;
+    font-weight: 180;
+}
+
+.ind {
+    visibility: hidden;
+    transition: all 150ms;
+    font-size: 25px;
+    position: absolute;
+    left: 40px;
+    bottom: 150px;
+    color: black;
+}
+
+.fish{
+    visibility: hidden;
+    transition: all 150ms;
+    font-size: 25px;
+    position: absolute;
+    left: 90px;
+    bottom: 150px;
+    color: black;
+}
+
+.trek {
+    visibility: hidden;
+    transition: all 150ms;
+    font-size: 25px;
+    position: absolute;
+    left: 70px;
+    bottom: 150px;
+    color: black;
+}
+
+.camp {
+    visibility: hidden;
+    transition: all 150ms;
+    font-size: 25px;
+    position: absolute;
+    left: 80px;
+    bottom: 150px;
+    color: black;
+}
+
 
 .index-main section .producto-oferta img {
     width: 100%;
@@ -239,7 +321,7 @@ main {
 }
 
 .imgProd{
-    height: 250px
+    height: 300px
 }
 
 .text-danger{
@@ -533,6 +615,11 @@ footer section i{
         margin:10px 5px;  
     }
 
+    .index-main section .category-box{
+        max-width: 45%; 
+        margin:10px 5px;  
+    }
+
     /* Footer en Tablet */
     
     footer {
@@ -575,6 +662,10 @@ footer section i{
     /* Main en Desktop */
     
     .index-main section .producto-oferta{
+        max-width: 23%;
+    }
+
+    .index-main section .category-box{
         max-width: 23%;
     }
 
