@@ -7,8 +7,6 @@ const authMiddleware = require('../middlewares/authMiddleware');
 
 let productsController = require('../controllers/productsController');
 
-// RUTA DE PRUEBA 
-//routerProducts.get("/prueba", productsController.prueba);
 
 // LISTA PRODUCTOS POR CATEGORIAS //
 routerProducts.get("/categoria/:id", productsController.categoryList);
@@ -36,6 +34,8 @@ routerProducts.put('/:id', uploadFile("products").single('image'), productsValid
 
 /*** DELETE ONE PRODUCT***/ 
 routerProducts.delete('/:id', productsController.destroy); //logica para borrar / ok
+
+
 
 
 

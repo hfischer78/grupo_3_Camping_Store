@@ -11,6 +11,7 @@ const methodOverride =  require('method-override'); // Pasar poder usar los mét
 let rutasMain = require('./routes/main.js');
 let rutasProducts = require('./routes/products.js');
 let rutasUsers = require('./routes/users.js');
+let rutasApi = require('./routes/api.js');
 
 
 app.use(session({
@@ -35,11 +36,14 @@ app.use(methodOverride('_method')); // para usar put and delete
 app.use('/', rutasMain);
 app.use('/products', rutasProducts);
 app.use('/users', rutasUsers);
+app.use('/api', rutasApi);
 
 
 //Configuración del Servidor
 app.listen(3000, function () {
 console.log("Servidor corriendo en el puerto 3000");
 })
+
+
 
 

@@ -27,15 +27,30 @@ module.exports = (sequelize, dataTypes) => {
     
     const Category = sequelize.define(alias, cols, config); 
 
-    // Actor.associate = function (models) {
-    //     Actor.belongsToMany(models.Movie, { // models.Movie -> Movies es el valor de alias en movie.js
-    //         as: "movies",
-    //         through: 'actor_movie',
-    //         foreignKey: 'actor_id',
-    //         otherKey: 'movie_id',
-    //         timestamps: false
-    //     })
-    
+    Category.associate = function (models) {
+   
+        Category.belongsToMany(models.Products, { 
+        as: "products",
+        through: 'Category_Products',
+        foreignKey: 'category_id',
+        otherKey: 'product_id',
+        //timestamps: false
+        
+   })
+  
+
+    //  Product.belongsToMany(models.Categories, { 
+    //      as: "categories",
+    //      through: 'Category_Products',
+    //      foreignKey: 'product_id',
+    //      otherKey: 'category_id',
+    //      //timestamps: false
+          
+    // })
+// }
+
+
+    }
 
     return Category
 };
