@@ -10,11 +10,12 @@ let apiUsers = require('../controllers/apiUsers');
 
 routerApi.get("/users",apiUsers.list)
 routerApi.get("/users/:id",apiUsers.detail)
+routerApi.get("/users/:id/:avatar",apiUsers.avatar)
 
 
 // productos
 routerApi.get("/products",apiProducts.list)
 routerApi.get("/products/:id",apiProducts.detail)
-
+routerApi.get("/products/:idProd/:image",apiProducts.image)
 
 module.exports = routerApi;

@@ -119,7 +119,18 @@ let controllerUsers = {
             user:req.session.userLogged
         });
     },
-    
+
+    detail: function (req, res) {
+        db.Users.findByPk(req.params.id)
+
+        .then(userDetail => {
+        
+      res.render(path.resolve(__dirname,"../views/users/userProfileById.ejs"),{userDetail});
+                                     
+        })
+    },
+
+
     logout: (req, res) => {
         res.clearCookie('userEmail');
         req.session.destroy();

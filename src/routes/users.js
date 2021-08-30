@@ -29,6 +29,9 @@ routerUsers.post("/login", validationsLogin,userController.processLogin);
 // Ruta que muestra perfil del User
 routerUsers.get("/profile/", userController.profile);
 
+// Ruta que muestra perfil de user indicado en el ID
+routerUsers.get("/detail/:id", userController.detail);
+
 // Logout
 routerUsers.get('/logout/', userController.logout);
 

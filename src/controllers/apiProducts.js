@@ -16,7 +16,9 @@ const Category = db.Category;
 const Category_Product = db.Category_Product;
 
 let apiProducts = {
-        list: 
+
+    // listado de productos
+    list: 
         function (req, res) {
             let products = db.Products.findAll(
                 {
@@ -49,7 +51,7 @@ let apiProducts = {
                 });
 
                 
-               // ejemplo con maps, funcionando
+               
                 let producto = products.map(function(producto) {
 
                     
@@ -76,6 +78,7 @@ let apiProducts = {
 
     }, // ciera list
 
+    // Detalle de Productos
     detail: function (req, res) {
 
          db.Products.findByPk(req.params.id,{
@@ -88,20 +91,23 @@ let apiProducts = {
 
         .then(productDetail => {
 
-
-            
-
             return res.status(200).json({
-                Products: productDetail,
-                URL: productDetail.image,
-                status: 200
-                
+              Products: productDetail,
+              //URL: productDetail.image,
+              "URL_Image": "http://localhost:3000/api/products/" + productDetail.id + "/" + productDetail.image,
+              status: 200
             })
                                      
         }) // cierra then
     
-    } // cierra detail
+    }, // cierra detail
 
+    image: (req, res) => { 
+
+        imagenProducto = req.params.image
+
+        res.render(path.resolve(__dirname,"../views/products/productImage.ejs"),{imagenProducto});
+    },
 
 } /// cierre del controlador
 
