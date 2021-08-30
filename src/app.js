@@ -40,8 +40,8 @@ app.use('/api', rutasApi);
 
 
 //Configuración del Servidor
-app.listen(3000, function () {
-console.log("Servidor corriendo en el puerto 3000");
+app.listen(3001, function () {
+console.log("Servidor corriendo en el puerto 3001");
 })
 
 
