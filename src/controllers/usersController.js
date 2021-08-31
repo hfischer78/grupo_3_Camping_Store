@@ -19,6 +19,57 @@ const {validationResult} = require("express-validator");
 
 let controllerUsers = {
 
+
+    // vista de creacion de usuarios por admin
+    create: function (req, res) {
+        res.render(path.resolve(__dirname,"../views/users/userCreate.ejs"))    
+    },
+
+    // proceso de creacion de usuario por admin
+    store: function (req, res) {
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0){
+            return res.render(path.resolve(__dirname,"../views/users/userCreate.ejs"), {errors : resultValidation.mapped(), oldData: req.body});
+        }
+        // acceso a la DB para verificar si el mail que se pretende registrar ya esta registrado    
+        db.Users.findOne({where: { email: req.body.email} })
+        .then(users => {
+    
+              // variable con el dato del mail para validacion
+                userInDb = users
+                if(userInDb) {
+                return res.render(path.resolve(__dirname,"../views/users/register.ejs"), {
+                    errors: {
+                        email: {
+                             msg: 'Este correo electrónico ya está registrado' //no permite registrar usuario con mismo email, falta hacer que se imprima el mensaje (tags en EJS)
+                     }
+                    }
+                })
+            }
+
+            // variable con datos para crear usuarios. 
+            let userToCreate= {
+                ...req.body,
+                password: bcryptjs.hashSync(req.body.password, 10),
+                avatar: req.file != undefined ? req.file.filename : null,
+            }   
+        
+            // creacion de usuario
+            db.Users.create(userToCreate)
+
+                .then(userDetail => {
+            
+                res.render(path.resolve(__dirname,"../views/users/userProfileById.ejs"),{userDetail});
+                                         
+            })
+
+
+        }) // cierre del then!
+
+        }, // cierre del proceso de registro
+
+
+
     // vista de formulario de registro
     register: function (req, res) {
         res.render(path.resolve(__dirname,"../views/users/register.ejs"))    

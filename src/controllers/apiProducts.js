@@ -65,7 +65,7 @@ let apiProducts = {
                 });
             }
         ); // cierra then
-    }, // ciera list
+    }, // cierra list
 
     // Detalle de Productos
     detail: function (req, res) {
@@ -98,6 +98,58 @@ let apiProducts = {
             { imagenProducto }
         );
     },
+
+    listCat: (req,res) => {
+
+        let products = db.Products.findAll({
+            include: [{ association: "categories" }],
+        });
+
+        let categories = db.Categories.findAll();
+        let categories_products = db.Category_Products.findAll();
+
+        Promise.all([products, categories, categories_products]).then(
+            function ([products, categories, categories_products]) {
+                let countByCategory = [];
+                categories.forEach(function (id, i) {
+                    filtro = categories[i].id;
+                    let totales = categories_products.filter((total) => {
+                        if (total.category_id === filtro) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    });
+
+                    let count = totales.length;
+                    let category = categories[i].name;
+                    countByCategory.push({ category, count });
+                });
+
+                let producto = products.map(function (producto) {
+                    return [
+                        {
+                            id: producto.id,
+                            name: producto.name,
+                            description: producto.description,
+                            categorias: products[0].categories,
+                            detail:
+                                "http://localhost:3001/products/detail/" +
+                                producto.id,
+                        },
+                    ];
+                });
+
+                return res.status(200).json({
+                    countByCategory: countByCategory,
+                    status: 200,
+                });
+            }
+        ); // cierra then
+
+        
+    }
+
 }; /// cierre del controlador
 
 module.exports = apiProducts;

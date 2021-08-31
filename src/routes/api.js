@@ -15,6 +15,7 @@ routerApi.get("/users/:id/:avatar",apiUsers.avatar)
 
 // productos
 routerApi.get("/products",apiProducts.list)
+routerApi.get("/products/categories",apiProducts.listCat)
 routerApi.get("/products/:id",apiProducts.detail)
 routerApi.get("/products/:idProd/:image",apiProducts.image)
 

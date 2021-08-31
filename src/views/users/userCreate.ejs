@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../partials/head")%>
+
+<body>
+
+    <%- include("../partials/header")%>
+
+    <main class="main-register">
+
+        <!--Contenedor de formulario y etiqueta de registro-->
+        <div class="contRegistro">
+            <h3 class="etiquetaRegister">
+                CREACION DE USUARIOS
+            </h3>
+            <div class="register">
+
+                <form action="/users/create" method="POST" class="form-registro" id="form-registro"
+                    enctype="multipart/form-data">
+
+                    <div class="input-group">
+                        <span><i class="far fa-user-circle"></i></span>
+                        <input type="text" name="first_name" class="form-input" id="first_name"
+                        placeholder= "Nombre" value="<%= locals.oldData ? oldData.first_name : null %>">
+                        <div class="text-danger" id="first-name-error"></div>
+                        <div class="errorMsg">
+                            <% if (locals.errors && errors.first_name) { %>
+                            <div class='text-danger'>
+                                <%= errors.first_name.msg %>
+                            </div>
+                            <% } %>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <span><i class="fas fa-user-circle"></i></span>
+                        <input type="text" name="last_name" class="form-input" id="last_name"
+                        placeholder= "Apellido" value="<%= locals.oldData ? oldData.last_name : null %>">
+                        <div class="text-danger" id="last-name-error"></div>
+                        <div class="errorMsg text-danger">
+                            <% if (locals.errors && errors.last_name) { %>
+                            <div class='text-danger'>
+                                <%= errors.last_name.msg %>
+                            </div>
+                            <% } %>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <span><i class="fas fa-user-circle"></i></span>
+                        <input type="text" name="user_type" class="form-input" id="user_type"
+                        placeholder= "Nivel de Acceso" value="">
+                        <div class="text-danger" id="last-name-error"></div>
+                    </div>
+
+
+                    <div class="input-group">
+                        <span><i class="fas fa-at"></i></span>
+                        <input type="email" name="email" class="form-input" id="email"
+                        placeholder="Dirección de correo electrónico" value="<%= locals.oldData ? oldData.email : null %>">
+                        <div class="text-danger" id="email-error"></div>
+                        <div class="errorMsg">
+                            <% if (locals.errors && errors.email) { %>
+                            <div class='text-danger'>
+                                <%= errors.email.msg %>
+                            </div>
+                            <% } %>
+                        </div>
+                    </div>
+
+
+                    <div class="input-group">
+                        <span><i class="fas fa-key"></i></span>
+                        <input type="password" name="password" class="form-input" id="password"
+                        placeholder="Contraseña" value="<%= locals.oldData ? oldData.password : null %>">
+                        <div class="text-danger" id="password-error"></div>
+                        <div class="errorMsg">
+                            <% if (locals.errors && errors.password) { %>
+                            <div class='text-danger'>
+                                <%= errors.password.msg %>
+                            </div>
+                            <% } %>
+                        </div>
+                    </div>
+
+                    <div class="input-group-label">
+                        <div class="input-group-label"><label for="avatar">Selecciona tu Foto de Perfil:</label></div>
+                        <!-- <span><i class="fas fa-portrait"></i></span> -->
+                        <div class="input-group-label"><input type="file" name="avatar"  id="avatar" placeholder="Selecciona tu Foto de Perfil:"></div>
+                        <div class="text-danger" id="image-error"></div>
+                        <div class="errorMsg">
+                            <% if (locals.errors && errors.avatar) { %>
+                            <div class='text-danger'>
+                                <%= errors.avatar.msg %>
+                            </div>
+                            <% } %>
+                        </div>
+                    </div>
+
+
+                    <div class="div-btn-registro">
+                        <button type="submit" class="form-submit-button">Registrarse</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+    </main>
+
+
+
+    <%- include("../partials/footer")%>
+    <script src="/js/register.js"></script>
+</body>

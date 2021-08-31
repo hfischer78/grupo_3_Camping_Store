@@ -23,6 +23,15 @@ routerUsers.post("/register", multerFunction("users").single('avatar'),validatio
 // Ruta de redireccionamiento a LogIn
 routerUsers.get("/login", guestMiddleware, userController.login);
 
+
+// Ruta de redireccionamiento a creacion de usuarios Admin
+routerUsers.get("/create", guestMiddleware, userController.create);
+
+// Ruta que procesa creacion de usuario 
+routerUsers.post("/create", multerFunction("users").single('avatar'),validations, userController.store) 
+
+
+
 // Ruta que procesa el Login
 routerUsers.post("/login", validationsLogin,userController.processLogin);
 
