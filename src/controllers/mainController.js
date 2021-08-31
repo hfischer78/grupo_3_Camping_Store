@@ -21,34 +21,36 @@ const Product = db.Product;
 let controller = {
     home: function (req, res) {
 
+            let products = db.Products.findAll({
+                    include: [
+                    {association: 'colors'},
+                    {association:'sizes'},
+                    {association:'categories'}
+                    ]
+                })
+    
+            let productsOnSale = db.Products.findAll(
+                    {
+                    include: [
+                    {association: 'colors'},
+                    {association:'sizes'},
+                    {association:'categories'}
+                    ],
+                    where: {
+                        discount: {[Op.gte]: 35}
+                       }
+                   })
+               
+            Promise.all([products,productsOnSale])
+            
+                .then(function([products,productsOnSale]) {
+            
+                   res.render('../views/index', {products,productsOnSale, toThousand})
+                })   
+    },            
 
-        // esto lo dejo para implementar categorias en el hime mas adealante!
-        //res.render(path.resolve(__dirname,"../views/index.ejs"))
-        
-        //     let visited = products.filter(function(categoria){
-		// 	return categoria.category == "visited"
-		// })
-		
-		// 	let inSales = products.filter(function(categoria){
-		// 	return categoria.category == "in-sale"
-		// })
-
-        db.Products.findAll({
-            include: [
-            {association: 'colors'},
-            {association:'sizes'},
-            {association:'categories'}
-            ]
-        })
-         
-             .then(products => {
-                res.render('../views/index', {products, toThousand})
-                //res.send(products)
-             })
-
-		//res.render(path.resolve(__dirname,'../views/index'),{products,toThousand})
-	},    
-
+   /////////////////////////////////////////////////////     
+       
     carrito: function (req, res) {
         res.render(path.resolve(__dirname,"../views/productCart.ejs"))
     },

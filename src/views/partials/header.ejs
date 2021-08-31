@@ -10,8 +10,11 @@
                 <a href= "/"><img src="/img/logo-mobile.png" class="mobile"></a>
             </div>
 
-            <form class="searcher" action="search" method="get">
-                <input class="search-bar" type="text" placeholder="¿Qué estás buscando?">
+            <!-- <form action="/products/" method="POST" class="createform" enctype="multipart/form-data" id="create-form"> -->
+                <!-- <input type="text" name="name" class="control" id="name-field" value="<%= locals.oldData ? oldData.name : null %>"> -->
+                <!-- <form class="searcher" action="/search" method="get"> -->
+            <form class="searcher" action="products/search" method="POST">
+                <input class="search-bar" name="search" type="text" placeholder="¿Qué estás buscando?">
                 <div class="lupa">
                     <button class="lupa button-search-bar" type="submit">
                         <i class="fas fa-search"></i>
@@ -21,9 +24,12 @@
 
             <div class="container-header-icons">
                 <div class="shopping-cart">
+                    <a class="header-icon" href= "/">Home</a>
+                </div>
+                <div class="shopping-cart">
                     <a class="header-icon" href= "/productCart"><i class="fas fa-shopping-cart"></i></a>
                 </div>
-               
+                   
                 
                 <% if (locals.isLogged) {%>
 
@@ -71,7 +77,7 @@
                         <li><a href="/products/categoria/2">Pesca</a></li>
                         <li><a href="/products/categoria/3">Trekking</a></li>
                         <li><a href="/products/categoria/4">Camping</a></li>
-                        <li><a href="#">Ofertas</a></li>
+                        <li><a href="/products/onSale">Ofertas</a></li>
                         <li><a href="/products">Todos</a></li>
                     </ul>
                 </div>
