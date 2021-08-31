@@ -14,8 +14,15 @@ let productsController = require('../controllers/productsController');
 routerProducts.get("/categoria/:id", productsController.categoryList);
 
 
+// LISTA PRODUCTOS POR CATEGORIAS //
+routerProducts.get("/onSale", productsController.onSale);
+
+
 // LISTA PRODUCTOS //
 routerProducts.get("/", productsController.index);
+
+//BUSQUEDA / SEARCH
+routerProducts.post("/search", productsController.search);
 
 // CREACION DE PRODUCTOS -
 routerProducts.get("/create", adminMiddleware, productsController.create); // vista para crear productos / ok

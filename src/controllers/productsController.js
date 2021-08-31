@@ -12,7 +12,8 @@ const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 // conexion con la DB
 const db = require('../database/models');
 const sequelize = db.sequelize;
-const { Op, Association } = require("sequelize");
+const { Op,Association } = require("sequelize");
+
 const moment = require('moment');
 const {validationResult} = require("express-validator");
 const Product = db.Product;
@@ -28,22 +29,48 @@ const User = db.User;
 let controllerProducts = {
     
     index: function (req, res) {
-           db.Products.findAll({
-                include: [
-                {association: 'colors'},
-                {association:'sizes'},
-                {association:'categories'}
-                ]
-            })
+        db.Products.findAll({
+             include: [
+             {association: 'colors'},
+             {association:'sizes'},
+             {association:'categories'}
+             ]
+         })
 
-            .then(products => {
-               
-               res.render('../views/products/productsList', {products, toThousand})
-            })
-    },
+         .then(products => {
+            
+            res.render('../views/products/productsList', {products, toThousand})
+         })
+ },
 
 
-//// para probar categorias
+
+// busqueda de producto
+search: (req, res) => {
+ 
+
+ db.Products.findAll(
+     {
+     include: [
+     {association: 'colors'},
+     {association:'sizes'},
+     {association:'categories'}
+     ],
+     where: {
+         name: {[Op.like]: '%' + req.body.search + '%'}
+        }
+    })
+
+ .then(products => {
+
+    res.render('../views/products/productsCategory', {products, toThousand})
+
+ })
+
+},
+
+
+//// Categorias
     
     categoryList: function (req, res) {
         
@@ -58,12 +85,36 @@ let controllerProducts = {
         )
 
         .then(products => {
-        
-        //res.send(products)
+  
         res.render('../views/products/productsCategory', {products, toThousand})
         })
     },
 
+
+    // en oferta - descuentos mayores a 20%
+
+    onSale: (req, res) => {
+ 
+        
+         db.Products.findAll(
+             {
+             include: [
+             {association: 'colors'},
+             {association:'sizes'},
+             {association:'categories'}
+             ],
+             where: {
+                 discount: {[Op.gte]: 20}
+                }
+            })
+        
+         .then(products => {
+        
+            res.render('../views/products/productsCategory', {products, toThousand})
+        
+         })
+        
+        },
 
     detail: function (req, res) {
             db.Products.findByPk(req.params.id,{
@@ -156,8 +207,7 @@ let controllerProducts = {
  
     edit: (req, res) => {
        
-        //db.Products.findByPk(req.params.id)
-
+        
         db.Products.findByPk(req.params.id,{
             include: [
             {association: 'colors'},
@@ -186,7 +236,7 @@ let controllerProducts = {
                             .then(categoryProducts => {
 
                                res.render('../views/products/productEdit', {productToEdit,sizes,colors, categories, categoryProducts, toThousand})
-                            //    res.send(categoryProducts)
+                           
 
                             })
 
@@ -215,7 +265,6 @@ let controllerProducts = {
                 description: req.body.description,
                 price: req.body.price,
                 discount: req.body.discount,
-                //category: req.body.category,
                 color_id: req.body.color,
                 size_id: req.body.size,
                 image: req.file != undefined ? req.file.filename : null,

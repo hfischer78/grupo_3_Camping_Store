@@ -40,19 +40,20 @@
     </div>
 
     <section>
-      <% products.forEach (function(id,i) { %>
+      
+      <% productsOnSale.forEach (function(id,i) { %>
       <article class="producto-oferta">
 
-        <a href="/products/detail/<%= products[i].id %>"><img class="imgProd"
-            src="/img/products/<%= (products[i].image == null) ? 'product-default.png' : products[i].image %>"></a>
+        <a href="/products/detail/<%= productsOnSale[i].id %>"><img class="imgProd"
+            src="/img/products/<%= (productsOnSale[i].image == null) ? 'product-default.png' : productsOnSale[i].image %>"></a>
         <div class="caja-productos">
           <i class="fas fa-piggy-bank pig-sale"></i>
-          <p class="titulo-producto"><%= products[i].name %></p>
+          <p class="titulo-producto"><%= productsOnSale[i].name %></p>
           <div class="valores-oferta">
-            <p class="precio">$ <%= toThousand(products[i].price) %> <span
-                class="descuento"><%= products[i].discount %>% OFF</span></p>
+            <p class="precio">$ <%= toThousand(productsOnSale[i].price) %> <span
+                class="descuento"><%= productsOnSale[i].discount %>% OFF</span></p>
           </div>
-          <div class="descripcion"><%= products[i].description %></div>
+          <div class="descripcion"><%= productsOnSale[i].description %></div>
         </div>
 
       </article>
