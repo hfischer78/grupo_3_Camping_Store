@@ -22,7 +22,8 @@
 						"Usuario habilitado para comprar"
 					<!-- Container -->
 					<% } %></h3> 
-							
+				
+				
 					 
 				<% if (user.user_type == 1) {%>	
 					<!-- Deberiamos en este botton de abajo poner que si el user_type es 0, entonces no pueda ir a crear -->
@@ -30,6 +31,8 @@
 					<div class="botonesDelAdmin">
 					<div ><a href="http://localhost:3000/" class="action-buttonEditProfile">DASHBOARD</a></div>
 					<div ><a href="/products/create" class="action-buttonEditProfile">CREAR PRODUCTO</a></div>
+					<div ><a href="/users/create" class="action-buttonEditProfile">CREAR USUARIO</a></div>
+					<!-- <div ><a href="/users/list" class="action-buttonEditProfile">USUARIOS</a></div> -->
 					<% } else {%>
 					</div>
 						<div class="prodNPD"><h2>Para Crear productos contactar al administrador</h2></div>

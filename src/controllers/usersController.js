@@ -69,6 +69,21 @@ let controllerUsers = {
         }, // cierre del proceso de registro
 
 
+        //
+
+    list: (req,res)   => {
+
+        db.Users.findAll()
+        .then(usuarios => {
+            
+        res.render(path.resolve(__dirname,"../views/users/userList.ejs"),{usarios});
+
+        })
+
+    },
+
+    
+
 
     // vista de formulario de registro
     register: function (req, res) {

@@ -24,7 +24,7 @@
 					<% } %></h3> 
 							
 					 
-				<% if (userDetail.user_type == 1) {%>	
+				<% if (req.session.user_type == 1) {%>	
 					<!-- Deberiamos en este botton de abajo poner que si el user_type es 0, entonces no pueda ir a crear -->
 					<!-- Deberia ser en la ruta del create  -->
 					<div class="botonesDelAdmin">
@@ -39,9 +39,7 @@
 				</div>
                     
 			</div>
-
-
-			
+		
 
 		</div>
 	</div>

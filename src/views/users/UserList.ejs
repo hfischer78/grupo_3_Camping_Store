@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../partials/head")%>
+
+
+<body>
+    <%- include("../partials/header")%>
+
+   
+    <main class="index-main">
+        <div class= "h3-home">
+            <h3>Lista de usuarios</h3>
+        </div>
+
+      
+        <section>
+            <% usuarios.forEach (function(id,i) { %>
+           <article class="producto-oferta">
+                
+            <a href="/users/edit/<%= usuarios[i].id %>"><img class="imgProd" src="./img/usuarios/<%= (usuarios[i].image == null) ? 'product-default.png' : usuarios[i].image %>"></a>
+                <div class= "caja-productos">
+                    <p class="titulo-producto"><%= usuarios[i].first_name %></p>
+                </div>
+              
+            </article> 
+            <% }) %>
+        </section>
+
+        
+    </main>
+
+    <%- include("../partials/footer")%>
+</body>
+
+</html>

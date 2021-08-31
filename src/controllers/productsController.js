@@ -291,7 +291,7 @@ search: (req, res) => {
             
              if (categorias.length == 1) {
                     categoryToCreate = {
-                    product_id: product.id,
+                    product_id: req.params.id,
                     category_id: categorias
                     }
             

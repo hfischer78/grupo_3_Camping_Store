@@ -1,4 +1,6 @@
-##PRIMER SPRINT##
+
+##SEGUNDO SPRINT##
+##RETRO DEL PRIMER SPRINT##
 
 ##Apectos que funcionaron bien:
 
@@ -11,8 +13,8 @@
 >Identificamos como oportunidad de mejora utilizar con mayor profundiad la herramienta de Trello.
 
 
-
-##"SEGUNDO SPRINT##
+##TERCER SPRINT##
+##RETRO DEL SEGUNDO SPRINT##
 
 ##Apectos que funcionaron bien:
 
@@ -26,7 +28,9 @@
 >Tener las presentaciones un día antes para hacer una revisión en conjunto y probarlo.
 >Profundizar más en la utilización de Trello y apoyarnos en eso para suplir las dificultades de encuentros diarios que tenemos para coordinar.
 
-##TERCER SPRINT##
+##CUARTO SPRINT##
+##RETRO DEL TERCER SPRINT##
+
 
 ##Aspectos que fucionaron bien ##
 
@@ -38,7 +42,9 @@
 
 >Creemos que podemos mejorar y profundizar nuestros conocimientos tecnicos para lograr una mejor aplicación y tener mayor rapidez y agilidad a la hora del desarrollo.
 
-##CUARTO SPRINT##
+##QUNTO SPRINT##
+##RETRO DEL CUARTO SPRINT##
+
 
 ##Aspectos que fucionaron bien ##
 
@@ -51,7 +57,9 @@
 >Para el proximo sprint, queremos seguir dandole mucha importancia a Trello porque ha sido clave en la división de tareas a completar.
 
 
-##QUINTO SPRINT##
+##SEXTO SPRINT##
+##RETRO DEL QUINTO SPRINT##
+
 
 ##Aspectos que fucionaron bien ##
 
@@ -63,7 +71,8 @@
 
 >Como objetivo para el proximo sprint, ya que se trata de uno de los últimos nos gustaría perfeccionar la página y ajustar detalles. También continuar con el trabajo coordinado como venimos haciendo e implementar los nuevos conocimientos adquiridos para dejar el proyecto lo más funcional y amigable para el cliente.
 
-##SEXTO SPRINT##
+##SEPTIMO SPRINT##
+##RETRO DEL SEXTO SPRINT##
 
 ##Aspectos que fucionaron bien ##
 
@@ -77,6 +86,16 @@
 
 >Debemos seguir trabajando para mejorar detalles de nuestro sitio, y funcionalidades.
 
+##OCTAVO SPRINT##
+##RETRO DEL SEPTIMO SPRINT Y ETAPAS ANTERIORES YA CUMPLIDAS##
 
+##Aspectos que fucionaron bien ##
 
-Para no devolver la contraseña cuando se logea el usuario podes usar un map en el mismo controller
+>Nos consolidamos como un equipo donde todos aportamos y trabajamos a la par.
+>Pudimos superar la restructuración del equipo cuando pasamos de ser 5 a 4.
+>Logramos cumplir con los objetivos y etapas que nos fuimos planteando y nos requeria el proyecto.
+>Crecimos en esta experiencia de codear.
+
+##Aspectos que podemos mejorar:
+
+>Si bien hemos trabajado cumpliendo los objetivos, quizás podriamos haber optimizado los tiempos de trabajo, para no llegar ajustados en algunas etapas.
