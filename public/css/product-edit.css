@@ -1,12 +1,16 @@
 .tituloImagen{
-    margin: 40px;
-    color: red 
+    margin: 15px auto;
+    width: 75%; 
+    
 }
 
 
 .imagenProductoEdit{
-    margin: 40px;
-    display: flex 
+    margin: 15px auto;
+    width: 75%;    
+  
+    /* margin: 40px;
+    display: flex  */
 }
 
 
@@ -24,7 +28,7 @@
 .controldelformularioImagenEdit{
     margin: 15px auto;
     width: 75%;    
-    display: block    
+    display: block     
 }
 
 

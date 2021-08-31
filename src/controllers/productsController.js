@@ -16,6 +16,7 @@ const { Op,Association } = require("sequelize");
 
 const moment = require('moment');
 const {validationResult} = require("express-validator");
+const { Console } = require("console");
 const Product = db.Product;
 const Size = db.Size;
 const Color = db.Color;
@@ -274,9 +275,49 @@ search: (req, res) => {
                 where: {id: req.params.id }
             });
 
+            //////////////////////////
+
+            // BORRAR CATEGORIAS ASIGNADAS
+
+            db.Category_Products.destroy(
+                 {
+                where: {product_id: req.params.id}
+              })
+
+             
+            // CARGAR NUEVAS CATEGORIAS
+
+            let categorias = req.body.Categorias
+            
+             if (categorias.length == 1) {
+                    categoryToCreate = {
+                    product_id: product.id,
+                    category_id: categorias
+                    }
+            
+                   db.Category_Products.create(categoryToCreate)
+
+             } else {
+
+                categorias.forEach (function(id,i) {
+                    categoryToCreate = {  
+                        product_id: req.params.id,
+                        category_id: categorias[i]
+                      
+                     }  //cierra variable categoryToCreate     
+                     db.Category_Products.create(categoryToCreate)
+                }) // cerramos for each     
+
+
+            /////////////////////////
+
             // redirecciono a productos
             res.redirect("/");
-        },       
+
+          //console.log("HOLA",categorias)
+        }       
+    
+    },
 
 
     //eliminacion de producto

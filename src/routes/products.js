@@ -14,7 +14,7 @@ let productsController = require('../controllers/productsController');
 routerProducts.get("/categoria/:id", productsController.categoryList);
 
 
-// LISTA PRODUCTOS POR CATEGORIAS //
+// LISTA PRODUCTOS EN OFERTA //
 routerProducts.get("/onSale", productsController.onSale);
 
 
@@ -27,12 +27,6 @@ routerProducts.post("/search", productsController.search);
 // CREACION DE PRODUCTOS -
 routerProducts.get("/create", adminMiddleware, productsController.create); // vista para crear productos / ok
 routerProducts.post('/', uploadFile("products").single('image'), productsValidations, productsController.store); // logica para crear / ok
-
-//estas borrarlas
-// routerProducts.get("/productCreate", productsController.create); // vista para crear
-// routerProducts.post("/products", productsController.store); // logica para crear
-
-
 
 // PRODUCT DETAIL //
 routerProducts.get("/detail/:id", productsController.detail); //ok

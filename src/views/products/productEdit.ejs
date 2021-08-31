@@ -36,10 +36,10 @@
                 <img class="imagenProductoDetalle" src="/img/products/<%= (productToEdit.image == null) ? 'product-default.png' : productToEdit.image %>"
                     alt="imagen del producto" >
                 
-                    <p class="controldelformularioEditOption">
+                    <!-- <p class="controldelformularioEditOption">
                         <input type="radio" name="editar-imagen" value="editar">
                         <label for="EdicionImagen">EDITAR IMAGEN</label>
-                    </p>                                      
+                    </p>                                       -->
 
             </div>
 
@@ -47,7 +47,7 @@
             <div class="controldelformularioImagenEdit">
                 <label>Seleccionar una imagen para el Producto:</label>
                 <input type="file" name="image" accept=".jpg" class="control" id="image-field">
-                <div><%=productToEdit.image%> </div>
+                <!-- <div><%=productToEdit.image%> </div> -->
                 <div class="text-danger" id="image-error"></div>
                 <% if (locals.errors && errors.image) { %>
                     <div class= 'text-danger'>
@@ -92,20 +92,9 @@
     
             </div>
             
-            <div>
-                <% categoryProducts.forEach (function(id,i) { %> 
-                    
-                <%= categoryProducts[i].category_id %>
-
-                <% }) %>
-
-            </div>
-
-
             
             <div class="controldelformulario">
                 <label for="Categorias">Categorías</label>
-                               
                 <% categories.forEach (function(id,i) { %> 
                     
                 <div class= "checkbox-edit"><input type="checkbox" name="Categorias" value=<%= categories[i].id %>> <%= categories[i].name %>
